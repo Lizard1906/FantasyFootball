@@ -1,0 +1,83 @@
+/* index.css */
+
+h1 {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+body {
+    background-image: url("../images/back.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.trophies {
+    background-color: rgb(192, 192, 192);
+    border-radius: 0px 0px 25px 0px;
+}
+
+.trophy-img {
+    height: 50px;
+    margin: 5px 5px 5px 5px;
+}
+
+.category-details {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.category-img {
+    height: 20px;
+    margin: 0px 5px 5px 5px;
+    border: 1px solid black
+}
+
+.info-player {
+    background-color: transparent;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.foto-jogador {
+    width: 100%;
+    border-radius: 0px 0px 0px 25px;
+}
+
+.player-name {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 25px 25px 0 0;
+}
+
+.player-desc {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+}
+
+a.btn.discover {
+    font-size: 40px;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+a.btn.discover:hover {
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+a.btn.discover:active {
+    border-color: transparent;
+    transition: all 0.5s;
+}

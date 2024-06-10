@@ -1,0 +1,160 @@
+
+body {
+    background-repeat: no-repeat;
+    background: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.trophy-card {
+    font-size: 20px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+
+.trophy-title {
+    border-radius: 25px 25px 0px 0px;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+}
+
+.trophy-graph {
+    border-radius: 0px 0px 25px 25px;
+    background-color: transparent;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card-text {
+    font-size: 18px;
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 2vh;
+}
+
+.arrow {
+    font-size: 40px;
+    border-radius: 50%;
+    transition: all 0.5s;
+    text-decoration: none;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    border: 3px solid;
+    padding: 1% 9%;
+}
+
+.arrow:hover {
+    color: grey;
+}
+
+
+.tabela {
+    width: 100%;
+    font-size: larger;
+    table-layout: fixed;
+}
+
+
+.logo-trophy {
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.tabela-header {
+    background-color: grey;
+}
+
+
+tr.even {
+    background-color: #f2f2f2;
+    /* Cor de fundo para linhas pares */
+}
+
+tr.odd {
+    background-color: #cccbcb;
+    /* Cor de fundo para linhas ímpares */
+}
+
+
+
+/*trofeus*/
+
+
+.mundial22 {
+    background-color: #3b0115;
+    color: #fff;
+    border-color: #fff;
+}
+
+.ptbetclic {
+    background-color: #0b0437;
+    color: #fff;
+    border-color: #b80000;
+}
+
+.ptbwin {
+    background-color: #ffcc15;
+    color: #000000;
+    border-color: #000000;
+}
+
+.ptpredict {
+    background-color: #fdea00;
+    color: #252525;
+    border-color: #252525;
+}
+
+.premier {
+    background-color: #37003c;
+    color: #fff;
+    border-color: #fff;
+}
+
+.champions {
+    background-color: #020236;
+    color: #fff;
+    border-color: #fff;
+}
+
+.uclpredictor {
+    background-color: #060c60;
+    color: #fff;
+    border-color: #fff;
+}
+
+
+#lineChart {
+    /* height: 500px; */
+    background-color: transparent;
+}
+
+
+a.btn.back {
+    font-size: 40px;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+a.btn.back:hover {
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+a.btn.back:active {
+    border-color: transparent;
+    transition: all 0.5s;
+}

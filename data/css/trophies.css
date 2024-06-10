@@ -1,0 +1,64 @@
+
+body{
+    background-image: url("../images/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    padding-bottom : 5px;
+    padding-top : 5px;
+}
+
+.year-label{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.player-desc{
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.info-trophies-year{
+    background-color: #fff;
+    border-radius: 25px 25px 25px 25px;
+    margin-bottom:50px
+}
+
+.trophies{
+    background-color: rgb(192, 192, 192);
+    border-radius: 0px 0px 25px 25px;
+}
+
+.trophy-img{
+    height: 125px;
+    margin: 0px 0px;
+}
+
+
+a.btn.back {
+    font-size: 40px;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+a.btn.back:hover {
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+a.btn.back:active {
+    border-color: transparent;
+    transition: all 0.5s;
+}
+
+
