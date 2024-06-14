@@ -21,13 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
               <div class="player-desc"><i>${player.description}</i></div>
           </div>
           <div class="row">
-              <div class="col player p-0">
+              <div class="col-12 col-lg-6 player p-0">
                   <img src="data/images/players/${player.name}.jpg" class="foto-jogador" alt="Jogador ${player.name}">
               </div>
-              <div class="col trophies p-0">
+              <div class="col-12 col-lg-6 trophies p-0">
               </div>
-          </div>
-          <div class="row">
           </div>
       </div>
       `;

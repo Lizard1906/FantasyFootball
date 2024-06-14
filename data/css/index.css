@@ -18,7 +18,7 @@ body {
 
 .trophies {
     background-color: rgb(192, 192, 192);
-    border-radius: 0px 0px 25px 0px;
+    /* border-radius: 0px 0px 25px 0px; */
 }
 
 .trophy-img {
@@ -39,12 +39,12 @@ body {
 
 .info-player {
     background-color: transparent;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 25px 25px 0px 0px;
 }
 
 .foto-jogador {
     width: 100%;
-    border-radius: 0px 0px 0px 25px;
+    /* border-radius: 0px 0px 0px 25px; */
 }
 
 .player-name {
