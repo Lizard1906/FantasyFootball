@@ -105,7 +105,7 @@ tr.odd {
 /*trofeus*/
 
 
-.mundial22 {
+.wc22 {
     background-color: #3b0115;
     color: #fff;
     border-color: #fff;
@@ -145,6 +145,24 @@ tr.odd {
     background-color: #060c60;
     color: #fff;
     border-color: #fff;
+}
+
+.euro24 {
+    background-color: #1534E4;
+    color: #fff;
+    border-color: #1F1F2B;
+}
+
+.euro24predictor {
+    background-color: #0D1E62;
+    color: #fff;
+    border-color: #FF3C00;
+}
+
+.euro24bracket {
+    background-color: #186cff;
+    color: #fff;
+    border-color: #0D1E62;
 }
 
 

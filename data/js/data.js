@@ -23,7 +23,7 @@ const players = [
 
 const trophies = [
     // 2022-23
-    { id: 'wc22', code: 'mundial22', date: 2023, name: 'World Cup', category: 'world', data: [{ pos: 1, player: 1, points: null }, { pos: 2, player: 2, points: null }], finished: true },
+    { id: 'wc22', code: 'wc22', date: 2023, name: 'World Cup', category: 'world', data: [{ pos: 1, player: 1, points: null }, { pos: 2, player: 2, points: null }], finished: true },
     { id: 'pt23', code: 'ptbwin', date: 2023, name: 'Liga Portugal', category: 'pt', data: [{ pos: 1, player: 1, points: 2207 }, { pos: 2, player: 2, points: 2201 }], finished: true },
     { id: 'en23', code: 'premier', date: 2023, name: 'Premier League', category: 'en', data: [{ pos: 1, player: 2, points: 2581 }, { pos: 2, player: 1, points: 2552 }], finished: true },
     { id: 'ucl23', code: 'champions', date: 2023, name: 'Champions League', category: 'champ', data: [{ pos: 1, player: 2, points: 903 }, { pos: 2, player: 1, points: 880 }, { pos: 3, player: 3, points: 165 }], finished: true },
@@ -54,7 +54,7 @@ const trophies = [
         finished: true
     },
     {
-        id: 'ucl24', code: 'champions', date: 2024, name: 'Champions League', winner: null, category: 'champ',
+        id: 'ucl24', code: 'champions', date: 2024, name: 'Champions League', category: 'champ',
         graph: [
             { player: 1, color: 'red', evolution: [66, 104, 156, 247, 307, 340, 397, 474, 515, 568, 614, 660, 730] },
             { player: 2, color: 'green', evolution: [62, 106, 171, 244, 328, 390, 439, 509, 552, 602, 644, 683, 752] },
@@ -62,12 +62,36 @@ const trophies = [
         finished: true
     },
     {
-        id: 'uclpredict24', code: 'uclpredictor', date: 2024, name: 'Champions Predict', winner: null, category: 'champ',
+        id: 'uclpredict24', code: 'uclpredictor', date: 2024, name: 'Champions Predict', category: 'champ',
         graph: [
             { player: 1, color: 'red', evolution: [54, 93, 155, 202, 231, 272, 314, 347, 364, 371, 376, 382, 392] },
             { player: 2, color: 'green', evolution: [52, 94, 159, 205, 243, 284, 310, 356, 375, 384, 387, 391, 409] },
         ],
         finished: true
+    },
+    {
+        id: 'euro24', code: 'euro24', date: 2024, name: 'Euro Cup', category: 'euro',
+        graph: [
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
+        ],
+        finished: false
+    },
+    {
+        id: 'euro24predictor', code: 'euro24predictor', date: 2024, name: 'Euro Cup Predict', category: 'euro',
+        graph: [
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
+        ],
+        finished: false
+    },
+    {
+        id: 'euro24bracket', code: 'euro24bracket', date: 2024, name: 'Euro Cup Bracket', category: 'euro',
+        data: [
+            { pos: 1, player: 1, points: 0 },
+            { pos: 2, player: 2, points: 0 },
+        ],
+        finished: false
     },
 ];
 
@@ -91,7 +115,7 @@ trophies.forEach(trophy => {
 
 trophies.forEach(trophy => {
     if (trophy.finished) {
-        trophy.winner=players[trophy.data[0].player-1].name
+        trophy.winner = players[trophy.data[0].player - 1].name
     } else {
         trophy.winner = null;
     }
