@@ -137,6 +137,30 @@ trophies.forEach(trophy => {
 });
 
 
+// sort trophies by importance
+const categoryOrder = ['pt', 'en', 'champ', 'world', 'euro'];
+
+function compareCategories(a, b) {
+    return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
+}
+
+function compareNames(a, b) {
+    if (a.includes('Bracket') && !b.includes('Bracket')) return 1;
+    if (!a.includes('Bracket') && b.includes('Bracket')) return -1;
+    if (a.includes('Predict') && !b.includes('Predict')) return 1;
+    if (!a.includes('Predict') && b.includes('Predict')) return -1;
+    return a.localeCompare(b);
+}
+
+players.forEach(player => {
+    player.trophies.sort((a, b) => {
+        const categoryComparison = compareCategories(a.category, b.category);
+        if (categoryComparison !== 0) return categoryComparison;
+        return compareNames(a.name, b.name);
+    });
+});
+
+
 
 
 
