@@ -134,17 +134,34 @@ if (foundTrophy.graph) {
 
 
 function drawChart(playerData) {
-    const chartData = [['X', ...playerData.map(player => fantasy.players[player.player-1].name)]];
+    const lineChartData = [['X', ...playerData.map(player => fantasy.players[player.player-1].name)]];
+    const columnChartData = [['X', ...playerData.map(player => fantasy.players[player.player-1].name)]];
+
+    let maxRound=0;
+    let maxPoints=0;
+    let maxPlayer="";
 
     for (let i = 0; i < playerData[0].evolution.length; i++) {
-        chartData.push([i + 1, ...playerData.map(player => player.evolution[i])]);
+        lineChartData.push([i + 1, ...playerData.map(player => player.evolution[i])]);
+        if (i === 0) {
+            columnChartData.push([i + 1, ...playerData.map(player => player.evolution[i])]);
+        } else {
+            columnChartData.push([i + 1, ...playerData.map(player => player.evolution[i] - player.evolution[i - 1])]);
+        }
+        for (let j = 0; j < playerData.length; j++) {
+            if (columnChartData[i+1][j+1] > maxPoints) {
+                maxPoints = columnChartData[i+1][j+1]
+                maxRound = i+1
+                maxPlayer = columnChartData[0][j+1]
+            }
+        }
     }
 
-    const data = google.visualization.arrayToDataTable(chartData);
+    const lineData = google.visualization.arrayToDataTable(lineChartData);
+    const columnData = google.visualization.arrayToDataTable(columnChartData);
 
-    console.log(data)
-
-    const options = {
+    
+    const optionsLineChart = {
         title: 'Evolution Graph',
         curveType: 'function',
         legend: { position: 'bottom' },
@@ -158,6 +175,21 @@ function drawChart(playerData) {
         colors: playerData.map(player => player.color),
     };
 
+    const optionsColumnChart = {
+        title: 'Game by Game Graph',
+        curveType: 'function',
+        legend: { position: 'bottom' },
+        hAxis: {
+            title: 'GameWeek',
+            ticks: Array.from({ length: playerData[0].evolution.length }, (_, i) => i + 1), // Gera números inteiros de 1 até o comprimento do array
+        },
+        vAxis: {
+            title: 'Points',
+        },
+        colors: playerData.map(player => player.color),
+    };
+
+
 
     let max = 0;
     for (let i = 0; i < playerData.length; i++) {
@@ -168,8 +200,15 @@ function drawChart(playerData) {
     }
     document.getElementById("lineChart").style.height = `${max / 40 + 50}vh`
     document.getElementById("lineChart").classList.add('p-0')
-    const chart = new google.visualization.LineChart(document.getElementById('lineChart'));
-    chart.draw(data, options);
+    document.getElementById("columnChart").style.height = `${max / 40 + 50}vh`
+    document.getElementById("columnChart").classList.add('p-0')
+    const lineChart = new google.visualization.LineChart(document.getElementById('lineChart'));
+    lineChart.draw(lineData, optionsLineChart);
+    const columnChart = new google.visualization.ColumnChart(document.getElementById('columnChart'))
+    columnChart.draw(columnData, optionsColumnChart)
+    document.getElementById('best-round').classList.remove('d-none')
+    document.getElementById('best-round-winner').innerText = maxPlayer
+    document.getElementById('best-round-result').innerText = maxPoints + " points - Game Week "+maxRound
 }
 
 
