@@ -21,6 +21,10 @@ body {
     margin-bottom: 0;
 }
 
+.trophy-year {
+    font-size: large;
+}
+
 .trophy-graph {
     border-radius: 0px 0px 25px 25px;
     background-color: transparent;
@@ -63,6 +67,16 @@ body {
     font-size: larger;
     table-layout: fixed;
 }
+
+@media (max-width: 576px) {
+    .tabela, .trophy-title {
+        font-size: large;
+    }
+    .trophy-year {
+        font-size: medium;
+    }    
+}
+
 
 
 .logo-trophy {

@@ -38,7 +38,7 @@ if (nextTrophy != null) {
 
 
 initSeason = foundTrophy.date - 1;
-document.getElementById('trophy-title').innerHTML = `${foundTrophy.name} <span style="font-size: 25px">[${initSeason}/${foundTrophy.date}]</span>`;
+document.getElementById('trophy-title').innerHTML = `${foundTrophy.name} <span class="trophy-year">[${initSeason}/${foundTrophy.date}]</span>`;
 document.getElementById('trophy-title').classList.add(foundTrophy.code);
 
 const table = document.getElementById('points-table');
