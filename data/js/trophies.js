@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 html += `
               <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                 <a href="trophyDetails.html?id=${trophy.id}">
-                    <img src="../images/trophies/${trophy.code}.png" title="${trophy.name}" class="trophy-img">
+                    <img src="data/images/trophies/${trophy.code}.png" title="${trophy.name}" class="trophy-img">
                 </a>
             </div>
             `;

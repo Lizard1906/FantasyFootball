@@ -4,7 +4,7 @@ var url = window.location.href;
 var id = url.split('?id=')[1];
 console.log(id)
 
-document.body.style.backgroundImage = "url('../images/background/" + id + ".png')";
+document.body.style.backgroundImage = "url('data/images/background/" + id + ".png')";
 
 fantasy.trophies.forEach(trophy => {
     if (trophy.id == id) {
@@ -78,7 +78,7 @@ function getTrophyDataRows(id, trophyData) {
 
 
 
-document.getElementById('trophy-winner').setAttribute('src', "../images/players/" + foundTrophy.winner + ".jpg")
+document.getElementById('trophy-winner').setAttribute('src', "data/images/players/" + foundTrophy.winner + ".jpg")
 document.getElementById('trophy-winner').setAttribute('alt', foundTrophy.winner)
 
 const description = document.getElementById('description-winner')
