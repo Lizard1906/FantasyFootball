@@ -26,12 +26,12 @@ fantasy.trophies.forEach(trophy => {
 
 
 if (prevTrophy != null) {
-    document.getElementById('prev-arrow').setAttribute('href', 'trophyDetails.html?id=' + prevTrophy);
+    document.getElementById('prev-arrow').setAttribute('href', 'trophyDetails?id=' + prevTrophy);
     document.getElementById('prev-arrow').classList.remove('d-none');
     document.getElementById('prev-arrow').classList.add(foundTrophy.code);
 }
 if (nextTrophy != null) {
-    document.getElementById('next-arrow').setAttribute('href', 'trophyDetails.html?id=' + nextTrophy);
+    document.getElementById('next-arrow').setAttribute('href', 'trophyDetails?id=' + nextTrophy);
     document.getElementById('next-arrow').classList.remove('d-none');
     document.getElementById('next-arrow').classList.add(foundTrophy.code);
 }
