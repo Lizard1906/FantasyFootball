@@ -72,26 +72,26 @@ const trophies = [
     {
         id: 'euro24', code: 'euro24', date: 2024, name: 'Euro Cup', category: 'euro',
         graph: [
-            { player: 1, color: 'red', evolution: [56, 146, 192, 260, 305, 344] },
-            { player: 2, color: 'green', evolution: [56, 114, 148, 222, 270, 315] },
+            { player: 1, color: 'red', evolution: [56, 146, 192, 260, 305, 344, 385] },
+            { player: 2, color: 'green', evolution: [56, 114, 148, 222, 270, 315, 360] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'euro24predictor', code: 'euro24predictor', date: 2024, name: 'Euro Cup Predict', category: 'euro',
         graph: [
-            { player: 1, color: 'red', evolution: [69, 150, 207, 254, 281, 331] },
-            { player: 2, color: 'green', evolution: [74, 180, 250, 310, 336, 360] },
+            { player: 1, color: 'red', evolution: [69, 150, 207, 254, 281, 331, 331] },
+            { player: 2, color: 'green', evolution: [74, 180, 250, 310, 336, 360, 395] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'euro24bracket', code: 'euro24bracket', date: 2024, name: 'Euro Cup Bracket', category: 'euro',
         data: [
-            { pos: 1, player: 1, points: 52 },
-            { pos: 2, player: 2, points: 85 },
+            { pos: 1, player: 2, points: 90 },
+            { pos: 2, player: 1, points: 53 },
         ],
-        finished: false
+        finished: true
     },
 ];
 
