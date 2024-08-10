@@ -97,16 +97,16 @@ const trophies = [
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [] },
-            { player: 2, color: 'green', evolution: [] },
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
         ],
         finished: false
     },
     {
         id: 'en25draft', code: 'endraft', date: 2025, name: 'English Draft', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [] },
-            { player: 2, color: 'green', evolution: [] },
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
         ],
         finished: false
     },
