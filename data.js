@@ -93,6 +93,31 @@ const trophies = [
         ],
         finished: true
     },
+    // 2024-25
+    {
+        id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
+        graph: [
+            { player: 1, color: 'red', evolution: [] },
+            { player: 2, color: 'green', evolution: [] },
+        ],
+        finished: false
+    },
+    {
+        id: 'en25draft', code: 'endraft', date: 2025, name: 'English Draft', category: 'en',
+        graph: [
+            { player: 1, color: 'red', evolution: [] },
+            { player: 2, color: 'green', evolution: [] },
+        ],
+        finished: false
+    },
+    {
+        id: 'en25cup', code: 'emirates', date: 2025, name: 'Emirates Cup', category: 'en',
+        data: [
+            { pos: 1, player: 2, points: 0 },
+            { pos: 2, player: 1, points: 0 },
+        ],
+        finished: false
+    },
 ];
 
 trophies.forEach(trophy => {

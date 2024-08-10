@@ -135,6 +135,18 @@ tr.odd {
     border-color: #fff;
 }
 
+.endraft {
+    background-color: #37003c;
+    color: #00FF87;
+    border-color: #00FF87;
+}
+
+.emirates {
+    background-color: #122045;
+    color: #fff;
+    border-color: #DD2531;
+}
+
 .champions {
     background-color: #020236;
     color: #fff;
