@@ -1,0 +1,1 @@
+['Santa Clara', 'FC Porto', 'Sporting CP', 'FC Famalicão', 'Moreirense FC', 'Boavista FC', 'Vitória SC', 'AVS', 'CD Nacional', 'Estrela Amadora', 'SC Braga', 'SC Farense', 'Casa Pia AC', 'FC Arouca', 'Rio Ave FC', 'SL Benfica', 'Estoril Praia', 'Gil Vicente FC']

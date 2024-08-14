@@ -21,6 +21,9 @@ const players = [
     }
 ];
 
+// siglas equipas PT
+AVS="AVS"; FCA="FC Arouca"; SLB="SL Benfica"; BFC="Boavista FC"; CPI = "Casa Pia AC", GDEP = "Estoril Praia"; FCEA="Estrela Amadora"; FCF="FC Famalicão"; SCF="SC Farense"; GVFC="Gil Vicente FC"; MFC="Moreirense FC"; CDN="CD Nacional"; FCP="FC Porto"; RAFC="Rio Ave FC"; GDSC="Santa Clara"; SCB="SC Braga"; SCP="Sporting CP"; VSC="Vitória SC"
+
 const trophies = [
     // 2022-23
     { id: 'wc22', code: 'wc22', date: 2023, name: 'World Cup', category: 'world', data: [{ pos: 1, player: 1, points: null }, { pos: 2, player: 2, points: null }], finished: true },
@@ -95,6 +98,15 @@ const trophies = [
     },
     // 2024-25
     {
+        id: 'pt25bracket', code: 'ptbracket', date: 2025, name: 'Portugal Bracket', category: 'pt',
+        standings: [
+            { player: 0, predict: ['Santa Clara', 'FC Porto', 'Sporting CP', 'FC Famalicão', 'Moreirense FC', 'Boavista FC', 'Vitória SC', 'AVS', 'CD Nacional', 'Estrela Amadora', 'SC Braga', 'SC Farense', 'Casa Pia AC', 'FC Arouca', 'Rio Ave FC', 'SL Benfica', 'Estoril Praia', 'Gil Vicente FC']},
+            { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
+            { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AVS, BFC]},
+        ],
+        finished: false
+    },
+    {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
             { player: 1, color: 'red', evolution: [0] },
@@ -136,6 +148,89 @@ trophies.forEach(trophy => {
 
         trophy.data = playersData;
     }
+
+    if (trophy.standings) {
+        let realTable = trophy.standings[0];
+        let new_standings = [];
+        for (let i=1; i<trophy.standings.length; i++) {
+            new_predict = [];
+            trophy.standings[i].predict.forEach((t, index) => {
+                points_scored = 0;
+                realPlace = realTable.predict.indexOf(t) + 1
+                predictPlace = index + 1
+
+                // pontuação por lugares
+                if (1 <= realPlace && realPlace <= 2 && 1 <= predictPlace && predictPlace <= 2 ) {
+                    points_scored += 3
+                    if (realPlace === predictPlace) {
+                        points_scored += 4
+                    }
+                } else if (3 <= realPlace && realPlace <= 4 && 3 <= predictPlace && predictPlace <= 4 ) {
+                    points_scored += 3
+                    if (realPlace === predictPlace) {
+                        points_scored += 1
+                    }
+                } else if (realPlace == predictPlace == 5 ) {
+                    points_scored += 2
+                } else if (6 <= realPlace && realPlace <= 10 && 6 <= predictPlace && predictPlace <= 10 ) {
+                    points_scored += 2
+                    if (realPlace === predictPlace) {
+                        points_scored += 3
+                    }
+                } else if (11 <= realPlace && realPlace <= 15 && 11 <= predictPlace && predictPlace <= 15 ) {
+                    points_scored += 2
+                    if (realPlace === predictPlace) {
+                        points_scored += 3
+                    }
+                } else if (16 <= realPlace && realPlace <= 18 && 16 <= predictPlace && predictPlace <= 18 ) {
+                    points_scored += 4
+                    if (realPlace === predictPlace) {
+                        points_scored += 4
+                    }
+                }
+
+                if (Math.abs(predictPlace-realPlace)>=5) {
+                    points_scored -= 2
+                }
+
+                new_predict.push({team:t, points: points_scored})
+            });
+            new_standings.push({player: i, predict: new_predict})
+        }
+        console.log(new_standings)
+        trophy.standings = new_standings;
+        // 1º-2ºlugar: 4 pontos
+        // 3º-5º: 1
+        // 6º-15º: 3
+        // 16º-18º: 4
+        
+        // equipa apurada para champions (1º e 2º): 3 pontos
+        // equipa apurada para liga europa (3º e 4º): 3 pontos
+        // equipa apurada para liga conference (5º): 1 ponto
+        // equipa na 1 metade da tabela (exceto top 5): 2 pontos
+        // equipa na 2 metade da tabela (exceto despromocao): 2 pontos
+        // equipa em zona de despromocao: 4 pontos});
+
+        // Se errarmos a posição por 5 ou mais lugares, menos 2 pontos
+
+
+        // tabela data
+        let playersData = trophy.standings.map((player, index) => ({
+            pos: 0,
+            player: player.player,
+            points: player.predict.reduce((acc, curr) => acc + curr.points, 0)
+        }));
+
+        playersData.sort((a, b) => b.points - a.points);
+
+        playersData.forEach((player, index) => {
+            player.pos = index + 1;
+        });
+
+        trophy.data = playersData;
+        console.log(trophy)
+    }
+
 });
 
 trophies.forEach(trophy => {
