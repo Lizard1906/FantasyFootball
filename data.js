@@ -192,6 +192,7 @@ trophies.forEach(trophy => {
 
                 if (Math.abs(predictPlace-realPlace)>=5) {
                     points_scored -= 2
+                    points_scored -= (Math.abs(predictPlace-realPlace)-5)
                 }
 
                 new_predict.push({team:t, realPlace: realPlace+1, points: points_scored})
@@ -211,7 +212,7 @@ trophies.forEach(trophy => {
         // equipa na 2 metade da tabela (exceto despromocao): 2 pontos
         // equipa em zona de despromocao: 4 pontos});
 
-        // Se errarmos a posição por 5 ou mais lugares, menos 2 pontos
+        // Se errarmos a posição por 5 ou mais lugares, menos (abs(real-predict)-5+2 ) pontos
 
 
         // tabela data
