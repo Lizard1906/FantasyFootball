@@ -158,14 +158,13 @@ if (foundTrophy.standings) {
             let tr = document.createElement('tr')
             tr.innerHTML = `
                 <td>${index + 1}</td>
-                <td>${team.team}</td>
+                <td>${team.team} <span style="font-size: 0.75rem; color: #aaa">(${team.realPlace})</span> </td>
                 <td style="color: ${team.points > 0 ? 'green' : team.points < 0 ? 'red' : ''};">
                     ${team.points > 0 ? '+' : ''}${team.points}
                 </td>
             `;
         tbody.appendChild(tr)
-        }
-        )
+        })
         table.appendChild(tbody)
         tableCol.appendChild(table)
         tables.appendChild(tableCol)

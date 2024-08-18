@@ -194,7 +194,7 @@ trophies.forEach(trophy => {
                     points_scored -= 2
                 }
 
-                new_predict.push({team:t, points: points_scored})
+                new_predict.push({team:t, realPlace: realPlace+1, points: points_scored})
             });
             new_standings.push({player: i, predict: new_predict})
         }
