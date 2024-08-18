@@ -19,8 +19,19 @@ if response.status_code == 200:
             if dados[2]!='':
                 equipas.append(dados[2])
 
-    with open("ligaPTtable.txt", "w", encoding="utf-8") as classificacao_file:
-        classificacao_file.write(str(equipas))
+    equipas_str = ', '.join([f'"{e}"' for e in equipas])
+    nova_linha_js = f"{{ player: 0, predict: [{equipas_str}]}},\n"
+
+    with open("data.js", "r", encoding="utf-8") as file:
+        lines = file.readlines()
+
+    # Localizar e substituir a linha específica no arquivo JS
+    with open("data.js", "w", encoding="utf-8") as file:
+        for line in lines:
+            if line.strip().startswith("{ player: 0, predict: ["):
+                file.write(f"            {nova_linha_js}")
+            else:
+                file.write(line)
 
 
 else:

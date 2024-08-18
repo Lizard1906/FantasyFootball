@@ -197,7 +197,6 @@ trophies.forEach(trophy => {
             });
             new_standings.push({player: i, predict: new_predict})
         }
-        console.log(new_standings)
         trophy.standings = new_standings;
         // 1º-2ºlugar: 4 pontos
         // 3º-5º: 1
@@ -228,7 +227,6 @@ trophies.forEach(trophy => {
         });
 
         trophy.data = playersData;
-        console.log(trophy)
     }
 
 });
