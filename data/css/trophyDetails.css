@@ -129,6 +129,12 @@ tr.odd {
     border-color: #252525;
 }
 
+.ptbracket {
+    background-color: #740101;
+    color: #d4ff00;
+    border-color: #197225;
+}
+
 .premier {
     background-color: #37003c;
     color: #fff;
