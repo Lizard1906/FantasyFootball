@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import datetime
 
 url = 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic'
 
@@ -20,7 +21,8 @@ if response.status_code == 200:
                 equipas.append(dados[2])
 
     equipas_str = ', '.join([f'"{e}"' for e in equipas])
-    nova_linha_js = f"{{ player: 0, predict: [{equipas_str}]}},\n"
+    nova_linha_js = f"            {{ player: 0, predict: [{equipas_str}]}},\n"
+    update_info = f"        source: {{name: 'Liga Portugal', url: '{url}', update: '{datetime.datetime.now()}'}},\n"
 
     with open("data.js", "r", encoding="utf-8") as file:
         lines = file.readlines()
@@ -29,7 +31,9 @@ if response.status_code == 200:
     with open("data.js", "w", encoding="utf-8") as file:
         for line in lines:
             if line.strip().startswith("{ player: 0, predict: ["):
-                file.write(f"            {nova_linha_js}")
+                file.write(f"{nova_linha_js}")
+            elif line.strip().startswith("source"):
+                file.write(update_info)
             else:
                 file.write(line)
 

@@ -121,15 +121,68 @@ function getNumberTrophiesPast(id, name, winner) {
 }
 
 
-trophyGraph = document.getElementById('trophy-graph');
-
-let html = "";
 
 if (foundTrophy.graph) {
     const playerData = foundTrophy.graph;
 
     google.charts.load('current', { 'packages': ['corechart'] });
     google.charts.setOnLoadCallback(() => drawChart(playerData));
+}
+
+if (foundTrophy.standings) {
+    console.log(foundTrophy)
+    document.getElementById('table-predicts').classList.remove('d-none')
+    let tables = document.getElementById('table-predicts')
+
+    foundTrophy.standings.forEach(player => {
+
+        let tableCol = document.createElement('div');
+        tableCol.classList.add('col-12', 'p-4', 'pb-0')    
+        if (foundTrophy.standings.length == 2) {
+            tableCol.classList.add('col-md-6')
+        }    
+
+        let table = document.createElement('table')
+        table.classList.add('table', 'table-striped', 'table-bordered', 'table-sm')
+        table.style.width = '100%'
+        table.style.fontSize = 'large'
+        table.innerHTML = `
+            <thead>
+                <tr>
+                    <th colspan="3" class="text-center">${fantasy.players[player.player-1].name}</th>
+                </tr>
+            </thead>
+        `
+        let tbody = document.createElement('tbody')
+        player.predict.forEach((team, index) => {
+            let tr = document.createElement('tr')
+            tr.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${team.team}</td>
+                <td style="color: ${team.points > 0 ? 'green' : team.points < 0 ? 'red' : ''};">
+                    ${team.points > 0 ? '+' : ''}${team.points}
+                </td>
+            `;
+        tbody.appendChild(tr)
+        }
+        )
+        table.appendChild(tbody)
+        tableCol.appendChild(table)
+        tables.appendChild(tableCol)
+        console.log(tables)
+              
+
+    })
+
+    let text = document.createElement('div')
+    text.classList.add('text-center', 'text-muted', 'pb-2');
+    text.style.fontSize = '0.75rem'; // Tamanho de fonte menor
+    text.innerHTML = `
+        Source: <a href="${foundTrophy.source.url}" style="color: inherit" target="_blank">${foundTrophy.source.name}</a> - Last Updated: ${foundTrophy.source.update.split('.')[0]}
+    `
+    tables.appendChild(text)
+
+
 }
 
 
