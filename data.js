@@ -100,26 +100,26 @@ const trophies = [
     {
         id: 'pt25bracket', code: 'ptbracket', date: 2025, name: 'Portugal Bracket', category: 'pt',
         standings: [
-            { player: 0, predict: ['Santa Clara', 'FC Porto', 'Sporting CP', 'FC Famalicão', 'Moreirense FC', 'Boavista FC', 'Vitória SC', 'AVS', 'CD Nacional', 'Estrela Amadora', 'SC Braga', 'SC Farense', 'Casa Pia AC', 'FC Arouca', 'Rio Ave FC', 'SL Benfica', 'Estoril Praia', 'Gil Vicente FC']},
+            { player: 0, predict: ["Sporting CP", "FC Famalicão", "FC Porto", "Moreirense FC", "Vitória SC", "SC Braga", "Santa Clara", "SL Benfica", "Boavista FC", "Gil Vicente FC", "Rio Ave FC", "AVS", "Estrela Amadora", "CD Nacional", "SC Farense", "FC Arouca", "Estoril Praia", "Casa Pia AC"]},
             { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
             { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AVS, BFC]},
         ],
-        source: {name: 'Liga Portugal', url: 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic', update: '2024-08-14 21:56:39.543394'},
+        source: {name: 'Liga Portugal', url: 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic', update: '2024-08-22 21:36:57.579422'},
         finished: false
     },
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [0] },
-            { player: 2, color: 'green', evolution: [0] },
+            { player: 1, color: 'red', evolution: [68] },
+            { player: 2, color: 'green', evolution: [54] },
         ],
         finished: false
     },
     {
         id: 'en25draft', code: 'endraft', date: 2025, name: 'English Draft', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [0] },
-            { player: 2, color: 'green', evolution: [0] },
+            { player: 1, color: 'red', evolution: [88] },
+            { player: 2, color: 'green', evolution: [55] },
         ],
         finished: false
     },
