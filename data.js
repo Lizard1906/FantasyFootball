@@ -171,7 +171,7 @@ trophies.forEach(trophy => {
                     if (realPlace === predictPlace) {
                         points_scored += 1
                     }
-                } else if (realPlace == predictPlace == 5 ) {
+                } else if (realPlace == predictPlace && realPlace == 5 ) {
                     points_scored += 2
                 } else if (6 <= realPlace && realPlace <= 10 && 6 <= predictPlace && predictPlace <= 10 ) {
                     points_scored += 2
