@@ -102,11 +102,11 @@ const trophies = [
     {
         id: 'pt25bracket', code: 'ptbracket', date: 2025, name: 'Portugal Bracket', category: 'pt',
         standings: [
-            { player: 0, predict: ["Sporting CP", "FC Famalicão", "FC Porto", "Santa Clara", "Vitória SC", "SC Braga", "SL Benfica", "Moreirense FC", "Rio Ave FC", "Gil Vicente FC", "Boavista FC", "AVS", "CD Nacional", "FC Arouca", "Casa Pia AC", "Estoril Praia", "Estrela Amadora", "SC Farense"]},
+            { player: 0, predict: ["Sporting CP", "FC Porto", "SL Benfica", "Santa Clara", "Vitória SC", "FC Famalicão", "SC Braga", "Moreirense FC", "Gil Vicente FC", "Casa Pia AC", "Rio Ave FC", "AFS", "FC Arouca", "Estoril Praia", "Boavista FC", "CD Nacional", "Estrela Amadora", "SC Farense"]},
             { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
             { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AVS, BFC]},
         ],
-        source: {name: 'Liga Portugal', url: 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic', update: '2024-09-02 22:37:04.042847'},
+        source: {name: 'SAPO Desporto', url: 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic', update: '2024-09-28 15:06:18.567270'},
         finished: false
     },
     {
