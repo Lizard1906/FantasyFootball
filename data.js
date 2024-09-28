@@ -134,7 +134,7 @@ const trophies = [
         finished: false
     },
     {
-        id: 'ucl25bracket', code: 'ucbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
+        id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
         standings: [
             { player: 0, predict: ["Bayern M.", "Celtic", "B. Leverkusen", "Aston Villa", "B. Dortmund", "Sparta Praha", "Liverpool", "Juventus", "Real Madrid", "Sporting CP", "SL Benfica", "Atl. Madrid", "Brest", "Monaco", "PSG", "Arsenal", "Atalanta", "Bolonha", "Inter", "Man. City", "Shakhtar", "Barcelona", "Leipzig", "Sturm Graz", "Crvena Zvezda", "Girona", "PSV", "Estugarda", "Milan", "Lille", "Club Brugge", "Salzburg", "Young Boys", "Slovan Bratislava", "Feyenoord", "D. Zagreb"]},
             { player: 1, predict: [BAR, MCI, RMA, BAY, PSG, ARS, LIV, SLB, SCP, MIL, INT, DOR, ATM, LPZ, JUV, ATA, AVI, LEV, FEY, STT, PSV, CEL, SHK, SZB, GIR, STU, BOL, CZV, DZG, YB, MON, LOSC, BRE, BRU, SPA, SLO]},
@@ -229,7 +229,7 @@ trophies.forEach(trophy => {
             // Se errarmos a posição por 5 ou mais lugares, menos (abs(real-predict)-5+2 ) pontos
         }
 
-        if (trophy.code === 'ucbracket') {  
+        if (trophy.code === 'uclbracket') {  
             let realTable = trophy.standings[0];
             let new_standings = [];
             for (let i=1; i<trophy.standings.length; i++) {
