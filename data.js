@@ -112,8 +112,8 @@ const trophies = [
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [68, 126, 181] },
-            { player: 2, color: 'green', evolution: [54, 122, 173] },
+            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267] },
+            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296] },
         ],
         finished: false
     },
@@ -134,6 +134,22 @@ const trophies = [
         finished: false
     },
     {
+        id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'champ',
+        graph: [
+            { player: 1, color: 'red', evolution: [95] },
+            { player: 2, color: 'green', evolution: [86] },
+        ],
+        finished: false
+    },
+    {
+        id: 'ucl25predict', code: 'uclpredictor', date: 2025, name: 'Champions Predict', category: 'champ',
+        graph: [
+            { player: 1, color: 'red', evolution: [22] },
+            { player: 2, color: 'green', evolution: [28] },
+        ],
+        finished: false
+    },
+    {
         id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
         standings: [
             { player: 0, predict: ["Bayern M.", "Celtic", "B. Leverkusen", "Aston Villa", "B. Dortmund", "Sparta Praha", "Liverpool", "Juventus", "Real Madrid", "Sporting CP", "SL Benfica", "Atl. Madrid", "Brest", "Monaco", "PSG", "Arsenal", "Atalanta", "Bolonha", "Inter", "Man. City", "Shakhtar", "Barcelona", "Leipzig", "Sturm Graz", "Crvena Zvezda", "Girona", "PSV", "Estugarda", "Milan", "Lille", "Club Brugge", "Salzburg", "Young Boys", "Slovan Bratislava", "Feyenoord", "D. Zagreb"]},
@@ -141,6 +157,14 @@ const trophies = [
             { player: 2, predict: [BAR, RMA, MCI, BAY, LIV, JUV, PSG, SCP, ATA, INT, AVI, DOR, MIL, LEV, ATM, ARS, SLB, CEL, STT, GIR, FEY, LPZ, SZB, PSV, MON, BOL, LOSC, SHK, BRE, STU, YB, CZV, DZG, BRU, SPA, SLO]},
         ],
         source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2024-09-28 13:24:15.853314'},
+        finished: false
+    },
+    {
+        id: 'uel25predict', code: 'uelpredictor', date: 2025, name: 'Europa Predict', category: 'uel',
+        graph: [
+            { player: 1, color: 'red', evolution: [37] },
+            { player: 2, color: 'green', evolution: [47] },
+        ],
         finished: false
     },
 ];
