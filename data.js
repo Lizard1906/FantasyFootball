@@ -143,6 +143,14 @@ const trophies = [
         source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2024-09-28 13:24:15.853314'},
         finished: false
     },
+    {
+        id: 'uel25predict', code: 'uelpredictor', date: 2025, name: 'Europa Predict', category: 'uel',
+        graph: [
+            { player: 1, color: 'red', evolution: [37] },
+            { player: 2, color: 'green', evolution: [47] },
+        ],
+        finished: false
+    },
 ];
 
 trophies.forEach(trophy => {
