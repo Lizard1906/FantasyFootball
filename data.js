@@ -112,8 +112,8 @@ const trophies = [
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [68, 126, 181] },
-            { player: 2, color: 'green', evolution: [54, 122, 173] },
+            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267] },
+            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296] },
         ],
         finished: false
     },
