@@ -134,6 +134,22 @@ const trophies = [
         finished: false
     },
     {
+        id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'champ',
+        graph: [
+            { player: 1, color: 'red', evolution: [95] },
+            { player: 2, color: 'green', evolution: [86] },
+        ],
+        finished: false
+    },
+    {
+        id: 'ucl25predict', code: 'uclpredictor', date: 2025, name: 'Champions Predict', category: 'champ',
+        graph: [
+            { player: 1, color: 'red', evolution: [22] },
+            { player: 2, color: 'green', evolution: [28] },
+        ],
+        finished: false
+    },
+    {
         id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
         standings: [
             { player: 0, predict: ["Bayern M.", "Celtic", "B. Leverkusen", "Aston Villa", "B. Dortmund", "Sparta Praha", "Liverpool", "Juventus", "Real Madrid", "Sporting CP", "SL Benfica", "Atl. Madrid", "Brest", "Monaco", "PSG", "Arsenal", "Atalanta", "Bolonha", "Inter", "Man. City", "Shakhtar", "Barcelona", "Leipzig", "Sturm Graz", "Crvena Zvezda", "Girona", "PSV", "Estugarda", "Milan", "Lille", "Club Brugge", "Salzburg", "Young Boys", "Slovan Bratislava", "Feyenoord", "D. Zagreb"]},
