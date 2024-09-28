@@ -22,7 +22,7 @@ const players = [
 ];
 
 // siglas equipas PT
-AVS="AVS"; FCA="FC Arouca"; SLB="SL Benfica"; BFC="Boavista FC"; CPI = "Casa Pia AC", GDEP = "Estoril Praia"; FCEA="Estrela Amadora"; FCF="FC Famalicão"; SCF="SC Farense"; GVFC="Gil Vicente FC"; MFC="Moreirense FC"; CDN="CD Nacional"; FCP="FC Porto"; RAFC="Rio Ave FC"; GDSC="Santa Clara"; SCB="SC Braga"; SCP="Sporting CP"; VSC="Vitória SC"
+AVS="AFS"; FCA="FC Arouca"; SLB="SL Benfica"; BFC="Boavista FC"; CPI = "Casa Pia AC", GDEP = "Estoril Praia"; FCEA="Estrela Amadora"; FCF="FC Famalicão"; SCF="SC Farense"; GVFC="Gil Vicente FC"; MFC="Moreirense FC"; CDN="CD Nacional"; FCP="FC Porto"; RAFC="Rio Ave FC"; GDSC="Santa Clara"; SCB="SC Braga"; SCP="Sporting CP"; VSC="Vitória SC"
 // siglas equipas UCL
 BAY="Bayern M."; CEL="Celtic"; LEV="B. Leverkusen"; AVI="Aston Villa"; DOR="B. Dortmund"; SPA="Sparta Praha"; LIV="Liverpool"; JUV="Juventus"; RMA="Real Madrid"; ATM="Atl. Madrid"; BRE="Brest"; MON="Monaco"; PSG="PSG"; ARS="Arsenal"; ATA="Atalanta"; BOL="Bolonha"; INT="Inter"; MCI="Man. City"; SHK="Shakhtar"; BAR="Barcelona"; LPZ="Leipzig"; STU="Sturm Graz"; CZV="Crvena Zvezda"; GIR="Girona"; PSV="PSV"; STT="Estugarda"; MIL="Milan"; LOSC="Lille"; BRU="Club Brugge"; SZB="Salzburg"; YB="Young Boys"; SLO="Slovan Bratislava"; FEY="Feyenoord"; DZG="D. Zagreb"
 
@@ -200,31 +200,31 @@ trophies.forEach(trophy => {
 
                     // pontuação por lugares
                     if (1 <= realPlace && realPlace <= 2 && 1 <= predictPlace && predictPlace <= 2 ) {
-                        points_scored += 3
-                        if (realPlace === predictPlace) {
-                            points_scored += 4
-                        }
-                    } else if (3 <= realPlace && realPlace <= 4 && 3 <= predictPlace && predictPlace <= 4 ) {
-                        points_scored += 3
-                        if (realPlace === predictPlace) {
-                            points_scored += 1
-                        }
-                    } else if (realPlace == predictPlace && realPlace == 5 ) {
-                        points_scored += 2
-                    } else if (6 <= realPlace && realPlace <= 10 && 6 <= predictPlace && predictPlace <= 10 ) {
-                        points_scored += 2
-                        if (realPlace === predictPlace) {
-                            points_scored += 3
-                        }
-                    } else if (11 <= realPlace && realPlace <= 15 && 11 <= predictPlace && predictPlace <= 15 ) {
-                        points_scored += 2
-                        if (realPlace === predictPlace) {
-                            points_scored += 3
-                        }
-                    } else if (16 <= realPlace && realPlace <= 18 && 16 <= predictPlace && predictPlace <= 18 ) {
                         points_scored += 4
                         if (realPlace === predictPlace) {
+                            points_scored += 5
+                        }
+                    } else if (3 <= realPlace && realPlace <= 4 && 3 <= predictPlace && predictPlace <= 4 ) {
+                        points_scored += 4
+                        if (realPlace === predictPlace) {
+                            points_scored += 2
+                        }
+                    } else if (realPlace == predictPlace && realPlace == 5 ) {
+                        points_scored += 3
+                    } else if (6 <= realPlace && realPlace <= 10 && 6 <= predictPlace && predictPlace <= 10 ) {
+                        points_scored += 3
+                        if (realPlace === predictPlace) {
                             points_scored += 4
+                        }
+                    } else if (11 <= realPlace && realPlace <= 15 && 11 <= predictPlace && predictPlace <= 15 ) {
+                        points_scored += 3
+                        if (realPlace === predictPlace) {
+                            points_scored += 4
+                        }
+                    } else if (16 <= realPlace && realPlace <= 18 && 16 <= predictPlace && predictPlace <= 18 ) {
+                        points_scored += 5
+                        if (realPlace === predictPlace) {
+                            points_scored += 5
                         }
                     }
 
@@ -238,17 +238,17 @@ trophies.forEach(trophy => {
                 new_standings.push({player: i, predict: new_predict})
             }
             trophy.standings = new_standings;
-            // 1º-2ºlugar: 4 pontos
-            // 3º-5º: 1
-            // 6º-15º: 3
-            // 16º-18º: 4
+            // 1º-2ºlugar: 5 pontos
+            // 3º-5º: 2
+            // 6º-15º: 4
+            // 16º-18º: 5
             
-            // equipa apurada para champions (1º e 2º): 3 pontos
-            // equipa apurada para liga europa (3º e 4º): 3 pontos
-            // equipa apurada para liga conference (5º): 1 ponto
-            // equipa na 1 metade da tabela (exceto top 5): 2 pontos
-            // equipa na 2 metade da tabela (exceto despromocao): 2 pontos
-            // equipa em zona de despromocao: 4 pontos});
+            // equipa apurada para champions (1º e 2º): 4 pontos
+            // equipa apurada para liga europa (3º e 4º): 4 pontos
+            // equipa apurada para liga conference (5º): 2 ponto
+            // equipa na 1 metade da tabela (exceto top 5): 3 pontos
+            // equipa na 2 metade da tabela (exceto despromocao): 3 pontos
+            // equipa em zona de despromocao: 5 pontos});
 
             // Se errarmos a posição por 5 ou mais lugares, menos (abs(real-predict)-5+2 ) pontos
         }
