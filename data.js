@@ -136,34 +136,34 @@ const trophies = [
     {
         id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'champ',
         graph: [
-            { player: 1, color: 'red', evolution: [95, 182, 259] },
-            { player: 2, color: 'green', evolution: [86, 149, 218] },
+            { player: 1, color: 'red', evolution: [95, 182, 259, 319] },
+            { player: 2, color: 'green', evolution: [86, 149, 218, 311] },
         ],
         finished: false
     },
     {
         id: 'ucl25predict', code: 'uclpredictor', date: 2025, name: 'Champions Predict', category: 'champ',
         graph: [
-            { player: 1, color: 'red', evolution: [22, 50, 87] },
-            { player: 2, color: 'green', evolution: [28, 51, 99] },
+            { player: 1, color: 'red', evolution: [22, 50, 87, 102] },
+            { player: 2, color: 'green', evolution: [28, 51, 99, 122] },
         ],
         finished: false
     },
     {
         id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
         standings: [
-            { player: 0, predict: ["Aston Villa", "Liverpool", "Man. City", "Monaco", "Brest", "B. Leverkusen", "Inter", "Sporting CP", "Arsenal", "Barcelona", "B. Dortmund", "Real Madrid", "SL Benfica", "Juventus", "Lille", "Feyenoord", "Atalanta", "Estugarda", "PSG", "Celtic", "Sparta Praha", "D. Zagreb", "Bayern M.", "Girona", "Milan", "Club Brugge", "Atl. Madrid", "PSV", "Bolonha", "Shakhtar", "Leipzig", "Sturm Graz", "Crvena Zvezda", "Salzburg", "Young Boys", "Slovan Bratislava"]},
+            { player: 0, predict: ["Liverpool", "Sporting CP", "Monaco", "Brest", "Inter", "Barcelona", "B. Dortmund", "Aston Villa", "Atalanta", "Man. City", "Juventus", "Arsenal", "B. Leverkusen", "Lille", "Celtic", "D. Zagreb", "Bayern M.", "Real Madrid", "SL Benfica", "Milan", "Feyenoord", "Club Brugge", "Atl. Madrid", "PSV", "PSG", "Sparta Praha", "Estugarda", "Shakhtar", "Girona", "Salzburg", "Bolonha", "Leipzig", "Sturm Graz", "Young Boys", "Crvena Zvezda", "Slovan Bratislava"]},
             { player: 1, predict: [BAR, MCI, RMA, BAY, PSG, ARS, LIV, SLB, SCP, MIL, INT, DOR, ATM, LPZ, JUV, ATA, AVI, LEV, FEY, STT, PSV, CEL, SHK, SZB, GIR, STU, BOL, CZV, DZG, YB, MON, LOSC, BRE, BRU, SPA, SLO]},
             { player: 2, predict: [BAR, RMA, MCI, BAY, LIV, JUV, PSG, SCP, ATA, INT, AVI, DOR, MIL, LEV, ATM, ARS, SLB, CEL, STT, GIR, FEY, LPZ, SZB, PSV, MON, BOL, LOSC, SHK, BRE, STU, YB, CZV, DZG, BRU, SPA, SLO]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2024-10-24 22:24:32.252870'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2024-11-07 23:39:03.908152'},
         finished: false
     },
     {
         id: 'uel25predict', code: 'uelpredictor', date: 2025, name: 'Europa Predict', category: 'uel',
         graph: [
-            { player: 1, color: 'red', evolution: [37, 37, 72] },
-            { player: 2, color: 'green', evolution: [47, 73, 108] },
+            { player: 1, color: 'red', evolution: [37, 37, 72, 109] },
+            { player: 2, color: 'green', evolution: [47, 73, 108, 145] },
         ],
         finished: false
     },
