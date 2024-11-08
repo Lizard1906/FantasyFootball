@@ -200,9 +200,9 @@ trophies.forEach(trophy => {
 
                     // pontuação por lugares
                     if (1 <= realPlace && realPlace <= 2 && 1 <= predictPlace && predictPlace <= 2 ) {
-                        points_scored += 4
+                        points_scored += 3
                         if (realPlace === predictPlace) {
-                            points_scored += 5
+                            points_scored += 2
                         }
                     } else if (3 <= realPlace && realPlace <= 4 && 3 <= predictPlace && predictPlace <= 4 ) {
                         points_scored += 4
@@ -210,16 +210,16 @@ trophies.forEach(trophy => {
                             points_scored += 2
                         }
                     } else if (realPlace == predictPlace && realPlace == 5 ) {
-                        points_scored += 3
+                        points_scored += 4 + 2
                     } else if (6 <= realPlace && realPlace <= 10 && 6 <= predictPlace && predictPlace <= 10 ) {
-                        points_scored += 3
+                        points_scored += 2
                         if (realPlace === predictPlace) {
-                            points_scored += 4
+                            points_scored += 5
                         }
                     } else if (11 <= realPlace && realPlace <= 15 && 11 <= predictPlace && predictPlace <= 15 ) {
                         points_scored += 3
                         if (realPlace === predictPlace) {
-                            points_scored += 4
+                            points_scored += 5
                         }
                     } else if (16 <= realPlace && realPlace <= 18 && 16 <= predictPlace && predictPlace <= 18 ) {
                         points_scored += 5
@@ -229,8 +229,7 @@ trophies.forEach(trophy => {
                     }
 
                     if (Math.abs(predictPlace-realPlace)>=5) {
-                        points_scored -= 2
-                        points_scored -= (Math.abs(predictPlace-realPlace)-5)
+                        points_scored -= Math.floor(Math.abs(predictPlace-realPlace)/2)
                     }
 
                     new_predict.push({team:t, realPlace: realPlace, points: points_scored})
@@ -238,19 +237,19 @@ trophies.forEach(trophy => {
                 new_standings.push({player: i, predict: new_predict})
             }
             trophy.standings = new_standings;
-            // 1º-2ºlugar: 5 pontos
+            // 1º-2ºlugar: 2 pontos
             // 3º-5º: 2
-            // 6º-15º: 4
+            // 6º-15º: 5
             // 16º-18º: 5
             
-            // equipa apurada para champions (1º e 2º): 4 pontos
+            // equipa apurada para champions (1º e 2º): 3 pontos
             // equipa apurada para liga europa (3º e 4º): 4 pontos
-            // equipa apurada para liga conference (5º): 2 ponto
-            // equipa na 1 metade da tabela (exceto top 5): 3 pontos
+            // equipa apurada para liga conference (5º): 4 ponto
+            // equipa na 1 metade da tabela (exceto top 5): 2 pontos
             // equipa na 2 metade da tabela (exceto despromocao): 3 pontos
             // equipa em zona de despromocao: 5 pontos});
 
-            // Se errarmos a posição por 5 ou mais lugares, menos (abs(real-predict)-5+2 ) pontos
+            // Se errarmos a posição por 5 ou mais lugares, menos (diff pontos/2)
         }
 
         if (trophy.code === 'uclbracket') {  
@@ -265,23 +264,22 @@ trophies.forEach(trophy => {
 
                     // pontuação por lugar exato
                     if (realPlace === predictPlace) {
-                        points_scored += 4
+                        points_scored += 5
                     }
 
                     // pontuação por intervalo de lugares
                     if (1 <= realPlace && realPlace <= 8 && 1 <= predictPlace && predictPlace <= 8 ) {
-                        points_scored += 3
+                        points_scored += 5
                     } else if (9 <= realPlace && realPlace <= 16 && 9 <= predictPlace && predictPlace <= 16 ) {
-                        points_scored += 4
+                        points_scored += 5
                     } else if (17 <= realPlace && realPlace <= 24 && 17 <= predictPlace && predictPlace <= 24 ) {
-                        points_scored += 4
+                        points_scored += 5
                     } else if (25 <= realPlace && realPlace <= 36 && 25 <= predictPlace && predictPlace <= 36 ) {
-                        points_scored += 3
+                        points_scored += 5
                     }
 
                     if (Math.abs(predictPlace-realPlace)>=10) {
-                        points_scored -= 2
-                        points_scored -= (Math.abs(predictPlace-realPlace)-3)
+                        points_scored -= Math.floor(Math.abs(predictPlace-realPlace)/3)
                     }
 
                     new_predict.push({team:t, realPlace: realPlace, points: points_scored})
@@ -291,12 +289,12 @@ trophies.forEach(trophy => {
             trophy.standings = new_standings;
             // acertar lugar exato: 5 pontos
             
-            // equipa apurada para champions (1º a 8º): 3 pontos
-            // equipa apurada para play-offs top (9º a 16º): 4 pontos
-            // equipa apurada para play-offs bottom (17º a 24º): 4 pontos
-            // equipa nao apurada (25º a 36º): 3 pontos
+            // equipa apurada para champions (1º a 8º): 5 pontos
+            // equipa apurada para play-offs top (9º a 16º): 5 pontos
+            // equipa apurada para play-offs bottom (17º a 24º): 5 pontos
+            // equipa nao apurada (25º a 36º): 5 pontos
 
-            // Se errarmos a posição por 5 ou mais lugares, menos (abs(real-predict)-5+2 ) pontos
+            // Se errarmos a posição por 10 ou mais lugares, menos (diff pontos/2)
         }
 
         // tabela data
