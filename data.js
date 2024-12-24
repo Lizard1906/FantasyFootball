@@ -159,8 +159,8 @@ const trophies = [
     {
         id: 'uel25predict', code: 'uelpredictor', date: 2025, name: 'Europa Predict', category: 'uel',
         graph: [
-            { player: 1, color: 'red', evolution: [37, 37, 72, 109] },
-            { player: 2, color: 'green', evolution: [47, 73, 108, 145] },
+            { player: 1, color: 'red', evolution: [37, 37, 72, 109, 139, 165] },
+            { player: 2, color: 'green', evolution: [47, 73, 108, 145, 194, 215] },
         ],
         finished: false
     },
