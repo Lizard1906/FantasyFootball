@@ -52,11 +52,14 @@ function getTrophyDataRows(id, trophyData) {
     const trophy = trophies.find((trophy) => trophy.id === id);
     if (trophy) {
         const rowClass = trophy.code;
+        headers = Object.keys(trophyData[0])
         html += `
             <tr class="${rowClass}">
                 <th style="width:20%">Pos</th>
                 <th>Player</th>
-                <th style="width:25%">Points</th>
+                ${headers.includes('points') ? '<th style="width:25%">Points</th>' : ''}
+                ${headers.includes('V') ? '<th style="width:20%">V</th>' : ''}
+                ${headers.includes('score') ? '<th>Score</th>' : ''}
             </tr>
         `;
 
@@ -66,7 +69,9 @@ function getTrophyDataRows(id, trophyData) {
                 <tr class="${rowClass}">
                     <td>${dado.pos}</td>
                     <td>${fantasy.players[dado.player-1].name}</td>
-                    <td>${dado.points}</td>
+                    ${headers.includes('points') ? `<td>${dado.points}</td>` : ''}
+                    ${headers.includes('V') ? `<td>${dado.V}</td>` : ''}
+                    ${headers.includes('score') ? `<td>${dado.score}</td>` : ''}
                 </tr>
             `;
         });

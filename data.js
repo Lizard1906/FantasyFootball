@@ -119,10 +119,7 @@ const trophies = [
     },
     {
         id: 'en25draft', code: 'endraft', date: 2025, name: 'English Draft', category: 'en',
-        graph: [
-            { player: 1, color: 'red', evolution: [88, 155, 224] },
-            { player: 2, color: 'green', evolution: [55, 124, 168] },
-        ],
+        data: [{ pos: 1, player: 1, V: 10, score: 975 }, { pos: 2, player: 2, V: 7, score: 859 }], 
         finished: false
     },
     {
