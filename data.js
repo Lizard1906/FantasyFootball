@@ -102,18 +102,18 @@ const trophies = [
     {
         id: 'pt25bracket', code: 'ptbracket', date: 2025, name: 'Portugal Bracket', category: 'pt',
         standings: [
-            { player: 0, predict: ["Sporting CP", "SL Benfica", "FC Porto", "Santa Clara", "SC Braga", "Vitória SC", "Moreirense FC", "FC Famalicão", "Rio Ave FC", "Casa Pia AC", "Estoril Praia", "Gil Vicente FC", "Estrela Amadora", "Boavista FC", "AFS", "CD Nacional", "SC Farense", "FC Arouca"]},
+            { player: 0, predict: ["SL Benfica", "Sporting CP", "FC Porto", "SC Braga", "Santa Clara", "Vitória SC", "Casa Pia AC", "Moreirense FC", "FC Famalicão", "Gil Vicente FC", "Rio Ave FC", "Estrela Amadora", "Estoril Praia", "CD Nacional", "AFS", "Boavista FC", "SC Farense", "FC Arouca"]},
             { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
             { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AVS, BFC]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic', update: '2024-12-13 00:01:14.544131'},
+        source: {name: 'SAPO Desporto', url: 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic', update: '2024-12-24 12:54:47.233564'},
         finished: false
     },
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881] },
-            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757] },
+            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013] },
+            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844] },
         ],
         finished: false
     },
