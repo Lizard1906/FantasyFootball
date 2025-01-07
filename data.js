@@ -102,24 +102,24 @@ const trophies = [
     {
         id: 'pt25bracket', code: 'ptbracket', date: 2025, name: 'Portugal Bracket', category: 'pt',
         standings: [
-            { player: 0, predict: ["SL Benfica", "Sporting CP", "FC Porto", "SC Braga", "Santa Clara", "Vitória SC", "Casa Pia AC", "Moreirense FC", "FC Famalicão", "Gil Vicente FC", "Rio Ave FC", "Estrela Amadora", "Estoril Praia", "CD Nacional", "AFS", "Boavista FC", "SC Farense", "FC Arouca"]},
+            { player: 0, predict: ["Sporting CP", "FC Porto", "SL Benfica", "SC Braga", "Santa Clara", "Vitória SC", "Casa Pia AC", "Moreirense FC", "FC Famalicão", "Rio Ave FC", "Gil Vicente FC", "Estoril Praia", "Estrela Amadora", "AFS", "FC Arouca", "SC Farense", "CD Nacional", "Boavista FC"]},
             { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
             { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AVS, BFC]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic', update: '2024-12-24 12:54:47.233564'},
+        source: {name: 'SAPO Desporto', url: 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic', update: '2025-01-07 11:32:56.264585'},
         finished: false
     },
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013] },
-            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844] },
+            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013, 1069, 1131, 1196] },
+            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844, 895, 976, 1041] },
         ],
         finished: false
     },
     {
         id: 'en25draft', code: 'endraft', date: 2025, name: 'English Draft', category: 'en',
-        data: [{ pos: 1, player: 1, V: 10, score: 975 }, { pos: 2, player: 2, V: 7, score: 859 }], 
+        data: [{ pos: 1, player: 1, V: 11, score: 1140 }, { pos: 2, player: 2, V: 9, score: 1018 }], 
         finished: false
     },
     {
