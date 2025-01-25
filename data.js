@@ -112,14 +112,14 @@ const trophies = [
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013, 1069, 1131, 1196] },
-            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844, 895, 976, 1041] },
+            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013, 1069, 1131, 1196, 1254, 1293] },
+            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844, 895, 976, 1041, 1120, 1158] },
         ],
         finished: false
     },
     {
         id: 'en25draft', code: 'endraft', date: 2025, name: 'English Draft', category: 'en',
-        data: [{ pos: 1, player: 1, V: 11, score: 1140 }, { pos: 2, player: 2, V: 9, score: 1018 }], 
+        data: [{ pos: 1, player: 1, V: 11, score: 1214 }, { pos: 2, player: 2, V: 11, score: 1125 }], 
         finished: false
     },
     {
@@ -133,34 +133,34 @@ const trophies = [
     {
         id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'champ',
         graph: [
-            { player: 1, color: 'red', evolution: [95, 182, 259, 319, 391, 457] },
-            { player: 2, color: 'green', evolution: [86, 149, 218, 311, 404, 463] },
+            { player: 1, color: 'red', evolution: [95, 182, 259, 319, 391, 457, 540] },
+            { player: 2, color: 'green', evolution: [86, 149, 218, 311, 404, 463, 542] },
         ],
         finished: false
     },
     {
         id: 'ucl25predict', code: 'uclpredictor', date: 2025, name: 'Champions Predict', category: 'champ',
         graph: [
-            { player: 1, color: 'red', evolution: [22, 50, 87, 102, 143, 169] },
-            { player: 2, color: 'green', evolution: [28, 51, 99, 122, 152, 177] },
+            { player: 1, color: 'red', evolution: [22, 50, 87, 102, 143, 169, 185] },
+            { player: 2, color: 'green', evolution: [28, 51, 99, 122, 152, 177, 179] },
         ],
         finished: false
     },
     {
         id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
         standings: [
-            { player: 0, predict: ["Liverpool", "Barcelona", "Arsenal", "B. Leverkusen", "Aston Villa", "Inter", "Brest", "Lille", "B. Dortmund", "Bayern M.", "Atl. Madrid", "Milan", "Atalanta", "Juventus", "SL Benfica", "Monaco", "Sporting CP", "Feyenoord", "Club Brugge", "Real Madrid", "Celtic", "Man. City", "PSV", "D. Zagreb", "PSG", "Estugarda", "Shakhtar", "Sparta Praha", "Sturm Graz", "Girona", "Crvena Zvezda", "Salzburg", "Bolonha", "Leipzig", "Slovan Bratislava", "Young Boys"]},
+            { player: 0, predict: ["Liverpool", "Barcelona", "Arsenal", "Inter", "Atl. Madrid", "Milan", "Atalanta", "B. Leverkusen", "Aston Villa", "Monaco", "Feyenoord", "Lille", "Brest", "B. Dortmund", "Bayern M.", "Real Madrid", "Juventus", "Celtic", "PSV", "Club Brugge", "SL Benfica", "PSG", "Sporting CP", "Estugarda", "Man. City", "D. Zagreb", "Shakhtar", "Bolonha", "Sparta Praha", "Leipzig", "Girona", "Crvena Zvezda", "Sturm Graz", "Salzburg", "Slovan Bratislava", "Young Boys"]},
             { player: 1, predict: [BAR, MCI, RMA, BAY, PSG, ARS, LIV, SLB, SCP, MIL, INT, DOR, ATM, LPZ, JUV, ATA, AVI, LEV, FEY, STT, PSV, CEL, SHK, SZB, GIR, STU, BOL, CZV, DZG, YB, MON, LOSC, BRE, BRU, SPA, SLO]},
             { player: 2, predict: [BAR, RMA, MCI, BAY, LIV, JUV, PSG, SCP, ATA, INT, AVI, DOR, MIL, LEV, ATM, ARS, SLB, CEL, STT, GIR, FEY, LPZ, SZB, PSV, MON, BOL, LOSC, SHK, BRE, STU, YB, CZV, DZG, BRU, SPA, SLO]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2024-12-13 00:01:12.421851'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2025-01-25 19:29:04.431217'},
         finished: false
     },
     {
         id: 'uel25predict', code: 'uelpredictor', date: 2025, name: 'Europa Predict', category: 'uel',
         graph: [
-            { player: 1, color: 'red', evolution: [37, 37, 72, 109, 139, 165] },
-            { player: 2, color: 'green', evolution: [47, 73, 108, 145, 194, 215] },
+            { player: 1, color: 'red', evolution: [37, 37, 72, 109, 139, 165, 202] },
+            { player: 2, color: 'green', evolution: [47, 73, 108, 145, 194, 215, 253] },
         ],
         finished: false
     },
