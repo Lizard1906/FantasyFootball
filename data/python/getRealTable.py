@@ -2,10 +2,7 @@ import datetime
 
 def getTable(trophy):
     url = trophies[trophy]
-    if trophy == "pt25bracket":
-        equipas = useParserLigaPortugal(url)
-    else:
-        equipas = useParserSapo(url)
+    equipas = useParserSapo(url)
 
     equipas_str = ', '.join([f'"{e}"' for e in equipas])
     nova_linha_js = f"            {{ player: 0, predict: [{equipas_str}]}},\n"
@@ -57,6 +54,7 @@ def useParserSapo(url):
     return equipas
 
 def useParserLigaPortugal(url):
+    # este parser era para o site da liga, mas tiveram um update portanto usa-se o parser do sapo
     import requests
     from bs4 import BeautifulSoup
 
@@ -82,7 +80,8 @@ def useParserLigaPortugal(url):
 
 trophies = {
     "ucl25bracket": "https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao",
-    "pt25bracket": "https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic"
+    # "pt25bracket": "https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic",
+    "pt25bracket": "https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao"
 }
 
 getTable("ucl25bracket")

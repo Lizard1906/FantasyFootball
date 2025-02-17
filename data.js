@@ -22,7 +22,7 @@ const players = [
 ];
 
 // siglas equipas PT
-AVS="AFS"; FCA="FC Arouca"; SLB="SL Benfica"; BFC="Boavista FC"; CPI = "Casa Pia AC", GDEP = "Estoril Praia"; FCEA="Estrela Amadora"; FCF="FC Famalicão"; SCF="SC Farense"; GVFC="Gil Vicente FC"; MFC="Moreirense FC"; CDN="CD Nacional"; FCP="FC Porto"; RAFC="Rio Ave FC"; GDSC="Santa Clara"; SCB="SC Braga"; SCP="Sporting CP"; VSC="Vitória SC"
+AVS="AVS"; FCA="FC Arouca"; SLB="SL Benfica"; BFC="Boavista FC"; CPI = "Casa Pia AC", GDEP = "Estoril Praia"; FCEA="Estrela Amadora"; FCF="FC Famalicão"; SCF="SC Farense"; GVFC="Gil Vicente FC"; MFC="Moreirense FC"; CDN="CD Nacional"; FCP="FC Porto"; RAFC="Rio Ave FC"; GDSC="Santa Clara"; SCB="SC Braga"; SCP="Sporting CP"; VSC="Vitória SC"
 // siglas equipas UCL
 BAY="Bayern M."; CEL="Celtic"; LEV="B. Leverkusen"; AVI="Aston Villa"; DOR="B. Dortmund"; SPA="Sparta Praha"; LIV="Liverpool"; JUV="Juventus"; RMA="Real Madrid"; ATM="Atl. Madrid"; BRE="Brest"; MON="Monaco"; PSG="PSG"; ARS="Arsenal"; ATA="Atalanta"; BOL="Bolonha"; INT="Inter"; MCI="Man. City"; SHK="Shakhtar"; BAR="Barcelona"; LPZ="Leipzig"; STU="Sturm Graz"; CZV="Crvena Zvezda"; GIR="Girona"; PSV="PSV"; STT="Estugarda"; MIL="Milan"; LOSC="Lille"; BRU="Club Brugge"; SZB="Salzburg"; YB="Young Boys"; SLO="Slovan Bratislava"; FEY="Feyenoord"; DZG="D. Zagreb"
 
@@ -102,11 +102,11 @@ const trophies = [
     {
         id: 'pt25bracket', code: 'ptbracket', date: 2025, name: 'Portugal Bracket', category: 'pt',
         standings: [
-            { player: 0, predict: ["Sporting CP", "FC Porto", "SL Benfica", "SC Braga", "Santa Clara", "Vitória SC", "Casa Pia AC", "Moreirense FC", "FC Famalicão", "Rio Ave FC", "Gil Vicente FC", "Estoril Praia", "Estrela Amadora", "AFS", "FC Arouca", "SC Farense", "CD Nacional", "Boavista FC"]},
+            { player: 0, predict: ["Sporting CP", "SL Benfica", "FC Porto", "SC Braga", "Santa Clara", "Casa Pia AC", "Vitória SC", "Estoril Praia", "Rio Ave FC", "Moreirense FC", "FC Famalicão", "FC Arouca", "CD Nacional", "Gil Vicente FC", "Estrela Amadora", "AVS", "SC Farense", "Boavista FC"]},
             { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
             { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AVS, BFC]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic', update: '2025-01-07 11:32:56.264585'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-02-17 22:32:10.520600'},
         finished: false
     },
     {
