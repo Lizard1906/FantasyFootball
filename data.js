@@ -31,7 +31,7 @@ const trophies = [
     { id: 'wc22', code: 'wc22', date: 2023, name: 'World Cup', category: 'world', data: [{ pos: 1, player: 1, points: null }, { pos: 2, player: 2, points: null }], finished: true },
     { id: 'pt23', code: 'ptbwin', date: 2023, name: 'Liga Portugal', category: 'pt', data: [{ pos: 1, player: 1, points: 2207 }, { pos: 2, player: 2, points: 2201 }], finished: true },
     { id: 'en23', code: 'premier', date: 2023, name: 'Premier League', category: 'en', data: [{ pos: 1, player: 2, points: 2581 }, { pos: 2, player: 1, points: 2552 }], finished: true },
-    { id: 'ucl23', code: 'champions', date: 2023, name: 'Champions League', category: 'champ', data: [{ pos: 1, player: 2, points: 903 }, { pos: 2, player: 1, points: 880 }, { pos: 3, player: 3, points: 165 }], finished: true },
+    { id: 'ucl23', code: 'champions', date: 2023, name: 'Champions League', category: 'ucl', data: [{ pos: 1, player: 2, points: 903 }, { pos: 2, player: 1, points: 880 }, { pos: 3, player: 3, points: 165 }], finished: true },
     // 2023-24
     {
         id: 'pt24', code: 'ptbetclic', date: 2024, name: 'Liga Portugal', category: 'pt',
@@ -59,7 +59,7 @@ const trophies = [
         finished: true
     },
     {
-        id: 'ucl24', code: 'champions', date: 2024, name: 'Champions League', category: 'champ',
+        id: 'ucl24', code: 'champions', date: 2024, name: 'Champions League', category: 'ucl',
         graph: [
             { player: 1, color: 'red', evolution: [66, 104, 156, 247, 307, 340, 397, 474, 515, 568, 614, 660, 730] },
             { player: 2, color: 'green', evolution: [62, 106, 171, 244, 328, 390, 439, 509, 552, 602, 644, 683, 752] },
@@ -67,7 +67,7 @@ const trophies = [
         finished: true
     },
     {
-        id: 'uclpredict24', code: 'uclpredictor', date: 2024, name: 'Champions Predict', category: 'champ',
+        id: 'uclpredict24', code: 'uclpredictor', date: 2024, name: 'Champions Predict', category: 'ucl',
         graph: [
             { player: 1, color: 'red', evolution: [54, 93, 155, 202, 231, 272, 314, 347, 364, 371, 376, 382, 392] },
             { player: 2, color: 'green', evolution: [52, 94, 159, 205, 243, 284, 310, 356, 375, 384, 387, 391, 409] },
@@ -131,7 +131,7 @@ const trophies = [
         finished: false
     },
     {
-        id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'champ',
+        id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'ucl',
         graph: [
             { player: 1, color: 'red', evolution: [95, 182, 259, 319, 391, 457, 540, 628, 727] },
             { player: 2, color: 'green', evolution: [86, 149, 218, 311, 404, 463, 542, 637, 709] },
@@ -139,7 +139,7 @@ const trophies = [
         finished: false
     },
     {
-        id: 'ucl25predict', code: 'uclpredictor', date: 2025, name: 'Champions Predict', category: 'champ',
+        id: 'ucl25predict', code: 'uclpredictor', date: 2025, name: 'Champions Predict', category: 'ucl',
         graph: [
             { player: 1, color: 'red', evolution: [22, 50, 87, 102, 143, 169, 185, 215, 252] },
             { player: 2, color: 'green', evolution: [28, 51, 99, 122, 152, 177, 179, 212, 256] },
@@ -337,7 +337,7 @@ trophies.forEach(trophy => {
 
 
 // sort trophies by importance
-const categoryOrder = ['pt', 'en', 'champ', 'world', 'euro'];
+const categoryOrder = ['pt', 'en', 'ucl', 'world', 'euro'];
 
 function compareCategories(a, b) {
     return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
