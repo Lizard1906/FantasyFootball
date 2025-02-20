@@ -100,7 +100,7 @@ const trophies = [
     },
     // 2024-25
     {
-        id: 'pt25bracket', code: 'ptbracket', date: 2025, name: 'Portugal Bracket', category: 'pt',
+        id: 'pt25battle', code: 'ptbattle', date: 2025, name: 'Portugal Battle', category: 'pt',
         standings: [
             { player: 0, predict: ["Sporting CP", "SL Benfica", "FC Porto", "SC Braga", "Santa Clara", "Casa Pia AC", "Vitória SC", "Estoril Praia", "Rio Ave FC", "Moreirense FC", "FC Famalicão", "FC Arouca", "CD Nacional", "Gil Vicente FC", "Estrela Amadora", "AVS", "SC Farense", "Boavista FC"]},
             { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
@@ -147,7 +147,7 @@ const trophies = [
         finished: false
     },
     {
-        id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
+        id: 'ucl25battle', code: 'uclbattle', date: 2025, name: 'Champions Battle', category: 'ucl',
         standings: [
             { player: 0, predict: ["Liverpool", "Barcelona", "Arsenal", "Inter", "Atl. Madrid", "B. Leverkusen", "Lille", "Aston Villa", "Atalanta", "B. Dortmund", "Real Madrid", "Bayern M.", "Milan", "PSV", "PSG", "SL Benfica", "Monaco", "Brest", "Feyenoord", "Juventus", "Celtic", "Man. City", "Sporting CP", "Club Brugge", "D. Zagreb", "Estugarda", "Shakhtar", "Bolonha", "Crvena Zvezda", "Sturm Graz", "Sparta Praha", "Leipzig", "Girona", "Salzburg", "Slovan Bratislava", "Young Boys"]},
             { player: 1, predict: [BAR, MCI, RMA, BAY, PSG, ARS, LIV, SLB, SCP, MIL, INT, DOR, ATM, LPZ, JUV, ATA, AVI, LEV, FEY, STT, PSV, CEL, SHK, SZB, GIR, STU, BOL, CZV, DZG, YB, MON, LOSC, BRE, BRU, SPA, SLO]},
@@ -185,7 +185,7 @@ trophies.forEach(trophy => {
 
     if (trophy.standings) {
 
-        if (trophy.code === 'ptbracket') {  
+        if (trophy.code === 'ptbattle') {  
             let realTable = trophy.standings[0];
             let new_standings = [];
             for (let i=1; i<trophy.standings.length; i++) {
@@ -249,7 +249,7 @@ trophies.forEach(trophy => {
             // Se errarmos a posição por 5 ou mais lugares, menos (diff pontos/2)
         }
 
-        if (trophy.code === 'uclbracket') {  
+        if (trophy.code === 'uclbattle') {  
             let realTable = trophy.standings[0];
             let new_standings = [];
             for (let i=1; i<trophy.standings.length; i++) {

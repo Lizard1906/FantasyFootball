@@ -79,10 +79,10 @@ def useParserLigaPortugal(url):
 
 
 trophies = {
-    "ucl25bracket": "https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao",
-    # "pt25bracket": "https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic",
-    "pt25bracket": "https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao"
+    "ucl25battle": "https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao",
+    # "pt25battle": "https://www.ligaportugal.pt/pt/liga/classificacao/20242025/ligaportugalbetclic",
+    "pt25battle": "https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao"
 }
 
-getTable("ucl25bracket")
-getTable("pt25bracket")
+getTable("ucl25battle")
+getTable("pt25battle")
