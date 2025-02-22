@@ -133,16 +133,16 @@ const trophies = [
     {
         id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [95, 182, 259, 319, 391, 457, 540, 628, 727] },
-            { player: 2, color: 'green', evolution: [86, 149, 218, 311, 404, 463, 542, 637, 709] },
+            { player: 1, color: 'red', evolution: [95, 182, 259, 319, 391, 457, 540, 628, 727, 795] },
+            { player: 2, color: 'green', evolution: [86, 149, 218, 311, 404, 463, 542, 637, 709, 794] },
         ],
         finished: false
     },
     {
         id: 'ucl25predict', code: 'uclpredictor', date: 2025, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [22, 50, 87, 102, 143, 169, 185, 215, 252] },
-            { player: 2, color: 'green', evolution: [28, 51, 99, 122, 152, 177, 179, 212, 256] },
+            { player: 1, color: 'red', evolution: [22, 50, 87, 102, 143, 169, 185, 215, 252, 267] },
+            { player: 2, color: 'green', evolution: [28, 51, 99, 122, 152, 177, 179, 212, 256, 266] },
         ],
         finished: false
     },
@@ -159,8 +159,8 @@ const trophies = [
     {
         id: 'uel25predict', code: 'uelpredictor', date: 2025, name: 'Europa Predict', category: 'uel',
         graph: [    // vamos fingir que os playoffs so tiveram 1 jogo
-            { player: 1, color: 'red', evolution: [37, 37, 72, 109, 139, 165, 202, 233] },
-            { player: 2, color: 'green', evolution: [47, 73, 108, 145, 194, 215, 253, 297] },
+            { player: 1, color: 'red', evolution: [37, 37, 72, 109, 139, 165, 202, 233, 257] },
+            { player: 2, color: 'green', evolution: [47, 73, 108, 145, 194, 215, 253, 297, 322] },
         ],
         finished: false
     },
