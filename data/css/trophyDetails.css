@@ -169,6 +169,11 @@ tr.odd {
     color: #fff;
     border-color: #fff;
 }
+.uclbracket {
+    background-color: #020646;
+    color: #fff;
+    border-color: #fff;
+}
 .uelpredictor {
     background-color: #FF3C00;
     color: #000;

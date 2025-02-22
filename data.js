@@ -157,6 +157,14 @@ const trophies = [
         finished: true
     },
     {
+        id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
+        data: [
+            { pos: 1, player: 2, points: 0 },
+            { pos: 2, player: 1, points: 0 },
+        ],
+        finished: false
+    },
+    {
         id: 'uel25predict', code: 'uelpredictor', date: 2025, name: 'Europa Predict', category: 'uel',
         graph: [    // vamos fingir que os playoffs so tiveram 1 jogo
             { player: 1, color: 'red', evolution: [37, 37, 72, 109, 139, 165, 202, 233, 257] },
