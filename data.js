@@ -112,14 +112,14 @@ const trophies = [
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013, 1069, 1131, 1196, 1254, 1293, 1367, 1482, 1574] },
-            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844, 895, 976, 1041, 1120, 1158, 1234, 1362, 1470] },
+            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013, 1069, 1131, 1196, 1254, 1293, 1367, 1482, 1574, 1645] },
+            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844, 895, 976, 1041, 1120, 1158, 1234, 1362, 1470, 1539] },
         ],
         finished: false
     },
     {
         id: 'en25draft', code: 'endraft', date: 2025, name: 'English Draft', category: 'en',
-        data: [{ pos: 1, player: 1, V: 14, score: 1442 }, { pos: 2, player: 2, V: 11, score: 1272 }], 
+        data: [{ pos: 1, player: 1, V: 15, score: 1508 }, { pos: 2, player: 2, V: 11, score: 1316 }], 
         finished: false
     },
     {
