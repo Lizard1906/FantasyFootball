@@ -172,6 +172,14 @@ const trophies = [
         ],
         finished: false
     },
+    {
+        id: 'uel25bracket', code: 'uelbracket', date: 2025, name: 'Europa Bracket', category: 'uel',
+        data: [
+            { pos: 1, player: 2, points: 0 },
+            { pos: 2, player: 1, points: 0 },
+        ],
+        finished: false
+    },
 ];
 
 trophies.forEach(trophy => {
