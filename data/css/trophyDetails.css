@@ -158,14 +158,13 @@ tr.odd {
     color: #fff;
     border-color: #fff;
 }
-
-.uclpredictor {
-    background-color: #060c60;
+.uclbattle {
+    background-color: #001d74;
     color: #fff;
     border-color: #fff;
 }
-.uclbattle {
-    background-color: #001d74;
+.uclpredictor {
+    background-color: #060c60;
     color: #fff;
     border-color: #fff;
 }

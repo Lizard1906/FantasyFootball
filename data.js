@@ -147,6 +147,14 @@ const trophies = [
         finished: false
     },
     {
+        id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
+        data: [
+            { pos: 1, player: 2, points: 27 },
+            { pos: 2, player: 1, points: 24 },
+        ],
+        finished: false
+    },
+    {
         id: 'ucl25battle', code: 'uclbattle', date: 2025, name: 'Champions Battle', category: 'ucl',
         standings: [
             { player: 0, predict: ["Liverpool", "Barcelona", "Arsenal", "Inter", "Atl. Madrid", "B. Leverkusen", "Lille", "Aston Villa", "Atalanta", "B. Dortmund", "Real Madrid", "Bayern M.", "Milan", "PSV", "PSG", "SL Benfica", "Monaco", "Brest", "Feyenoord", "Juventus", "Celtic", "Man. City", "Sporting CP", "Club Brugge", "D. Zagreb", "Estugarda", "Shakhtar", "Bolonha", "Crvena Zvezda", "Sturm Graz", "Sparta Praha", "Leipzig", "Girona", "Salzburg", "Slovan Bratislava", "Young Boys"]},
@@ -155,14 +163,6 @@ const trophies = [
         ],
         source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2025-02-16 23:11:21.989854'},
         finished: true
-    },
-    {
-        id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
-        data: [
-            { pos: 1, player: 2, points: 27 },
-            { pos: 2, player: 1, points: 24 },
-        ],
-        finished: false
     },
     {
         id: 'uel25predict', code: 'uelpredictor', date: 2025, name: 'Europa Predict', category: 'uel',
