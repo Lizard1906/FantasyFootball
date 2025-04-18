@@ -84,5 +84,5 @@ trophies = {
     "pt25battle": "https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao"
 }
 
-getTable("ucl25battle")
+# getTable("ucl25battle")
 getTable("pt25battle")
