@@ -102,11 +102,11 @@ const trophies = [
     {
         id: 'pt25battle', code: 'ptbattle', date: 2025, name: 'Portugal Battle', category: 'pt',
         standings: [
-            { player: 0, predict: ["Sporting CP", "SL Benfica", "SC Braga", "FC Porto", "Vitória SC", "Santa Clara", "FC Famalicão", "Casa Pia AC", "Estoril Praia", "Moreirense FC", "Rio Ave FC", "CD Nacional", "FC Arouca", "Gil Vicente FC", "Estrela Amadora", "AVS", "SC Farense", "Boavista FC"]},
+            { player: 0, predict: ["Sporting CP", "SL Benfica", "SC Braga", "FC Porto", "Vitória SC", "Santa Clara", "FC Famalicão", "Casa Pia AC", "Estoril Praia", "Moreirense FC", "Rio Ave FC", "FC Arouca", "CD Nacional", "Gil Vicente FC", "Estrela Amadora", "AVS", "Boavista FC", "SC Farense"]},
             { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
             { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AVS, BFC]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-04-18 11:22:20.688187'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-04-29 22:31:07.426140'},
         finished: false
     },
     {
