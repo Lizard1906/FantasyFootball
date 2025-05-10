@@ -133,24 +133,24 @@ const trophies = [
     {
         id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [95, 182, 259, 319, 391, 457, 540, 628, 727, 795, 852, 917, 1004, 1065, 1120] },
-            { player: 2, color: 'green', evolution: [86, 149, 218, 311, 404, 463, 542, 637, 709, 794, 862, 940, 1044, 1107, 1163] },
+            { player: 1, color: 'red', evolution: [95, 182, 259, 319, 391, 457, 540, 628, 727, 795, 852, 917, 1004, 1065, 1120, 1181] },
+            { player: 2, color: 'green', evolution: [86, 149, 218, 311, 404, 463, 542, 637, 709, 794, 862, 940, 1044, 1107, 1163, 1220] },
         ],
         finished: false
     },
     {
         id: 'ucl25predict', code: 'uclpredictor', date: 2025, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [22, 50, 87, 102, 143, 169, 185, 215, 252, 267, 292, 315, 373, 426, 454] },
-            { player: 2, color: 'green', evolution: [28, 51, 99, 122, 152, 177, 179, 212, 256, 266, 299, 349, 458, 501, 531] },
+            { player: 1, color: 'red', evolution: [22, 50, 87, 102, 143, 169, 185, 215, 252, 267, 292, 315, 373, 426, 454, 497] },
+            { player: 2, color: 'green', evolution: [28, 51, 99, 122, 152, 177, 179, 212, 256, 266, 299, 349, 458, 501, 531, 589] },
         ],
         finished: false
     },
     {
         id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
         data: [
-            { pos: 1, player: 2, points: 39 },
-            { pos: 2, player: 1, points: 30 },
+            { pos: 1, player: 2, points: 51 },
+            { pos: 2, player: 1, points: 39 },
         ],
         finished: false
     },
@@ -167,16 +167,16 @@ const trophies = [
     {
         id: 'uel25predict', code: 'uelpredictor', date: 2025, name: 'Europa Predict', category: 'uel',
         graph: [    // vamos fingir que os playoffs so tiveram 1 jogo
-            { player: 1, color: 'red', evolution: [37, 37, 72, 109, 139, 165, 202, 233, 257, 295, 356, 470, 528] },
-            { player: 2, color: 'green', evolution: [47, 73, 108, 145, 194, 215, 253, 297, 322, 360, 439, 546, 588] },
+            { player: 1, color: 'red', evolution: [37, 37, 72, 109, 139, 165, 202, 233, 257, 295, 356, 470, 528, 534] },
+            { player: 2, color: 'green', evolution: [47, 73, 108, 145, 194, 215, 253, 297, 322, 360, 439, 546, 588, 618] },
         ],
         finished: false
     },
     {
         id: 'uel25bracket', code: 'uelbracket', date: 2025, name: 'Europa Bracket', category: 'uel',
         data: [
-            { pos: 1, player: 2, points: 30 },
-            { pos: 2, player: 1, points: 27 },
+            { pos: 1, player: 2, points: 33 },
+            { pos: 2, player: 1, points: 30 },
         ],
         finished: false
     },
