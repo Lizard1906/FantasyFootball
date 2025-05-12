@@ -102,24 +102,24 @@ const trophies = [
     {
         id: 'pt25battle', code: 'ptbattle', date: 2025, name: 'Portugal Battle', category: 'pt',
         standings: [
-            { player: 0, predict: ["Sporting CP", "SL Benfica", "FC Porto", "SC Braga", "Vitória SC", "Santa Clara", "FC Famalicão", "Casa Pia AC", "Estoril Praia", "Rio Ave FC", "Moreirense FC", "FC Arouca", "CD Nacional", "Gil Vicente FC", "Estrela Amadora", "Boavista FC", "AVS", "SC Farense"]},
+            { player: 0, predict: ["Sporting CP", "SL Benfica", "FC Porto", "SC Braga", "Vitória SC", "Santa Clara", "Casa Pia AC", "FC Famalicão", "Estoril Praia", "Rio Ave FC", "Moreirense FC", "FC Arouca", "CD Nacional", "Gil Vicente FC", "Estrela Amadora", "AVS", "SC Farense", "Boavista FC"]},
             { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
             { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AVS, BFC]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-05-10 12:55:30.554424'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-05-12 19:28:40.391452'},
         finished: false
     },
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013, 1069, 1131, 1196, 1254, 1293, 1367, 1482, 1574, 1645, 1702, 1765, 1828, 1898, 1942, 2032, 2094, 2150, 2199] },
-            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844, 895, 976, 1041, 1120, 1158, 1234, 1362, 1470, 1539, 1596, 1658, 1730, 1789, 1854, 1935, 1989, 2045, 2103] },
+            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013, 1069, 1131, 1196, 1254, 1293, 1367, 1482, 1574, 1645, 1702, 1765, 1828, 1898, 1942, 2032, 2094, 2150, 2199, 2236] },
+            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844, 895, 976, 1041, 1120, 1158, 1234, 1362, 1470, 1539, 1596, 1658, 1730, 1789, 1854, 1935, 1989, 2045, 2103, 2138] },
         ],
         finished: false
     },
     {
         id: 'en25draft', code: 'endraft', date: 2025, name: 'English Draft', category: 'en',
-        data: [{ pos: 1, player: 1, V: 21, score: 1939 }, { pos: 2, player: 2, V: 14, score: 1701 }], 
+        data: [{ pos: 1, player: 1, V: 21, score: 1974 }, { pos: 2, player: 2, V: 15, score: 1738 }], 
         finished: false
     },
     {
