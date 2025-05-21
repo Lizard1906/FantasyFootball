@@ -353,7 +353,7 @@ trophies.forEach(trophy => {
 
 
 // sort trophies by importance
-const categoryOrder = ['pt', 'en', 'ucl', 'world', 'euro'];
+const categoryOrder = ['pt', 'en', 'ucl', 'uel', 'world', 'euro'];
 
 function compareCategories(a, b) {
     return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
