@@ -170,7 +170,7 @@ const trophies = [
             { player: 1, color: 'red', evolution: [37, 37, 72, 109, 139, 165, 202, 233, 257, 295, 356, 470, 528, 534] },
             { player: 2, color: 'green', evolution: [47, 73, 108, 145, 194, 215, 253, 297, 322, 360, 439, 546, 588, 618] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'uel25bracket', code: 'uelbracket', date: 2025, name: 'Europa Bracket', category: 'uel',
@@ -178,7 +178,7 @@ const trophies = [
             { pos: 1, player: 2, points: 33 },
             { pos: 2, player: 1, points: 30 },
         ],
-        finished: false
+        finished: true
     },
 ];
 
