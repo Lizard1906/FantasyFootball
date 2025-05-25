@@ -112,23 +112,23 @@ const trophies = [
     {
         id: 'en25', code: 'premier', date: 2025, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013, 1069, 1131, 1196, 1254, 1293, 1367, 1482, 1574, 1645, 1702, 1765, 1828, 1898, 1942, 2032, 2094, 2150, 2199, 2236, 2278] },
-            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844, 895, 976, 1041, 1120, 1158, 1234, 1362, 1470, 1539, 1596, 1658, 1730, 1789, 1854, 1935, 1989, 2045, 2103, 2138, 2176] },
+            { player: 1, color: 'red', evolution: [68, 126, 181, 214, 267, 343, 409, 451, 515, 561, 617, 693, 781, 833, 881, 925, 1013, 1069, 1131, 1196, 1254, 1293, 1367, 1482, 1574, 1645, 1702, 1765, 1828, 1898, 1942, 2032, 2094, 2150, 2199, 2236, 2278, 2336] },
+            { player: 2, color: 'green', evolution: [54, 122, 173, 242, 296, 352, 391, 436, 479, 517, 584, 629, 665, 710, 757, 809, 844, 895, 976, 1041, 1120, 1158, 1234, 1362, 1470, 1539, 1596, 1658, 1730, 1789, 1854, 1935, 1989, 2045, 2103, 2138, 2176, 2241] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'en25draft', code: 'endraft', date: 2025, name: 'English Draft', category: 'en',
         data: [{ pos: 1, player: 1, V: 21, score: 2006 }, { pos: 2, player: 2, V: 16, score: 1779 }], 
-        finished: false
+        finished: true
     },
     {
         id: 'en25cup', code: 'emirates', date: 2025, name: 'Emirates Cup', category: 'en',
         data: [
-            { pos: 1, player: 2, points: 0 },
-            { pos: 2, player: 1, points: 0 },
+            { pos: 1, player: 2, points: 65 },
+            { pos: 2, player: 1, points: 58 },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'ucl',
