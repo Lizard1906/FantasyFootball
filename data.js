@@ -201,68 +201,138 @@ trophies.forEach(trophy => {
 
     if (trophy.standings) {
 
-        if (trophy.code === 'ptbattle') {  
+        if (trophy.code === 'ptbattle') {
+
+            const ptbattleScoringRules = {
+                accuracy: [
+                    {
+                        check: (real, predict) => real <= 5 && real === predict,
+                        points: 5,
+                        description: 'Get the exact position of a team in the Top 5'
+                    },
+                    {
+                        check: (real, predict) => real >= 6 && predict >= 6 && real === predict,
+                        points: 10,
+                        description: 'Get the exact position of a team outside the Top 5'
+                    },
+                    {
+                        check: (real, predict) => real >= 6 && predict >= 6 && Math.abs(real - predict) === 1,
+                        points: 5,
+                        description: 'Miss by 1 outside the Top 5'
+                    },
+                    {
+                        check: (real, predict) => real >= 6 && predict >= 6 && Math.abs(real - predict) === 2,
+                        points: 3,
+                        description: 'Miss by 2 outside the Top 5'
+                    },
+                    {
+                        check: (real, predict) => real >= 6 && predict >= 6 && Math.abs(real - predict) === 3,
+                        points: 1,
+                        description: 'Miss by 3 outside the Top 5'
+                    },
+                ],
+                bonus: [
+                    {
+                        check: (real, predict) => real <= 5 && ((1 <= real && real <= 2 && 1 <= predict && predict <= 2) || (3 <= real && real <= 4 && 3 <= predict && predict <= 4) || (real === 5 && predict === 5)),
+                        points: 1,
+                        description: 'Europen qualification'
+                    },
+                    {
+                        check: (real, predict) => real >= 6 && predict >= 6 && 6 <= real && real <= 10 && 6 <= predict && predict <= 10,
+                        points: 3,
+                        description: 'First half of the table (6th-10th)'
+                    },
+                    {
+                        check: (real, predict) => real >= 6 && predict >= 6 && 11 <= real && real <= 15 && 11 <= predict && predict <= 15,
+                        points: 3,
+                        description: 'Second half of the table (11th-15th)'
+                    },
+                    {
+                        check: (real, predict) => real >= 6 && predict >= 6 && 16 <= real && real <= 18 && 16 <= predict && predict <= 18,
+                        points: 5,
+                        description: 'Relegation zone (16th-18th)'
+                    },
+                ],
+                penalties: [
+                    {
+                        check: (real, predict) => Math.abs(predict - real) > 5,
+                        points: (real, predict) => -(Math.abs(predict - real) - 5),
+                        description: 'Miss by 5 or more places'
+                    },
+                ],
+                unlikely: [
+                    {
+                        check: (real, predict, t) => predict > 5 && real > 5 && [SLB, SCP, FCP, SCB, VSC].includes(t),
+                        points: 10,
+                        description: 'Big 5 miss the Top 5'
+                    },
+                    {
+                        check: (real, predict, t) => predict > 3 && real > 3 && [SLB, SCP, FCP].includes(t),
+                        points: 10,
+                        description: 'Big 3 miss the Top 3'
+                    },
+                ]
+            };
+
             let realTable = trophy.standings[0];
             let new_standings = [];
-            for (let i=1; i<trophy.standings.length; i++) {
+            for (let i = 1; i < trophy.standings.length; i++) {
                 new_predict = [];
                 trophy.standings[i].predict.forEach((t, index) => {
-                    points_scored = 0;
-                    realPlace = realTable.predict.indexOf(t) + 1
-                    predictPlace = index + 1
+                    let points_scored = 0;
+                    let realPlace = realTable.predict.indexOf(t) + 1;
+                    let predictPlace = index + 1;
 
-                    // pontuação por lugares
-                    if (1 <= realPlace && realPlace <= 2 && 1 <= predictPlace && predictPlace <= 2 ) {
-                        points_scored += 3
-                        if (realPlace === predictPlace) {
-                            points_scored += 2
+                    // Accuracy rules
+                    ptbattleScoringRules.accuracy.forEach(rule => {
+                        if (rule.check(realPlace, predictPlace)) {
+                            points_scored += typeof rule.points === 'function' ? rule.points(realPlace, predictPlace) : rule.points;
                         }
-                    } else if (3 <= realPlace && realPlace <= 4 && 3 <= predictPlace && predictPlace <= 4 ) {
-                        points_scored += 4
-                        if (realPlace === predictPlace) {
-                            points_scored += 2
+                    });
+                    // Bonus
+                    ptbattleScoringRules.bonus.forEach(rule => {
+                        if (rule.check(realPlace, predictPlace)) {
+                            points_scored += typeof rule.points === 'function' ? rule.points(realPlace, predictPlace) : rule.points;
                         }
-                    } else if (realPlace == predictPlace && realPlace == 5 ) {
-                        points_scored += 4 + 2
-                    } else if (6 <= realPlace && realPlace <= 10 && 6 <= predictPlace && predictPlace <= 10 ) {
-                        points_scored += 2
-                        if (realPlace === predictPlace) {
-                            points_scored += 5
+                    });
+                    // Penalties
+                    ptbattleScoringRules.penalties.forEach(rule => {
+                        if (rule.check(realPlace, predictPlace)) {
+                            points_scored += typeof rule.points === 'function' ? rule.points(realPlace, predictPlace) : rule.points;
                         }
-                    } else if (11 <= realPlace && realPlace <= 15 && 11 <= predictPlace && predictPlace <= 15 ) {
-                        points_scored += 3
-                        if (realPlace === predictPlace) {
-                            points_scored += 5
+                    });
+                    // Unlikely
+                    ptbattleScoringRules.unlikely.forEach(rule => {
+                        if (rule.check(realPlace, predictPlace, t)) {
+                            points_scored += typeof rule.points === 'function' ? rule.points(realPlace, predictPlace, t) : rule.points;
                         }
-                    } else if (16 <= realPlace && realPlace <= 18 && 16 <= predictPlace && predictPlace <= 18 ) {
-                        points_scored += 5
-                        if (realPlace === predictPlace) {
-                            points_scored += 5
-                        }
-                    }
+                    });
 
-                    if (Math.abs(predictPlace-realPlace)>=5) {
-                        points_scored -= Math.floor(Math.abs(predictPlace-realPlace)/2)
-                    }
-
-                    new_predict.push({team:t, realPlace: realPlace, points: points_scored})
+                    new_predict.push({ team: t, realPlace: realPlace, points: points_scored });
                 });
-                new_standings.push({player: i, predict: new_predict})
+                new_standings.push({ player: i, predict: new_predict });
             }
             trophy.standings = new_standings;
-            // 1º-2ºlugar: 2 pontos
-            // 3º-5º: 2
-            // 6º-15º: 5
-            // 16º-18º: 5
-            
-            // equipa apurada para champions (1º e 2º): 3 pontos
-            // equipa apurada para liga europa (3º e 4º): 4 pontos
-            // equipa apurada para liga conference (5º): 4 ponto
-            // equipa na 1 metade da tabela (exceto top 5): 2 pontos
-            // equipa na 2 metade da tabela (exceto despromocao): 3 pontos
-            // equipa em zona de despromocao: 5 pontos});
 
-            // Se errarmos a posição por 5 ou mais lugares, menos (diff pontos/2)
+            // REGRAS DE PONTUAÇÃO
+            trophy.rules = [
+                {
+                    category: "Accuracy",
+                    rules: ptbattleScoringRules.accuracy.map(r => ({ description: r.description, points: typeof r.points === 'function' ? 'variable' : r.points.toString() }))
+                },
+                {
+                    category: "Bonus",
+                    rules: ptbattleScoringRules.bonus.map(r => ({ description: r.description, points: typeof r.points === 'function' ? 'variable' : r.points.toString() }))
+                },
+                {
+                    category: "Penalties",
+                    rules: ptbattleScoringRules.penalties.map(r => ({ description: r.description, points: typeof r.points === 'function' ? 'variable' : r.points.toString() }))
+                },
+                {
+                    category: "Unlikely",
+                    rules: ptbattleScoringRules.unlikely.map(r => ({ description: r.description, points: typeof r.points === 'function' ? 'variable' : r.points.toString() }))
+                }
+            ];
         }
 
         if (trophy.code === 'uclbattle') {  
