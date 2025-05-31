@@ -335,49 +335,109 @@ trophies.forEach(trophy => {
             ];
         }
 
-        if (trophy.code === 'uclbattle') {  
+        if (trophy.code === 'uclbattle') {
+            const uclbattleScoringRules = {
+                accuracy: [
+                    {
+                        check: (real, predict) => real === predict,
+                        points: 10,
+                        description: 'Get the exact position'
+                    },
+                    {
+                        check: (real, predict) => Math.abs(real - predict) === 1,
+                        points: 5,
+                        description: 'Miss by 1'
+                    },
+                    {
+                        check: (real, predict) => Math.abs(real - predict) === 2,
+                        points: 3,
+                        description: 'Miss by 2'
+                    },
+                    {
+                        check: (real, predict) => Math.abs(real - predict) === 3,
+                        points: 1,
+                        description: 'Miss by 3'
+                    }
+                ],
+                bonus: [
+                    {
+                        check: (real, predict) => 1 <= real && real <= 8 && 1 <= predict && predict <= 8,
+                        points: 10,
+                        description: 'Champions League zone (1st-8th)'
+                    },
+                    {
+                        check: (real, predict) => 9 <= real && real <= 16 && 9 <= predict && predict <= 16,
+                        points: 5,
+                        description: 'Play-offs Top (9th-16th)'
+                    },
+                    {
+                        check: (real, predict) => 17 <= real && real <= 24 && 17 <= predict && predict <= 24,
+                        points: 5,
+                        description: 'Play-offs Bottom (17th-24th)'
+                    },
+                    {
+                        check: (real, predict) => 25 <= real && real <= 36 && 25 <= predict && predict <= 36,
+                        points: 10,
+                        description: 'Not qualified (25th-36th)'
+                    }
+                ],
+                penalties: [
+                    {
+                        check: (real, predict) => Math.abs(predict - real) >= 5,
+                        points: (real, predict) => -(Math.abs(predict - real) - 5),
+                        description: 'Miss by 5 or more places'
+                    }
+                ]
+            };
+
             let realTable = trophy.standings[0];
             let new_standings = [];
-            for (let i=1; i<trophy.standings.length; i++) {
+            for (let i = 1; i < trophy.standings.length; i++) {
                 new_predict = [];
                 trophy.standings[i].predict.forEach((t, index) => {
-                    points_scored = 0;
-                    realPlace = realTable.predict.indexOf(t) + 1
-                    predictPlace = index + 1
+                    let points_scored = 0;
+                    let realPlace = realTable.predict.indexOf(t) + 1;
+                    let predictPlace = index + 1;
 
-                    // pontuação por lugar exato
-                    if (realPlace === predictPlace) {
-                        points_scored += 5
-                    }
+                    // Accuracy rules
+                    uclbattleScoringRules.accuracy.forEach(rule => {
+                        if (rule.check(realPlace, predictPlace)) {
+                            points_scored += typeof rule.points === 'function' ? rule.points(realPlace, predictPlace) : rule.points;
+                        }
+                    });
+                    // Bonus
+                    uclbattleScoringRules.bonus.forEach(rule => {
+                        if (rule.check(realPlace, predictPlace)) {
+                            points_scored += typeof rule.points === 'function' ? rule.points(realPlace, predictPlace) : rule.points;
+                        }
+                    });
+                    // Penalties
+                    uclbattleScoringRules.penalties.forEach(rule => {
+                        if (rule.check(realPlace, predictPlace)) {
+                            points_scored += typeof rule.points === 'function' ? rule.points(realPlace, predictPlace) : rule.points;
+                        }
+                    });
 
-                    // pontuação por intervalo de lugares
-                    if (1 <= realPlace && realPlace <= 8 && 1 <= predictPlace && predictPlace <= 8 ) {
-                        points_scored += 5
-                    } else if (9 <= realPlace && realPlace <= 16 && 9 <= predictPlace && predictPlace <= 16 ) {
-                        points_scored += 5
-                    } else if (17 <= realPlace && realPlace <= 24 && 17 <= predictPlace && predictPlace <= 24 ) {
-                        points_scored += 5
-                    } else if (25 <= realPlace && realPlace <= 36 && 25 <= predictPlace && predictPlace <= 36 ) {
-                        points_scored += 5
-                    }
-
-                    if (Math.abs(predictPlace-realPlace)>=10) {
-                        points_scored -= Math.floor(Math.abs(predictPlace-realPlace)/3)
-                    }
-
-                    new_predict.push({team:t, realPlace: realPlace, points: points_scored})
+                    new_predict.push({ team: t, realPlace: realPlace, points: points_scored });
                 });
-                new_standings.push({player: i, predict: new_predict})
+                new_standings.push({ player: i, predict: new_predict });
             }
             trophy.standings = new_standings;
-            // acertar lugar exato: 5 pontos
-            
-            // equipa apurada para champions (1º a 8º): 5 pontos
-            // equipa apurada para play-offs top (9º a 16º): 5 pontos
-            // equipa apurada para play-offs bottom (17º a 24º): 5 pontos
-            // equipa nao apurada (25º a 36º): 5 pontos
 
-            // Se errarmos a posição por 10 ou mais lugares, menos (diff pontos/2)
+            trophy.rules = [
+                {
+                    category: "Accuracy",
+                    rules: uclbattleScoringRules.accuracy.map(r => ({ description: r.description, points: typeof r.points === 'function' ? 'variable' : r.points.toString() }))
+                },
+                {
+                    category: "Bonus",
+                    rules: uclbattleScoringRules.bonus.map(r => ({ description: r.description, points: typeof r.points === 'function' ? 'variable' : r.points.toString() }))
+                },
+                {
+                    category: "Penalties",
+                    rules: uclbattleScoringRules.penalties.map(r => ({ description: r.description, points: typeof r.points === 'function' ? 'variable' : r.points.toString() }))
+                }
+            ];
         }
 
         // tabela data
