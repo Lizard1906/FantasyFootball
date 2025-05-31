@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (trophy.date === season) {
                 html += `
               <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
-                <a href="trophyDetails.html?${trophy.id}">
+                <a href="trophyDetails?${trophy.id}">
                     <img src="data/images/trophies/${trophy.code}.png" title="${trophy.name}" class="trophy-img">
                 </a>
             </div>
