@@ -133,26 +133,26 @@ const trophies = [
     {
         id: 'ucl25', code: 'champions', date: 2025, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [95, 182, 259, 319, 391, 457, 540, 628, 727, 795, 852, 917, 1004, 1065, 1120, 1181] },
-            { player: 2, color: 'green', evolution: [86, 149, 218, 311, 404, 463, 542, 637, 709, 794, 862, 940, 1044, 1107, 1163, 1220] },
+            { player: 1, color: 'red', evolution: [95, 182, 259, 319, 391, 457, 540, 628, 727, 795, 852, 917, 1004, 1065, 1120, 1181, 1262] },
+            { player: 2, color: 'green', evolution: [86, 149, 218, 311, 404, 463, 542, 637, 709, 794, 862, 940, 1044, 1107, 1163, 1220, 1303] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'ucl25predict', code: 'uclpredictor', date: 2025, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [22, 50, 87, 102, 143, 169, 185, 215, 252, 267, 292, 315, 373, 426, 454, 497] },
-            { player: 2, color: 'green', evolution: [28, 51, 99, 122, 152, 177, 179, 212, 256, 266, 299, 349, 458, 501, 531, 589] },
+            { player: 1, color: 'red', evolution: [22, 50, 87, 102, 143, 169, 185, 215, 252, 267, 292, 315, 373, 426, 454, 497, 515] },
+            { player: 2, color: 'green', evolution: [28, 51, 99, 122, 152, 177, 179, 212, 256, 266, 299, 349, 458, 501, 531, 589, 613] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'ucl25bracket', code: 'uclbracket', date: 2025, name: 'Champions Bracket', category: 'ucl',
         data: [
-            { pos: 1, player: 2, points: 51 },
-            { pos: 2, player: 1, points: 39 },
+            { pos: 1, player: 2, points: 56 },
+            { pos: 2, player: 1, points: 48 },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'ucl25battle', code: 'uclbattle', date: 2025, name: 'Champions Battle', category: 'ucl',
