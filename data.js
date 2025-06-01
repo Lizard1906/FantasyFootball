@@ -180,6 +180,22 @@ const trophies = [
         ],
         finished: true
     },
+    {
+        id: 'cwc25', code: 'cwc', date: 2025, name: 'Club World Cup', category: 'world',
+        graph: [
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
+        ],
+        finished: false
+    },
+    {
+        id: 'cwc25bracket', code: 'cwcbracket', date: 2025, name: 'Club World Cup Bracket', category: 'world',
+        data: [
+            { pos: 1, player: 1, points: 0 },
+            { pos: 2, player: 2, points: 0 },
+        ],
+        finished: false
+    },
 ];
 
 trophies.forEach(trophy => {
