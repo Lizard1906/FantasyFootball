@@ -203,6 +203,18 @@ tr.odd {
     border-color: #0D1E62;
 }
 
+.cwc {
+    background-color: #bd9717;
+    color: #000;
+    border-color: #000;
+}
+
+.cwcbracket {
+    background-color: #f2bf18;
+    color: #000;
+    border-color: #000;
+}
+
 
 #lineChart {
     /* height: 500px; */
