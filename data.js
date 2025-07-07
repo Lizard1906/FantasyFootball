@@ -183,8 +183,8 @@ const trophies = [
     {
         id: 'cwc25', code: 'cwc', date: 2025, name: 'Club World Cup', category: 'world',
         graph: [
-            { player: 1, color: 'red', evolution: [55, 105, 185] },
-            { player: 2, color: 'green', evolution: [50, 112, 183] },
+            { player: 1, color: 'red', evolution: [55, 105, 185, 272, 349] },
+            { player: 2, color: 'green', evolution: [50, 112, 183, 248, 321] },
         ],
         finished: false
     },
