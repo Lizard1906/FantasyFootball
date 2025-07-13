@@ -183,18 +183,18 @@ const trophies = [
     {
         id: 'cwc25', code: 'cwc', date: 2025, name: 'Club World Cup', category: 'world',
         graph: [
-            { player: 1, color: 'red', evolution: [55, 105, 185] },
-            { player: 2, color: 'green', evolution: [50, 112, 183] },
+            { player: 1, color: 'red', evolution: [55, 105, 185, 272, 349, 417, 473] },
+            { player: 2, color: 'green', evolution: [50, 112, 183, 248, 321, 393, 448] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'cwc25bracket', code: 'cwcbracket', date: 2025, name: 'Club World Cup Bracket', category: 'world',
         data: [
-            { pos: 1, player: 1, points: 1010 },
-            { pos: 2, player: 2, points: 780 },
+            { pos: 1, player: 1, points: 1285 },
+            { pos: 2, player: 2, points: 1055 },
         ],
-        finished: false
+        finished: true
     },
 ];
 
@@ -506,6 +506,8 @@ function compareCategories(a, b) {
 }
 
 function compareNames(a, b) {
+    if (a.startsWith('World Cup') && b.startsWith('Club World Cup')) return -1;
+    if (a.startsWith('Club World Cup') && b.startsWith('World Cup')) return 1;
     if (a.includes('Bracket') && !b.includes('Bracket')) return 1;
     if (!a.includes('Bracket') && b.includes('Bracket')) return -1;
     if (a.includes('Predict') && !b.includes('Predict')) return 1;
