@@ -10,9 +10,10 @@
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     --text-color: #333333;
     --card-bg: #ffffff;
-    --trophy-item-bg: #f8f9fa;
+    --trophy-item-bg: #f0ecc3;
     --trophy-item-hover: #f8fbc7;
     --border-color: #ffca1b;
+    --season-button: #ffca1b;
 }
 
 [data-theme="dark"] {
@@ -27,6 +28,7 @@
     --trophy-item-bg: #2a2a2a;
     --trophy-item-hover: #3a3a3a;
     --border-color: #1e1e1e;
+    --season-button: #000;
 }
 
 body {
