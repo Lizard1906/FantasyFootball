@@ -2,82 +2,150 @@
 
 h1 {
     text-align: center;
-    color: #fff;
+    color: var(--text-color);
     padding-bottom: 5px;
     padding-top: 5px;
 }
 
-
-body {
-    background-image: url("../images/back.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-
-.trophies {
-    background-color: rgb(192, 192, 192);
-    /* border-radius: 0px 0px 25px 0px; */
-}
-
-.trophy-img {
-    height: 50px;
-    margin: 5px 5px 5px 5px;
-}
-
-.category-details {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.category-img {
-    height: 20px;
-    margin: 0px 5px 5px 5px;
-    border: 1px solid black
+.players-section {
+    padding: 90px 0 60px;
 }
 
 .info-player {
-    background-color: transparent;
-    border-radius: 25px 25px 0px 0px;
+    margin-bottom: 100px;
+    transition: transform var(--transition-speed);
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-.foto-jogador {
+.info-player:hover {
+    transform: translateY(-5px);
+}
+
+.player-card {
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: var(--card-shadow);
+    background-color: var(--card-bg);
+    height: 100%;
+    position: relative;
+    padding-top: 60px;
+    margin-top: 60px;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    border: 2px solid var(--border-color);
+}
+
+.player-image-container {
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    z-index: 2;
+    transition: border-color var(--transition-speed);
+}
+
+.player-photo {
     width: 100%;
-    /* border-radius: 0px 0px 0px 25px; */
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.player-photo:hover {
+    transform: scale(1.1);
 }
 
 .player-name {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 15px 15px 5px;
     text-align: center;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 25px 25px 0 0;
+    color: var(--primary-color);
+    background-color: var(--card-bg);
+    transition: color var(--transition-speed), background-color var(--transition-speed);
 }
 
 .player-desc {
     font-size: 16px;
+    font-style: italic;
+    padding: 0px 15px 15px;
     text-align: center;
-    width: 100%;
-    background-color: #fff;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: color var(--transition-speed), background-color var(--transition-speed), border-color var(--transition-speed);
 }
 
-a.btn.discover {
-    font-size: 40px;
-    font-weight: bolder;
-    background-color: white;
-    color: black;
-    border-radius: 25px;
-    transition: all 0.5s;
+.trophies {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 0 0 15px 15px;
+    transition: background-color var(--transition-speed);
 }
 
-a.btn.discover:hover {
-    background-color: transparent;
-    transition: all 0.5s;
+.trophy-header {
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    transition: color var(--transition-speed);
 }
 
-a.btn.discover:active {
-    border-color: transparent;
-    transition: all 0.5s;
+.trophy-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--trophy-item-bg);
+    transition: background-color var(--transition-speed);
+    border-left: 3px solid var(--primary-color);
+}
+
+.trophy-item:hover {
+    background-color: var(--trophy-item-hover);
+    transform: translateX(3px);
+}
+
+.category-details {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 8px;
+    color: var(--text-color);
+    transition: color var(--transition-speed);
+}
+
+.category-img {
+    height: 25px;
+    margin: 0 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: border-color var(--transition-speed);
+}
+
+@media (max-width: 992px) {
+    .players-section {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .players-section {
+        padding-top: 70px;
+    }
+    
+    .player-card {
+        margin-top: 50px;
+        padding-top: 50px;
+    }
+    
+    .player-image-container {
+        width: 120px;
+        height: 120px;
+        top: -60px;
+    }
 }
