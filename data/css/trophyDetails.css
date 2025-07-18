@@ -9,8 +9,9 @@ body {
 
 .trophy-card {
     font-size: 20px;
-    background-color: white;
     border-radius: 25px;
+    background-color: rgba(0,0,0,0.25);
+    backdrop-filter: blur(40px);
 }
 
 
@@ -239,4 +240,108 @@ a.btn.back:hover {
 a.btn.back:active {
     border-color: transparent;
     transition: all 0.5s;
+}
+
+.winner-img-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.trophy-winner {
+    width: 220px !important;
+    height: 220px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    transition: filter 0.3s;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    position: relative;
+}
+
+.winner-img-container:hover .trophy-winner,
+.winner-img-container:focus .trophy-winner {
+    filter: blur(3px) brightness(0.7);
+}
+
+.description-winner {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, -40%) scale(0.95);
+    min-width: 140px;
+    max-width: 90%;
+    color: white;
+    padding: 10px 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    text-align: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.winner-img-container:hover .description-winner,
+.winner-img-container:focus .description-winner {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+    pointer-events: auto;
+}
+
+/* Trophy visual buttons - dynamic color */
+.btn-trophy-visual {
+    border-width: 2px;
+    border-style: solid;
+    background: transparent;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Dynamic color for active/hover state, set by JS */
+.btn-trophy-visual.trophy-active,
+.btn-trophy-visual:hover,
+.btn-trophy-visual:focus {
+    color: var(--trophy-color, #222) !important;
+    background: var(--trophy-bg, #fff) !important;
+    border-color: var(--trophy-border, #222) !important;
+}
+
+.btn-trophy-visual {
+    color: var(--trophy-bg, #222) !important;
+    background: transparent !important;
+    border-color: var(--trophy-bg, #222) !important;
+}
+
+
+.best-round-card {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 24px rgba(255, 215, 0, 0.10);
+    border-radius: 18px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    transition: box-shadow 0.2s;
+}
+
+.best-round-card h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.best-round-card h5 {
+    color: #eee;
+    font-weight: 600;
+}
+.best-round-card h6 {
+    color: #ddd;
+    font-weight: 500;
+}
+
+.best-round-star {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
