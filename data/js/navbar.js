@@ -14,7 +14,11 @@ Promise.all([
 ])
     .then(([navbarHTML, footerHTML]) => {
         document.getElementById("navbar").innerHTML = navbarHTML;
-        document.getElementById("footer").innerHTML = footerHTML;
+        try {
+            document.getElementById("footer").innerHTML = footerHTML;
+        } catch (error) {
+
+        }
 
         initializeThemeToggle();
     })

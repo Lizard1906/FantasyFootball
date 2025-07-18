@@ -101,7 +101,16 @@ tr.odd {
     /* Cor de fundo para linhas ímpares */
 }
 
-
+@media (prefers-color-scheme: dark) {
+    tr.even {
+        background-color: #2b2b2f;
+        color: #fff;
+    }
+    tr.odd {
+        background-color: #18181f;
+        color: #fff;
+    }
+}
 
 /*trofeus*/
 

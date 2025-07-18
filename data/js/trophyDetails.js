@@ -25,18 +25,6 @@ fantasy.trophies.forEach(trophy => {
 });
 
 
-if (prevTrophy != null) {
-    document.getElementById('prev-arrow').setAttribute('href', 'trophyDetails.html?' + prevTrophy);
-    document.getElementById('prev-arrow').classList.remove('d-none');
-    document.getElementById('prev-arrow').classList.add(foundTrophy.code);
-}
-if (nextTrophy != null) {
-    document.getElementById('next-arrow').setAttribute('href', 'trophyDetails.html?' + nextTrophy);
-    document.getElementById('next-arrow').classList.remove('d-none');
-    document.getElementById('next-arrow').classList.add(foundTrophy.code);
-}
-
-
 initSeason = foundTrophy.date - 1;
 document.getElementById('trophy-title').innerHTML = `${foundTrophy.name} <span class="trophy-year">[${initSeason}/${foundTrophy.date}]</span>`;
 document.getElementById('trophy-title').classList.add(foundTrophy.code);

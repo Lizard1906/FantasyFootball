@@ -5,6 +5,8 @@
     <title>Fantasy Football Results</title>
     <link rel="stylesheet" type="text/css" href="data/css/globals.css">
     <link rel="stylesheet" type="text/css" href="data/css/trophyDetails.css">
+    <link rel="stylesheet" type="text/css" href="data/css/navbar.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="data/images/logo.png">
@@ -17,24 +19,9 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar">
-        <div class="container-fluid">
-            <div class="col-1 arrows">
-                <a href="#" id="prev-arrow" class="arrow d-none">
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-            </div>
-            <div class="col-10">
-            </div>
-            <div class="col-1 text-end arrows">
-                <a href="#" id="next-arrow" class="arrow d-none">
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="trophy-card m-4 p-0 pt-0">
             <div class="row m-0">
                 <div class="col-12 p-0">
@@ -92,14 +79,6 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row" style="text-align: center;">
-            <div>
-                <a class="btn back" href="trophies.html">Go Back</a>
-            </div>
-        </div>
-    </div>
-
     <div style="height: 100vh;"></div>
 
 
@@ -107,6 +86,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="data.js"></script>
+    <script src="data/js/navbar.js"></script>
     <script src="data/js/trophyDetails.js"></script>
 </body>
 
