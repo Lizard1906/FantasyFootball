@@ -124,7 +124,6 @@ if (foundTrophy.graph) {
 }
 
 if (foundTrophy.standings) {
-    console.log(foundTrophy)
     document.getElementById('table-predicts').classList.remove('d-none')
     let tables = document.getElementById('table-predicts')
 
@@ -137,11 +136,11 @@ if (foundTrophy.standings) {
         }
 
         let table = document.createElement('table')
-        table.classList.add('table', 'table-striped', 'table-bordered', 'table-sm')
+        table.classList.add('table', 'table-sm')
         table.style.width = '100%'
         table.style.fontSize = 'large'
         table.innerHTML = `
-            <thead>
+            <thead class="${foundTrophy.code}">
                 <tr>
                     <th colspan="3" class="text-center">${fantasy.players[player.player - 1].name}</th>
                 </tr>
@@ -149,10 +148,12 @@ if (foundTrophy.standings) {
         `
         let tbody = document.createElement('tbody')
         player.predict.forEach((team, index) => {
+            const rowClass = index % 2 === 0 ? 'even' : 'odd';
             let tr = document.createElement('tr')
+            tr.classList.add(rowClass)
             tr.innerHTML = `
                 <td>${index + 1}</td>
-                <td>${team.team} <span style="font-size: 0.75rem; color: #aaa">(${team.realPlace})</span> </td>
+                <td>${team.team} <span style="font-size: 0.75rem">(${team.realPlace})</span> </td>
                 <td style="color: ${team.points > 0 ? 'green' : team.points < 0 ? 'red' : ''};">
                     ${team.points > 0 ? '+' : ''}${team.points}
                 </td>
@@ -392,7 +393,9 @@ window.addEventListener('DOMContentLoaded', function () {
         buttons.push({ id: 'btn-line', label: 'Evolution', active: false });
         buttons.push({ id: 'btn-column', label: 'Game by Game', active: false });
     }
-
+    if (foundTrophy.standings) {        
+        buttons.push({ id: 'btn-standings', label: 'Standings', active: false });
+    }
 
 
     buttons.forEach(btn => {
@@ -423,6 +426,9 @@ window.addEventListener('DOMContentLoaded', function () {
         } else if (view === 'column') {
             document.getElementById('visualization-column').classList.remove('d-none');
             document.getElementById('btn-column').classList.add('trophy-active');
+        } else if (view === 'standings') {
+            document.getElementById('visualization-standings').classList.remove('d-none');
+            document.getElementById('btn-standings').classList.add('trophy-active');
         }
     }
 
@@ -430,6 +436,9 @@ window.addEventListener('DOMContentLoaded', function () {
     if (foundTrophy.graph) {
         document.getElementById('btn-line').addEventListener('click', function () { setVisualization('line'); });
         document.getElementById('btn-column').addEventListener('click', function () { setVisualization('column'); });
+    }
+    if (foundTrophy.standings) {
+        document.getElementById('btn-standings').addEventListener('click', function () { setVisualization('standings'); });
     }
 
     setVisualization('table');
