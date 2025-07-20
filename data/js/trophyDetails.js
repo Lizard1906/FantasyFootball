@@ -185,6 +185,12 @@ function drawChart(playerData) {
     const ctxColumn = document.getElementById('columnChart').getContext('2d');
 
     const labels = playerData[0].evolution.map((_, i) => "GW " + (i + 1));
+    
+    const isMobile = window.innerWidth <= 768;
+
+    const mobileLabels = isMobile ? 
+        playerData[0].evolution.map((_, i) => (i % 2 === 0 || i === playerData[0].evolution.length - 1) ? "GW " + (i + 1) : '') : 
+        labels;
 
     const datasetsLine = playerData.map(player => ({
         label: fantasy.players[player.player - 1].name,
@@ -192,7 +198,9 @@ function drawChart(playerData) {
         borderColor: player.color,
         backgroundColor: player.color,
         fill: false,
-        tension: 0.2
+        tension: 0.2,
+        pointRadius: isMobile ? 2 : 3,
+        borderWidth: isMobile ? 2 : 3
     }));
 
     const datasetsColumn = playerData.map(player => {
@@ -200,110 +208,98 @@ function drawChart(playerData) {
         return {
             label: fantasy.players[player.player - 1].name,
             data: gameByGame,
-            backgroundColor: player.color
+            backgroundColor: player.color,
+            barThickness: isMobile ? 'flex' : undefined
         };
     });
 
-    new Chart(ctxLine, {
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: datasetsLine
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Evolution Graph',
-                    font: { size: 24 },
-                    color: "#fff"
-                },
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        color: "#fff"
+    const commonOptions = {
+        responsive: true,
+        maintainAspectRatio: !isMobile,
+        plugins: {
+            title: {
+                display: true,
+                font: { size: isMobile ? 18 : 24 },
+                color: "#fff"
+            },
+            legend: {
+                position: isMobile ? 'top' : 'bottom',
+                labels: {
+                    color: "#fff",
+                    boxWidth: isMobile ? 12 : 40,
+                    font: {
+                        size: isMobile ? 10 : 12
                     }
                 }
             },
-            scales: {
-                x: {
-                    title: {
-                        display: true,
-                        text: 'GameWeek',
-                        color: '#fff'
-                    },
-                    ticks: {
-                        color: '#fff'
-                    }
+            tooltip: {
+                enabled: true,
+                mode: isMobile ? 'nearest' : 'index',
+                intersect: isMobile
+            }
+        },
+        scales: {
+            x: {
+                title: {
+                    display: !isMobile,
+                    text: 'GameWeek',
+                    color: '#fff'
                 },
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Points',
-                        color: '#fff'
-                    },
-                    ticks: {
-                        color: '#fff'
+                ticks: {
+                    color: '#fff',
+                    maxRotation: isMobile ? 90 : 0,
+                    autoSkip: isMobile,
+                    font: {
+                        size: isMobile ? 8 : 12
+                    }
+                }
+            },
+            y: {
+                title: {
+                    display: !isMobile,
+                    text: 'Points',
+                    color: '#fff'
+                },
+                ticks: {
+                    color: '#fff',
+                    font: {
+                        size: isMobile ? 8 : 12
                     }
                 }
             }
         }
+    };
+
+    const lineOptions = JSON.parse(JSON.stringify(commonOptions));
+    lineOptions.plugins.title.text = 'Evolution Graph';
+
+    const columnOptions = JSON.parse(JSON.stringify(commonOptions));
+    columnOptions.plugins.title.text = 'Game by Game Graph';
+    
+    new Chart(ctxLine, {
+        type: 'line',
+        data: {
+            labels: mobileLabels,
+            datasets: datasetsLine
+        },
+        options: lineOptions
     });
 
     new Chart(ctxColumn, {
         type: 'bar',
         data: {
-            labels: labels,
+            labels: mobileLabels,
             datasets: datasetsColumn
         },
-        options: {
-            responsive: true,
-            plugins: {
-                title: { 
-                    display: true, 
-                    text: 'Game by Game Graph',
-                    font: { size: 24 },
-                    color: "#fff"
-                },
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        color: "#fff"
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    title: {
-                        display: true,
-                        text: 'GameWeek',
-                        color: '#fff'
-                    },
-                    ticks: {
-                        color: '#fff'
-                    }
-                },
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Points',
-                        color: '#fff'
-                    },
-                    ticks: {
-                        color: '#fff'
-                    }
-                }
-            }
-        }
+        options: columnOptions
     });
 
-    // Ajustar altura dinamicamente (como no original)
     let max = Math.max(...playerData.map(p => p.evolution[p.evolution.length - 1]));
-    document.getElementById("lineChart").style.height = `${max / 40 + 100}vh`;
-    document.getElementById("columnChart").style.height = `${max / 40 + 100}vh`;
+    if (!isMobile) {
+        document.getElementById("lineChart").style.height = `${max / 40 + 100}vh`;
+        document.getElementById("columnChart").style.height = `${max / 40 + 100}vh`;
+    }
 
-    // Determinar melhor ronda
     let best = { player: '', points: 0, round: 0 };
     datasetsColumn.forEach(dataset => {
         dataset.data.forEach((points, i) => {

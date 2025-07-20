@@ -354,3 +354,22 @@ a.btn.back:active {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
+
+@media (max-width: 768px) {
+    #lineChart, #columnChart {
+        height: auto !important;
+        min-height: 300px !important;
+        max-height: 400px !important;
+    }
+    
+    #btn-group-container {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    #btn-group-container .btn {
+        margin-left: 20% !important;
+        border-radius: 0 !important;
+        width: 60% !important;
+    }
+}
