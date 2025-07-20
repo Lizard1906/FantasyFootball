@@ -3,7 +3,10 @@
 
 <head>
     <title>Fantasy Football Results</title>
+    <link rel="stylesheet" type="text/css" href="data/css/globals.css">
     <link rel="stylesheet" type="text/css" href="data/css/trophyDetails.css">
+    <link rel="stylesheet" type="text/css" href="data/css/navbar.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="data/images/logo.png">
@@ -11,68 +14,72 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar">
-        <div class="container-fluid">
-            <div class="col-1 arrows">
-                <a href="#" id="prev-arrow" class="arrow d-none">
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-            </div>
-            <div class="col-10">
-            </div>
-            <div class="col-1 text-end arrows">
-                <a href="#" id="next-arrow" class="arrow d-none">
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
-    <div class="container">
-        <div class="trophy-card m-4 p-4 pt-0" style="background-color: transparent;">
-            <div class="row">
+    <div class="container mt-5">
+        <div class="trophy-card m-4 p-0 pt-0">
+            <div class="row m-0">
                 <div class="col-12 p-0">
-                    <h1 class="trophy-title" id="trophy-title"></h1>
+                    <h1 class="trophy-title mb-4" id="trophy-title" style="font-weight: bold; font-size: 2.2rem;"></h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-12 p-0 bg-white">
-                    <table id="points-table" class="tabela">
-                        <!-- tabela aqui -->
-                    </table>
-                </div>
-                <div class="col-lg-4 col-12 p-0">
-                    <div class="trophy-description p-1" id="description-winner"></div>
-                    <div class="row">
-                        <img class="trophy-winner" id="trophy-winner" />
+            <div class="row justify-content-center align-items-center mb-4">
+                <div class="col-auto">
+                    <div class="card border-0 p-3 mb-2" style="background-color: transparent;">
+                        <div class="winner-img-container position-relative mx-auto">
+                            <img class="trophy-winner" id="trophy-winner"
+                                style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.18); transition: filter 0.3s;" />
+                            <div class="description-winner" id="description-winner"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div id="trophy-graph" class="row trophy-graph">
-                <div id="lineChart"></div>
-                <div id="best-round" class="bg-white text-center d-none">
-                    <br/><br/>
-                    <h3>Best Round</h3>
-                    <h5 id="best-round-winner"></h5>                    
-                    <h6 id="best-round-result"></h6>                    
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <div class="btn-group" role="group" aria-label="Visualizations" id="btn-group-container"></div>
                 </div>
-                <div id="columnChart"></div>
             </div>
 
-            <div class="row bg-white d-none" id="table-predicts"></div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row" style="text-align: center;">
-            <div>
-                <a class="btn back" href="trophies.html">Go Back</a>
+            <div class="row">
+                <div class="col-12">
+                    <div id="visualization-table">
+                        <div class="card border-0 shadow-sm p-3" style="background-color: transparent;">
+                            <table id="points-table" class="tabela mb-0"></table>
+                        </div>
+                    </div>
+                    <div id="visualization-line" class="d-none">
+                        <div class="card border-0 shadow-sm p-3" style="background-color: transparent;">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                    <div id="visualization-column" class="d-none">
+                        <div class="card border-0 shadow-sm p-3" style="background-color: transparent;">
+                            <div id="best-round" class="best-round-card text-center d-none rounded-4 shadow-sm p-4 mt-4 mb-4 mx-auto"
+                                style="max-width: 400px;">
+                                <div class="mb-2">
+                                    <span class="best-round-star">
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                                <h3 class="mb-2" style="font-weight:700; letter-spacing:1px;">Best Round</h3>
+                                <h5 id="best-round-winner"></h5>
+                                <h6 id="best-round-result"></h6>
+                            </div>
+                            <canvas id="columnChart"></canvas>
+                        </div>
+                    </div>
+                    <div id="visualization-standings" class="d-none">
+                        <div class="card border-0 shadow-sm p-3" style="background-color: transparent;">
+                            <div id="table-predicts" class="row tabela mb-0"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -84,6 +91,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="data.js"></script>
+    <script src="data/js/navbar.js"></script>
     <script src="data/js/trophyDetails.js"></script>
 </body>
 
