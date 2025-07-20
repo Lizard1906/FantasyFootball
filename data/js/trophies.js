@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
             trophyCol.className = 'col-lg-2 col-md-3 col-sm-4 col-6';
             
             trophyCol.innerHTML = `
-                <a href="trophyDetails.html?${trophy.id}" class="text-decoration-none">
+                <a href="trophyDetails?${trophy.id}" class="text-decoration-none">
                     <div class="trophy-card">
                         <img src="data/images/trophies/${trophy.code}.png" alt="${trophy.name}" class="trophy-img">
                         <div class="trophy-overlay">${trophy.name}</div>
