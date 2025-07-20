@@ -172,7 +172,7 @@ if (foundTrophy.standings) {
     text.classList.add('text-center', 'text-muted', 'pb-2');
     text.style.fontSize = '0.75rem'; // Tamanho de fonte menor
     text.innerHTML = `
-        Source: <a href="${foundTrophy.source.url}.html" style="color: inherit" target="_blank">${foundTrophy.source.name}</a> - Last Updated: ${foundTrophy.source.update.split('.')[0]}
+        Source: <a href="${foundTrophy.source.url}" style="color: inherit" target="_blank">${foundTrophy.source.name}</a> - Last Updated: ${foundTrophy.source.update.split('.')[0]}
     `
     tables.appendChild(text)
 
