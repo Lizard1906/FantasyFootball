@@ -16,12 +16,16 @@
     display: none;
 }
 
-[data-theme="dark"] .logo-light {
-    display: none;
+@media (prefers-color-scheme: dark) {
+    .logo-light {
+        display: none;
+    }
 }
 
-[data-theme="dark"] .logo-dark {
-    display: inline-block;
+@media (prefers-color-scheme: dark) {
+    .logo-dark {
+        display: inline-block;
+    }
 }
 
 
@@ -73,21 +77,4 @@
     transform: translate(-50%, -50%);
     color: var(--nav-text);
     font-size: 1.25rem;
-}
-
-.theme-toggle-btn {
-    /* display: none;  Mostrar em dev */
-    background: none;
-    border: none;
-    color: var(--nav-text);
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 50%;
-    transition: background-color var(--transition-speed);
-    margin-left: 15px;
-}
-
-.theme-toggle-btn:hover {
-    background-color: rgba(0, 0, 0, 0.1);
 }

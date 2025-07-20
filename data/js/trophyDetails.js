@@ -333,8 +333,56 @@ function getTrophyColorsFromTitle() {
     };
 }
 
+function applyTrophyColorsToNavbar(colors) {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        navbar.style.backgroundColor = colors.bg;
+        navbar.style.color = colors.color;
+
+        const navLinks = navbar.querySelectorAll('.nav-link, .navbar-brand');
+        navLinks.forEach(link => {
+            link.style.setProperty("color", colors.color, "important");
+        });
+
+        const togglers = navbar.querySelectorAll('.navbar-toggler, .navbar-toggler-icon');
+        togglers.forEach(toggler => {
+            toggler.style.setProperty("color", colors.color, "important");
+            toggler.style.setProperty("border-color", colors.color, "important");
+        });
+
+        const style = document.createElement('style');
+        style.textContent = `
+            .navbar-toggler-icon::before {
+                color: ${colors.color} !important;
+            }
+        `;
+        document.head.appendChild(style);
+
+        const navbarLogos = document.querySelectorAll('.logo-light, .logo-dark');
+        navbarLogos.forEach(logo => {
+            logo.style.setProperty("display", "none", "important");
+        });
+
+    }
+}
+
 window.addEventListener('DOMContentLoaded', function () {
     const colors = getTrophyColorsFromTitle();
+
+    const btnGroup = document.getElementById('btn-group-container');
+    if (btnGroup) {
+        btnGroup.style.setProperty('--trophy-bg', colors.bg);
+        btnGroup.style.setProperty('--trophy-color', colors.color);
+        btnGroup.style.setProperty('--trophy-border', colors.border);
+    }
+
+    if (document.querySelector('.navbar')) {
+        applyTrophyColorsToNavbar(colors);
+    } else {
+        document.addEventListener('navbarLoaded', function() {
+            applyTrophyColorsToNavbar(colors);
+        });
+    }
 
     let buttons = [
         { id: 'btn-table', label: 'Table', active: true },
@@ -345,7 +393,7 @@ window.addEventListener('DOMContentLoaded', function () {
         buttons.push({ id: 'btn-column', label: 'Game by Game', active: false });
     }
 
-    const btnGroup = document.getElementById('btn-group-container');
+
 
     buttons.forEach(btn => {
         const button = document.createElement('button');
@@ -357,12 +405,6 @@ window.addEventListener('DOMContentLoaded', function () {
         btnGroup.appendChild(button);
     });
 
-
-    if (btnGroup) {
-        btnGroup.style.setProperty('--trophy-bg', colors.bg);
-        btnGroup.style.setProperty('--trophy-color', colors.color);
-        btnGroup.style.setProperty('--trophy-border', colors.border);
-    }
 
     function setVisualization(view) {
         buttons.forEach(btn => {
