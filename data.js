@@ -67,7 +67,7 @@ const trophies = [
         finished: true
     },
     {
-        id: 'uclpredict24', code: 'uclpredictor', date: 2024, name: 'Champions Predict', category: 'ucl',
+        id: 'ucl24predict', code: 'uclpredictor', date: 2024, name: 'Champions Predict', category: 'ucl',
         graph: [
             { player: 1, color: 'red', evolution: [54, 93, 155, 202, 231, 272, 314, 347, 364, 371, 376, 382, 392] },
             { player: 2, color: 'green', evolution: [52, 94, 159, 205, 243, 284, 310, 356, 375, 384, 387, 391, 409] },
