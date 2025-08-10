@@ -22,7 +22,7 @@ const players = [
 ];
 
 // siglas equipas PT
-AVS="AVS"; FCA="FC Arouca"; SLB="SL Benfica"; BFC="Boavista FC"; CPI = "Casa Pia AC", GDEP = "Estoril Praia"; FCEA="Estrela Amadora"; FCF="FC Famalicão"; SCF="SC Farense"; GVFC="Gil Vicente FC"; MFC="Moreirense FC"; CDN="CD Nacional"; FCP="FC Porto"; RAFC="Rio Ave FC"; GDSC="Santa Clara"; SCB="SC Braga"; SCP="Sporting CP"; VSC="Vitória SC"
+AVS="AVS"; ALV="FC Alverca"; FCA="FC Arouca"; SLB="SL Benfica"; BFC="Boavista FC"; CPI = "Casa Pia AC", GDEP = "Estoril Praia"; FCEA="Estrela Amadora"; FCF="FC Famalicão"; SCF="SC Farense"; GVFC="Gil Vicente FC"; MFC="Moreirense FC"; CDN="CD Nacional"; FCP="FC Porto"; RAFC="Rio Ave FC"; GDSC="Santa Clara"; SCB="SC Braga"; SCP="Sporting CP"; CDT="CD Tondela"; VSC="Vitória SC"
 // siglas equipas UCL
 BAY="Bayern M."; CEL="Celtic"; LEV="B. Leverkusen"; AVI="Aston Villa"; DOR="B. Dortmund"; SPA="Sparta Praha"; LIV="Liverpool"; JUV="Juventus"; RMA="Real Madrid"; ATM="Atl. Madrid"; BRE="Brest"; MON="Monaco"; PSG="PSG"; ARS="Arsenal"; ATA="Atalanta"; BOL="Bolonha"; INT="Inter"; MCI="Man. City"; SHK="Shakhtar"; BAR="Barcelona"; LPZ="Leipzig"; STU="Sturm Graz"; CZV="Crvena Zvezda"; GIR="Girona"; PSV="PSV"; STT="Estugarda"; MIL="Milan"; LOSC="Lille"; BRU="Club Brugge"; SZB="Salzburg"; YB="Young Boys"; SLO="Slovan Bratislava"; FEY="Feyenoord"; DZG="D. Zagreb"
 
@@ -195,6 +195,57 @@ const trophies = [
             { pos: 2, player: 2, points: 1055 },
         ],
         finished: true
+    },
+    // 2025-26
+    {
+        id: 'pt26', code: 'ptbetclic', date: 2026, name: 'Liga Portugal', category: 'pt',
+        graph: [
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
+        ],
+        finished: false
+    },
+    {
+        id: 'pt26battle', code: 'ptbattle', date: 2026, name: 'Portugal Battle', category: 'pt',
+        standings: [
+            { player: 0, predict: ["AVS", "FC Alverca", "FC Arouca", "SL Benfica", "Casa Pia AC", "Estoril Praia", "Estrela Amadora", "FC Famalicão", "Gil Vicente FC", "Moreirense FC", "CD Nacional", "FC Porto", "Rio Ave FC", "Santa Clara", "SC Braga", "Sporting CP", "CD Tondela", "Vitória SC"]},
+            { player: 1, predict: [SLB, FCP, SCP, SCB, VSC, FCF, MFC, GDSC, FCA, RAFC, GDEP, ALV, GVFC, CPI, CDT, FCEA, CDN, AVS]},
+            { player: 2, predict: [SCP, SLB, FCP, VSC, SCB, GDEP, FCF, MFC, CPI, GDSC, FCA, GVFC, CDN, CDT, ALV, RAFC, FCEA, AVS]},
+        ],
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-08-02 13:09:14.382782'},
+        finished: false
+    },
+    {
+        id: 'pt26cup', code: 'ptcup', date: 2026, name: 'Taça de Portugal', category: 'pt',
+        data: [
+            { pos: 1, player: 1, points: 0 },
+            { pos: 2, player: 2, points: 0 },
+        ],
+        finished: false
+    },
+    {
+        id: 'en26', code: 'premier', date: 2026, name: 'Premier League', category: 'en',
+        graph: [
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
+        ],
+        finished: false
+    },
+    {
+        id: 'en26challenge', code: 'enchallenge', date: 2026, name: 'English Challenge', category: 'en',
+        graph: [
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
+        ],
+        finished: false
+    },
+    {
+        id: 'en26cup', code: 'emirates', date: 2026, name: 'Emirates Cup', category: 'en',
+        data: [
+            { pos: 1, player: 1, points: 0 },
+            { pos: 2, player: 2, points: 0 },
+        ],
+        finished: false
     },
 ];
 

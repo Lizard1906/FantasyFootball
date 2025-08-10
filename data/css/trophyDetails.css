@@ -225,6 +225,20 @@ tr.odd {
     border-color: #000;
 }
 
+.ptcup {
+    background-color: #c71012;
+    color: #00db7f;
+    border-color: #00db7f;
+}
+
+.enchallenge {
+    background-color: #37003c;
+    color: #ffb241;
+    border-color: #ffb241;
+}
+
+
+
 
 #lineChart {
     /* height: 500px; */
