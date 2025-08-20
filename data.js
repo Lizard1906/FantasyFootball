@@ -200,19 +200,19 @@ const trophies = [
     {
         id: 'pt26', code: 'ptbetclic', date: 2026, name: 'Liga Portugal', category: 'pt',
         graph: [
-            { player: 1, color: 'red', evolution: [0] },
-            { player: 2, color: 'green', evolution: [0] },
+            { player: 1, color: 'red', evolution: [41, 72] },
+            { player: 2, color: 'green', evolution: [57, 83] },
         ],
         finished: false
     },
     {
         id: 'pt26battle', code: 'ptbattle', date: 2026, name: 'Portugal Battle', category: 'pt',
         standings: [
-            { player: 0, predict: ["AVS", "FC Alverca", "FC Arouca", "SL Benfica", "Casa Pia AC", "Estoril Praia", "Estrela Amadora", "FC Famalicão", "Gil Vicente FC", "Moreirense FC", "CD Nacional", "FC Porto", "Rio Ave FC", "Santa Clara", "SC Braga", "Sporting CP", "CD Tondela", "Vitória SC"]},
+            { player: 0, predict: ["Sporting CP", "SC Braga", "FC Porto", "FC Famalicão", "Moreirense FC", "SL Benfica", "Casa Pia AC", "Gil Vicente FC", "Vitória SC", "FC Arouca", "Rio Ave FC", "Estoril Praia", "Estrela Amadora", "CD Nacional", "AVS", "FC Alverca", "Santa Clara", "CD Tondela"]},
             { player: 1, predict: [SLB, FCP, SCP, SCB, VSC, FCF, MFC, GDSC, FCA, RAFC, GDEP, ALV, GVFC, CPI, CDT, FCEA, CDN, AVS]},
             { player: 2, predict: [SCP, SLB, FCP, VSC, SCB, GDEP, FCF, MFC, CPI, GDSC, FCA, GVFC, CDN, CDT, ALV, RAFC, FCEA, AVS]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-08-02 13:09:14.382782'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-08-20 22:21:26.880440'},
         finished: false
     },
     {
