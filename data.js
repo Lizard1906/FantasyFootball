@@ -226,16 +226,16 @@ const trophies = [
     {
         id: 'en26', code: 'premier', date: 2026, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [0] },
-            { player: 2, color: 'green', evolution: [0] },
+            { player: 1, color: 'red', evolution: [56] },
+            { player: 2, color: 'green', evolution: [43] },
         ],
         finished: false
     },
     {
         id: 'en26challenge', code: 'enchallenge', date: 2026, name: 'English Challenge', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [0] },
-            { player: 2, color: 'green', evolution: [0] },
+            { player: 1, color: 'red', evolution: [37] },
+            { player: 2, color: 'green', evolution: [52] },
         ],
         finished: false
     },
