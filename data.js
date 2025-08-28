@@ -200,8 +200,8 @@ const trophies = [
     {
         id: 'pt26', code: 'ptbetclic', date: 2026, name: 'Liga Portugal', category: 'pt',
         graph: [
-            { player: 1, color: 'red', evolution: [41, 72] },
-            { player: 2, color: 'green', evolution: [57, 83] },
+            { player: 1, color: 'red', evolution: [41, 113, 178] },
+            { player: 2, color: 'green', evolution: [57, 140, 204] },
         ],
         finished: false
     },
@@ -226,16 +226,16 @@ const trophies = [
     {
         id: 'en26', code: 'premier', date: 2026, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [56] },
-            { player: 2, color: 'green', evolution: [43] },
+            { player: 1, color: 'red', evolution: [56, 119] },
+            { player: 2, color: 'green', evolution: [43, 94] },
         ],
         finished: false
     },
     {
         id: 'en26challenge', code: 'enchallenge', date: 2026, name: 'English Challenge', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [37] },
-            { player: 2, color: 'green', evolution: [52] },
+            { player: 1, color: 'red', evolution: [37, 70] },
+            { player: 2, color: 'green', evolution: [52, 92] },
         ],
         finished: false
     },
