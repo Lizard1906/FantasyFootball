@@ -24,7 +24,7 @@ const players = [
 // siglas equipas PT
 AVS="AVS"; ALV="FC Alverca"; FCA="FC Arouca"; SLB="SL Benfica"; BFC="Boavista FC"; CPI = "Casa Pia AC", GDEP = "Estoril Praia"; FCEA="Estrela Amadora"; FCF="FC Famalicão"; SCF="SC Farense"; GVFC="Gil Vicente FC"; MFC="Moreirense FC"; CDN="CD Nacional"; FCP="FC Porto"; RAFC="Rio Ave FC"; GDSC="Santa Clara"; SCB="SC Braga"; SCP="Sporting CP"; CDT="CD Tondela"; VSC="Vitória SC"
 // siglas equipas UCL
-BAY="Bayern M."; CEL="Celtic"; LEV="B. Leverkusen"; AVI="Aston Villa"; DOR="B. Dortmund"; SPA="Sparta Praha"; LIV="Liverpool"; JUV="Juventus"; RMA="Real Madrid"; ATM="Atl. Madrid"; BRE="Brest"; MON="Monaco"; PSG="PSG"; ARS="Arsenal"; ATA="Atalanta"; BOL="Bolonha"; INT="Inter"; MCI="Man. City"; SHK="Shakhtar"; BAR="Barcelona"; LPZ="Leipzig"; STU="Sturm Graz"; CZV="Crvena Zvezda"; GIR="Girona"; PSV="PSV"; STT="Estugarda"; MIL="Milan"; LOSC="Lille"; BRU="Club Brugge"; SZB="Salzburg"; YB="Young Boys"; SLO="Slovan Bratislava"; FEY="Feyenoord"; DZG="D. Zagreb"
+AJA="Ajax"; ARS="Arsenal"; ATA="Atalanta"; ATH="Atl. Bilbao"; ATM="Atl. Madrid"; AVI="Aston Villa"; BAR="Barcelona"; BAY="Bayern M."; BRE="Brest"; BRU="Club Brugge"; BOD="Bodo"; BOL="Bolonha"; CEL="Celtic"; CHE="Chelsea FC"; COP="Copenhagen"; CZV="Crvena Zvezda"; DOR="B. Dortmund"; DZG="D. Zagreb"; FEY="Feyenoord"; FRA="E. Frankfurt"; GAL="Galatasaray"; GIR="Girona"; INT="Inter"; JUV="Juventus"; KAI="Kairat Almaty"; LEV="B. Leverkusen"; LIV="Liverpool"; LOSC="Lille"; LPZ="Leipzig"; MAR="Marselha"; MCI="Man. City"; MIL="Milan"; MON="Monaco"; NAP="Nápoles"; NEW="Newcastle"; OLY="Olympiakos"; PAF="Pafos"; PSG="PSG"; PSV="PSV"; QAR="Qarabag"; RMA="Real Madrid"; SHK="Shakhtar"; SLA="Slavia Praha"; SLO="Slovan Bratislava"; SPA="Sparta Praha"; STT="Estugarda"; STU="Sturm Graz"; SZB="Salzburg"; TOT="Tottenham"; USG="Un. Saint-Gilloise"; VIL="Villarreal"; YB="Young Boys";
 
 const trophies = [
     // 2022-23
@@ -247,6 +247,41 @@ const trophies = [
         ],
         finished: false
     },
+    {
+        id: 'ucl26', code: 'champions', date: 2026, name: 'Champions League', category: 'ucl',
+        graph: [
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
+        ],
+        finished: false
+    },
+    {
+        id: 'ucl26predict', code: 'uclpredictor', date: 2026, name: 'Champions Predict', category: 'ucl',
+        graph: [
+            { player: 1, color: 'red', evolution: [0] },
+            { player: 2, color: 'green', evolution: [0] },
+        ],
+        finished: false
+    },
+    {
+        id: 'ucl26bracket', code: 'uclbracket', date: 2026, name: 'Champions Bracket', category: 'ucl',
+        data: [
+            { pos: 1, player: 2, points: 0 },
+            { pos: 2, player: 1, points: 0 },
+        ],
+        finished: false
+    },
+    {
+        id: 'ucl26battle', code: 'uclbattle', date: 2026, name: 'Champions Battle', category: 'ucl',
+        standings: [
+            { player: 0, predict: ["Ajax", "Arsenal", "Atalanta", "Atl. Bilbao", "Atl. Madrid", "Barcelona", "B. Leverkusen", "Bayern M.", "Benfica", "Bodo", "B. Dortmund", "Chelsea", "Club Brugge", "Copenhagen", "E. Frankfurt", "Galatasaray", "Inter", "Juventus", "Kairat Almaty", "Liverpool", "Man. City", "Marselha", "Monaco", "Nápoles", "Newcastle", "Olympiakos", "Pafos", "PSG", "PSV", "Qarabag", "Real Madrid", "Slavia Praha", "Sporting CP", "Tottenham", "Un. Saint-Gilloise", "Villarreal"]},
+            { player: 1, predict: [BAR, LIV, BAY, PSG, INT, ARS, MCI, RMA, TOT, NAP, CHE, NEW, SLB, GAL, JUV, VIL, SCP, ATM, OLY, ATH, ATA, DOR, BOD, PSV, FRA, AJA, COP, LEV, MAR, PAF, BRU, USG, MON, QAR, KAI, SLA]},
+            { player: 2, predict: [PSG, BAR, ARS, NAP, RMA, BAY, CHE, LIV, NEW, INT, TOT, MCI, DOR, SLB, ATA, JUV, FRA, ATM, AJA, SCP, BRU, BOD, PSV, ATH, PAF, GAL, COP, MAR, OLY, MON, LEV, VIL, USG, KAI, QAR, SLA]},
+        ],
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2025-09-08 22:00:20.677856'},
+        finished: false
+    },
+
 ];
 
 trophies.forEach(trophy => {
