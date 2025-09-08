@@ -200,19 +200,19 @@ const trophies = [
     {
         id: 'pt26', code: 'ptbetclic', date: 2026, name: 'Liga Portugal', category: 'pt',
         graph: [
-            { player: 1, color: 'red', evolution: [41, 113, 178] },
-            { player: 2, color: 'green', evolution: [57, 140, 204] },
+            { player: 1, color: 'red', evolution: [41, 113, 178, 231] },
+            { player: 2, color: 'green', evolution: [57, 140, 204, 271] },
         ],
         finished: false
     },
     {
         id: 'pt26battle', code: 'ptbattle', date: 2026, name: 'Portugal Battle', category: 'pt',
         standings: [
-            { player: 0, predict: ["Sporting CP", "SC Braga", "FC Porto", "FC Famalicão", "Moreirense FC", "SL Benfica", "Casa Pia AC", "Gil Vicente FC", "Vitória SC", "FC Arouca", "Rio Ave FC", "Estoril Praia", "Estrela Amadora", "CD Nacional", "AVS", "FC Alverca", "Santa Clara", "CD Tondela"]},
+            { player: 0, predict: ["FC Porto", "FC Famalicão", "Sporting CP", "SL Benfica", "Moreirense FC", "SC Braga", "Gil Vicente FC", "FC Arouca", "CD Nacional", "Santa Clara", "Vitória SC", "Rio Ave FC", "Estrela Amadora", "Casa Pia AC", "Estoril Praia", "FC Alverca", "AVS", "CD Tondela"]},
             { player: 1, predict: [SLB, FCP, SCP, SCB, VSC, FCF, MFC, GDSC, FCA, RAFC, GDEP, ALV, GVFC, CPI, CDT, FCEA, CDN, AVS]},
             { player: 2, predict: [SCP, SLB, FCP, VSC, SCB, GDEP, FCF, MFC, CPI, GDSC, FCA, GVFC, CDN, CDT, ALV, RAFC, FCEA, AVS]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-08-20 22:21:26.880440'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-09-08 22:00:21.377738'},
         finished: false
     },
     {
@@ -226,16 +226,16 @@ const trophies = [
     {
         id: 'en26', code: 'premier', date: 2026, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [56, 119] },
-            { player: 2, color: 'green', evolution: [43, 94] },
+            { player: 1, color: 'red', evolution: [56, 119, 155] },
+            { player: 2, color: 'green', evolution: [43, 94, 146] },
         ],
         finished: false
     },
     {
         id: 'en26challenge', code: 'enchallenge', date: 2026, name: 'English Challenge', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [37, 70] },
-            { player: 2, color: 'green', evolution: [52, 92] },
+            { player: 1, color: 'red', evolution: [37, 70, 111] },
+            { player: 2, color: 'green', evolution: [52, 92, 132] },
         ],
         finished: false
     },
