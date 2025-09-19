@@ -200,8 +200,8 @@ const trophies = [
     {
         id: 'pt26', code: 'ptbetclic', date: 2026, name: 'Liga Portugal', category: 'pt',
         graph: [
-            { player: 1, color: 'red', evolution: [41, 113, 178, 231] },
-            { player: 2, color: 'green', evolution: [57, 140, 204, 271] },
+            { player: 1, color: 'red', evolution: [41, 113, 178, 231, 269] },
+            { player: 2, color: 'green', evolution: [57, 140, 204, 271, 321] },
         ],
         finished: false
     },
@@ -226,16 +226,16 @@ const trophies = [
     {
         id: 'en26', code: 'premier', date: 2026, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [56, 119, 155] },
-            { player: 2, color: 'green', evolution: [43, 94, 146] },
+            { player: 1, color: 'red', evolution: [56, 119, 155, 232] },
+            { player: 2, color: 'green', evolution: [43, 94, 146, 211] },
         ],
         finished: false
     },
     {
         id: 'en26challenge', code: 'enchallenge', date: 2026, name: 'English Challenge', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution: [37, 70, 111] },
-            { player: 2, color: 'green', evolution: [52, 92, 132] },
+            { player: 1, color: 'red', evolution: [37, 70, 111, 197] },
+            { player: 2, color: 'green', evolution: [52, 92, 132, 132] },
         ],
         finished: false
     },
@@ -250,16 +250,16 @@ const trophies = [
     {
         id: 'ucl26', code: 'champions', date: 2026, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [0] },
-            { player: 2, color: 'green', evolution: [0] },
+            { player: 1, color: 'red', evolution: [118] },
+            { player: 2, color: 'green', evolution: [94] },
         ],
         finished: false
     },
     {
         id: 'ucl26predict', code: 'uclpredictor', date: 2026, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [0] },
-            { player: 2, color: 'green', evolution: [0] },
+            { player: 1, color: 'red', evolution: [73] },
+            { player: 2, color: 'green', evolution: [55] },
         ],
         finished: false
     },
