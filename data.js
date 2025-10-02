@@ -250,16 +250,16 @@ const trophies = [
     {
         id: 'ucl26', code: 'champions', date: 2026, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [118] },
-            { player: 2, color: 'green', evolution: [94] },
+            { player: 1, color: 'red', evolution: [118, 205] },
+            { player: 2, color: 'green', evolution: [94, 181] },
         ],
         finished: false
     },
     {
         id: 'ucl26predict', code: 'uclpredictor', date: 2026, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution: [73] },
-            { player: 2, color: 'green', evolution: [55] },
+            { player: 1, color: 'red', evolution: [73, 153] },
+            { player: 2, color: 'green', evolution: [55, 137] },
         ],
         finished: false
     },
