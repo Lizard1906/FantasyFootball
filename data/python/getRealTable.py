@@ -117,5 +117,5 @@ api_ids = {
     "pt26battle": "192"
 }
 
-# getTable("ucl26battle")
-getTable("pt26battle")
+getTable("ucl26battle")
+# getTable("pt26battle")
