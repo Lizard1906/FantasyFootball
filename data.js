@@ -281,6 +281,14 @@ const trophies = [
         source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2025-12-13 13:50:04.731272'},
         finished: false
     },
+    {
+        id: 'can26', code: 'can26', date: 2026, name: 'African Cup of Nations', category: 'africa',
+        graph: [
+            { player: 1, color: 'red',   evolution: [76, 173, 217, 340, 411, 474, 520] },
+            { player: 2, color: 'green', evolution: [85, 152, 197, 269, 321, 350, 371] },
+        ],
+        finished: true
+    },
 
 ];
 
@@ -585,7 +593,7 @@ trophies.forEach(trophy => {
 
 
 // sort trophies by importance
-const categoryOrder = ['pt', 'en', 'ucl', 'uel', 'world', 'euro'];
+const categoryOrder = ['pt', 'en', 'ucl', 'uel', 'world', 'euro', 'africa'];
 
 function compareCategories(a, b) {
     return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
