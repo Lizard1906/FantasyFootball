@@ -250,16 +250,16 @@ const trophies = [
     {
         id: 'ucl26', code: 'champions', date: 2026, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495] },
-            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440] },
+            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495, 535] },
+            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440, 504] },
         ],
         finished: false
     },
     {
         id: 'ucl26predict', code: 'uclpredictor', date: 2026, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350] },
-            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355] },
+            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350, 417] },
+            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355, 410] },
         ],
         finished: false
     },
@@ -274,11 +274,11 @@ const trophies = [
     {
         id: 'ucl26battle', code: 'uclbattle', date: 2026, name: 'Champions Battle', category: 'ucl',
         standings: [
-            { player: 0, predict: ["Arsenal", "Bayern München", "PSG", "Manchester City", "Atalanta", "Internazionale", "Real Madrid", "Atlético Madrid", "Liverpool", "Borussia Dortmund", "Tottenham Hotspur", "Newcastle United", "Chelsea", "Sporting", "Barcelona", "Olympique Marseille", "Juventus", "Galatasaray", "Monaco", "Bayer Leverkusen", "PSV", "Qarabağ", "Napoli", "Copenhagen", "Benfica", "Pafos", "Union Saint-Gilloise", "Athletic Club", "Olympiakos", "Eintracht Frankfurt", "Club Brugge", "Bodø / Glimt", "Slavia", "Ajax", "Villarreal", "Kairat"]},
+            { player: 0, predict: ["Arsenal", "Bayern München", "Real Madrid", "Liverpool", "Tottenham Hotspur", "PSG", "Newcastle United", "Chelsea", "Barcelona", "Sporting", "Manchester City", "Atlético Madrid", "Atalanta", "Internazionale", "Juventus", "Borussia Dortmund", "Galatasaray", "Qarabağ", "Olympique Marseille", "Bayer Leverkusen", "Monaco", "PSV", "Athletic Club", "Olympiakos", "Napoli", "Copenhagen", "Club Brugge", "Bodø / Glimt", "Benfica", "Pafos", "Union Saint-Gilloise", "Ajax", "Eintracht Frankfurt", "Slavia", "Villarreal", "Kairat"]},
             { player: 1, predict: [BAR, LIV, BAY, PSG, INT, ARS, MCI, RMA, TOT, NAP, CHE, NEW, SLB, GAL, JUV, VIL, SCP, ATM, OLY, ATH, ATA, DOR, BOD, PSV, FRA, AJA, COP, LEV, MAR, PAF, BRU, USG, MON, QAR, KAI, SLA]},
             { player: 2, predict: [PSG, BAR, ARS, NAP, RMA, BAY, CHE, LIV, NEW, INT, TOT, MCI, DOR, SLB, ATA, JUV, FRA, ATM, AJA, SCP, BRU, BOD, PSV, ATH, PAF, GAL, COP, MAR, OLY, MON, LEV, VIL, USG, KAI, QAR, SLA]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2025-12-13 13:50:04.731272'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2026-01-28 09:58:30.260815'},
         finished: false
     },
     {
