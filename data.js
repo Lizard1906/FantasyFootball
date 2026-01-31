@@ -24,7 +24,7 @@ const players = [
 // siglas equipas PT
 AVS="AVS"; ALV="FC Alverca"; FCA="Arouca"; SLB="Benfica"; BFC="Boavista"; CPI = "Casa Pia", GDEP = "Estoril"; FCEA="Estrela"; FCF="Famalicão"; SCF="Farense"; GVFC="Gil Vicente"; MFC="Moreirense"; CDN="Nacional"; FCP="Porto"; RAFC="Rio Ave"; GDSC="Santa Clara"; SCB="Braga"; SCP="Sporting"; CDT="Tondela"; VSC="Vitória SC"
 // siglas equipas UCL
-AJA="Ajax"; ARS="Arsenal"; ATA="Atalanta"; ATH="Athletic Club"; ATM="Atlético Madrid"; AVI="Aston Villa"; BAR="Barcelona"; BAY="Bayern München"; BRE="Brest"; BRU="Club Brugge"; BOD="Bodø / Glimt"; BOL="Bolonha"; CEL="Celtic"; CHE="Chelsea"; COP="Copenhagen"; CZV="Crvena Zvezda"; DOR="Borussia Dortmund"; DZG="D. Zagreb"; FEY="Feyenoord"; FRA="Eintracht Frankfurt"; GAL="Galatasaray"; GIR="Girona"; INT="Internazionale"; JUV="Juventus"; KAI="Kairat"; LEV="Bayer Leverkusen"; LIV="Liverpool"; LOSC="Lille"; LPZ="Leipzig"; MAR="Marselha"; MCI="Manchester City"; MIL="Milan"; MON="Monaco"; NAP="Napoli"; NEW="Newcastle United"; OLY="Olympiakos"; PAF="Pafos"; PSG="PSG"; PSV="PSV"; QAR="Qarabağ"; RMA="Real Madrid"; SHK="Shakhtar"; SLA="Slavia"; SLO="Slovan Bratislava"; SPA="Sparta Praha"; STT="Estugarda"; STU="Sturm Graz"; SZB="Salzburg"; TOT="Tottenham Hotspur"; USG="Union Saint-Gilloise"; VIL="Villarreal"; YB="Young Boys";
+AJA="Ajax"; ARS="Arsenal"; ATA="Atalanta"; ATH="Athletic Club"; ATM="Atlético Madrid"; AVI="Aston Villa"; BAR="Barcelona"; BAY="Bayern München"; BRE="Brest"; BRU="Club Brugge"; BOD="Bodø / Glimt"; BOL="Bolonha"; CEL="Celtic"; CHE="Chelsea"; COP="Copenhagen"; CZV="Crvena Zvezda"; DOR="Borussia Dortmund"; DZG="D. Zagreb"; FEY="Feyenoord"; FRA="Eintracht Frankfurt"; GAL="Galatasaray"; GIR="Girona"; INT="Internazionale"; JUV="Juventus"; KAI="Kairat"; LEV="Bayer Leverkusen"; LIV="Liverpool"; LOSC="Lille"; LPZ="Leipzig"; MAR="Olympique Marseille"; MCI="Manchester City"; MIL="Milan"; MON="Monaco"; NAP="Napoli"; NEW="Newcastle United"; OLY="Olympiakos"; PAF="Pafos"; PSG="PSG"; PSV="PSV"; QAR="Qarabağ"; RMA="Real Madrid"; SHK="Shakhtar"; SLA="Slavia"; SLO="Slovan Bratislava"; SPA="Sparta Praha"; STT="Estugarda"; STU="Sturm Graz"; SZB="Salzburg"; TOT="Tottenham Hotspur"; USG="Union Saint-Gilloise"; VIL="Villarreal"; YB="Young Boys";
 
 const trophies = [
     // 2022-23
@@ -200,19 +200,19 @@ const trophies = [
     {
         id: 'pt26', code: 'ptbetclic', date: 2026, name: 'Liga Portugal', category: 'pt',
         graph: [
-            { player: 1, color: 'red', evolution:   [41, 113, 178, 231, 269, 375, 424, 476, 553, 599, 656, 711, 751, 832, 881, 916] },
-            { player: 2, color: 'green', evolution: [57, 140, 204, 271, 321, 378, 431, 471, 527, 573, 614, 675, 717, 805, 864, 941] },
+            { player: 1, color: 'red', evolution:   [41, 113, 178, 231, 269, 375, 424, 476, 553, 599, 656, 711, 751, 832, 881, 916, 997,  1058, 1131] },
+            { player: 2, color: 'green', evolution: [57, 140, 204, 271, 321, 378, 431, 471, 527, 573, 614, 675, 717, 805, 864, 941, 1000, 1074, 1163] },
         ],
         finished: false
     },
     {
         id: 'pt26battle', code: 'ptbattle', date: 2026, name: 'Portugal Battle', category: 'pt',
         standings: [
-            { player: 0, predict: ["Porto", "Sporting", "Benfica", "Gil Vicente", "Braga", "Famalicão", "Vitória SC", "Moreirense", "Estoril", "Estrela", "Rio Ave", "FC Alverca", "Nacional", "Santa Clara", "Casa Pia", "Arouca", "Tondela", "AVS"]},
+            { player: 0, predict: ["Porto", "Sporting", "Benfica", "Braga", "Gil Vicente", "Moreirense", "Famalicão", "Estoril", "Vitória SC", "FC Alverca", "Nacional", "Rio Ave", "Estrela", "Santa Clara", "Arouca", "Casa Pia", "Tondela", "AVS"]},
             { player: 1, predict: [SLB, FCP, SCP, SCB, VSC, FCF, MFC, GDSC, FCA, RAFC, GDEP, ALV, GVFC, CPI, CDT, FCEA, CDN, AVS]},
             { player: 2, predict: [SCP, SLB, FCP, VSC, SCB, GDEP, FCF, MFC, CPI, GDSC, FCA, GVFC, CDN, CDT, ALV, RAFC, FCEA, AVS]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2026-01-02 16:37:15.836741'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2026-01-28 09:48:08.098070'},
         finished: false
     },
     {
@@ -226,16 +226,16 @@ const trophies = [
     {
         id: 'en26', code: 'premier', date: 2026, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red',  evolution: [56, 119, 155, 232, 259, 289, 347, 389, 455, 522, 576, 614, 666, 734, 785, 853, 952, 1013, 1049] },
-            { player: 2, color: 'green', evolution: [43, 94, 146, 211, 255, 282, 361, 404, 444, 498, 530, 562, 600, 672, 710, 780, 871, 922, 950] },
+            { player: 1, color: 'red',  evolution: [56, 119, 155, 232, 259, 289, 347, 389, 455, 522, 576, 614, 666, 734, 785, 853, 952, 1013, 1049, 1090, 1127, 1157, 1193] },
+            { player: 2, color: 'green', evolution: [43, 94, 146, 211, 255, 282, 361, 404, 444, 498, 530, 562, 600, 672, 710, 780, 871,  922,  950,  982, 1032, 1075, 1123] },
         ],
         finished: false
     },
     {
         id: 'en26challenge', code: 'enchallenge', date: 2026, name: 'English Challenge', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution:   [37, 70, 111, 197, 245, 245, 307, 364, 404, 468, 468, 517, 557, 615, 663, 711, 839, 889, 910] },
-            { player: 2, color: 'green', evolution: [52, 92, 132, 132, 187, 237, 300, 359, 411, 477, 497, 524, 568, 650, 650, 671, 801, 834, 847] },
+            { player: 1, color: 'red', evolution:   [37, 70, 111, 197, 245, 245, 307, 364, 404, 468, 468, 517, 557, 615, 663, 711, 839, 889, 910, 937, 977, 1117, 1148] },
+            { player: 2, color: 'green', evolution: [52, 92, 132, 132, 187, 237, 300, 359, 411, 477, 497, 524, 568, 650, 650, 671, 801, 834, 847, 872, 936,  957,  994] },
         ],
         finished: false
     },
@@ -250,16 +250,16 @@ const trophies = [
     {
         id: 'ucl26', code: 'champions', date: 2026, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495] },
-            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440] },
+            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495, 535, 618] },
+            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440, 504, 559] },
         ],
         finished: false
     },
     {
         id: 'ucl26predict', code: 'uclpredictor', date: 2026, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350] },
-            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355] },
+            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350, 417, 477] },
+            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355, 410, 480] },
         ],
         finished: false
     },
@@ -274,12 +274,20 @@ const trophies = [
     {
         id: 'ucl26battle', code: 'uclbattle', date: 2026, name: 'Champions Battle', category: 'ucl',
         standings: [
-            { player: 0, predict: ["Arsenal", "Bayern München", "PSG", "Manchester City", "Atalanta", "Internazionale", "Real Madrid", "Atlético Madrid", "Liverpool", "Borussia Dortmund", "Tottenham Hotspur", "Newcastle United", "Chelsea", "Sporting", "Barcelona", "Olympique Marseille", "Juventus", "Galatasaray", "Monaco", "Bayer Leverkusen", "PSV", "Qarabağ", "Napoli", "Copenhagen", "Benfica", "Pafos", "Union Saint-Gilloise", "Athletic Club", "Olympiakos", "Eintracht Frankfurt", "Club Brugge", "Bodø / Glimt", "Slavia", "Ajax", "Villarreal", "Kairat"]},
+            { player: 0, predict: ["Arsenal", "Bayern München", "Liverpool", "Tottenham Hotspur", "Barcelona", "Chelsea", "Sporting", "Manchester City", "Real Madrid", "Internazionale", "PSG", "Newcastle United", "Juventus", "Atlético Madrid", "Atalanta", "Bayer Leverkusen", "Borussia Dortmund", "Olympiakos", "Club Brugge", "Galatasaray", "Monaco", "Qarabağ", "Bodø / Glimt", "Benfica", "Olympique Marseille", "Pafos", "Union Saint-Gilloise", "PSV", "Athletic Club", "Napoli", "Copenhagen", "Ajax", "Eintracht Frankfurt", "Slavia", "Villarreal", "Kairat"]},
             { player: 1, predict: [BAR, LIV, BAY, PSG, INT, ARS, MCI, RMA, TOT, NAP, CHE, NEW, SLB, GAL, JUV, VIL, SCP, ATM, OLY, ATH, ATA, DOR, BOD, PSV, FRA, AJA, COP, LEV, MAR, PAF, BRU, USG, MON, QAR, KAI, SLA]},
             { player: 2, predict: [PSG, BAR, ARS, NAP, RMA, BAY, CHE, LIV, NEW, INT, TOT, MCI, DOR, SLB, ATA, JUV, FRA, ATM, AJA, SCP, BRU, BOD, PSV, ATH, PAF, GAL, COP, MAR, OLY, MON, LEV, VIL, USG, KAI, QAR, SLA]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2025-12-13 13:50:04.731272'},
-        finished: false
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2026-01-31 09:51:36.730560'},
+        finished: true
+    },
+    {
+        id: 'can26', code: 'can26', date: 2026, name: 'African Cup of Nations', category: 'africa',
+        graph: [
+            { player: 1, color: 'red',   evolution: [76, 173, 217, 340, 411, 474, 520] },
+            { player: 2, color: 'green', evolution: [85, 152, 197, 269, 321, 350, 371] },
+        ],
+        finished: true
     },
 
 ];
@@ -585,7 +593,7 @@ trophies.forEach(trophy => {
 
 
 // sort trophies by importance
-const categoryOrder = ['pt', 'en', 'ucl', 'uel', 'world', 'euro'];
+const categoryOrder = ['pt', 'en', 'ucl', 'uel', 'world', 'euro', 'africa'];
 
 function compareCategories(a, b) {
     return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
