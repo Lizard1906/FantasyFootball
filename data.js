@@ -24,7 +24,7 @@ const players = [
 // siglas equipas PT
 AVS="AVS"; ALV="FC Alverca"; FCA="Arouca"; SLB="Benfica"; BFC="Boavista"; CPI = "Casa Pia", GDEP = "Estoril"; FCEA="Estrela"; FCF="Famalicão"; SCF="Farense"; GVFC="Gil Vicente"; MFC="Moreirense"; CDN="Nacional"; FCP="Porto"; RAFC="Rio Ave"; GDSC="Santa Clara"; SCB="Braga"; SCP="Sporting"; CDT="Tondela"; VSC="Vitória SC"
 // siglas equipas UCL
-AJA="Ajax"; ARS="Arsenal"; ATA="Atalanta"; ATH="Athletic Club"; ATM="Atlético Madrid"; AVI="Aston Villa"; BAR="Barcelona"; BAY="Bayern München"; BRE="Brest"; BRU="Club Brugge"; BOD="Bodø / Glimt"; BOL="Bolonha"; CEL="Celtic"; CHE="Chelsea"; COP="Copenhagen"; CZV="Crvena Zvezda"; DOR="Borussia Dortmund"; DZG="D. Zagreb"; FEY="Feyenoord"; FRA="Eintracht Frankfurt"; GAL="Galatasaray"; GIR="Girona"; INT="Internazionale"; JUV="Juventus"; KAI="Kairat"; LEV="Bayer Leverkusen"; LIV="Liverpool"; LOSC="Lille"; LPZ="Leipzig"; MAR="Marselha"; MCI="Manchester City"; MIL="Milan"; MON="Monaco"; NAP="Napoli"; NEW="Newcastle United"; OLY="Olympiakos"; PAF="Pafos"; PSG="PSG"; PSV="PSV"; QAR="Qarabağ"; RMA="Real Madrid"; SHK="Shakhtar"; SLA="Slavia"; SLO="Slovan Bratislava"; SPA="Sparta Praha"; STT="Estugarda"; STU="Sturm Graz"; SZB="Salzburg"; TOT="Tottenham Hotspur"; USG="Union Saint-Gilloise"; VIL="Villarreal"; YB="Young Boys";
+AJA="Ajax"; ARS="Arsenal"; ATA="Atalanta"; ATH="Athletic Club"; ATM="Atlético Madrid"; AVI="Aston Villa"; BAR="Barcelona"; BAY="Bayern München"; BRE="Brest"; BRU="Club Brugge"; BOD="Bodø / Glimt"; BOL="Bolonha"; CEL="Celtic"; CHE="Chelsea"; COP="Copenhagen"; CZV="Crvena Zvezda"; DOR="Borussia Dortmund"; DZG="D. Zagreb"; FEY="Feyenoord"; FRA="Eintracht Frankfurt"; GAL="Galatasaray"; GIR="Girona"; INT="Internazionale"; JUV="Juventus"; KAI="Kairat"; LEV="Bayer Leverkusen"; LIV="Liverpool"; LOSC="Lille"; LPZ="Leipzig"; MAR="Olympique Marseille"; MCI="Manchester City"; MIL="Milan"; MON="Monaco"; NAP="Napoli"; NEW="Newcastle United"; OLY="Olympiakos"; PAF="Pafos"; PSG="PSG"; PSV="PSV"; QAR="Qarabağ"; RMA="Real Madrid"; SHK="Shakhtar"; SLA="Slavia"; SLO="Slovan Bratislava"; SPA="Sparta Praha"; STT="Estugarda"; STU="Sturm Graz"; SZB="Salzburg"; TOT="Tottenham Hotspur"; USG="Union Saint-Gilloise"; VIL="Villarreal"; YB="Young Boys";
 
 const trophies = [
     // 2022-23
@@ -250,16 +250,16 @@ const trophies = [
     {
         id: 'ucl26', code: 'champions', date: 2026, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495, 535] },
-            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440, 504] },
+            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495, 535, 618] },
+            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440, 504, 559] },
         ],
         finished: false
     },
     {
         id: 'ucl26predict', code: 'uclpredictor', date: 2026, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350, 417] },
-            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355, 410] },
+            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350, 417, 477] },
+            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355, 410, 480] },
         ],
         finished: false
     },
@@ -274,12 +274,12 @@ const trophies = [
     {
         id: 'ucl26battle', code: 'uclbattle', date: 2026, name: 'Champions Battle', category: 'ucl',
         standings: [
-            { player: 0, predict: ["Arsenal", "Bayern München", "Real Madrid", "Liverpool", "Tottenham Hotspur", "PSG", "Newcastle United", "Chelsea", "Barcelona", "Sporting", "Manchester City", "Atlético Madrid", "Atalanta", "Internazionale", "Juventus", "Borussia Dortmund", "Galatasaray", "Qarabağ", "Olympique Marseille", "Bayer Leverkusen", "Monaco", "PSV", "Athletic Club", "Olympiakos", "Napoli", "Copenhagen", "Club Brugge", "Bodø / Glimt", "Benfica", "Pafos", "Union Saint-Gilloise", "Ajax", "Eintracht Frankfurt", "Slavia", "Villarreal", "Kairat"]},
+            { player: 0, predict: ["Arsenal", "Bayern München", "Liverpool", "Tottenham Hotspur", "Barcelona", "Chelsea", "Sporting", "Manchester City", "Real Madrid", "Internazionale", "PSG", "Newcastle United", "Juventus", "Atlético Madrid", "Atalanta", "Bayer Leverkusen", "Borussia Dortmund", "Olympiakos", "Club Brugge", "Galatasaray", "Monaco", "Qarabağ", "Bodø / Glimt", "Benfica", "Olympique Marseille", "Pafos", "Union Saint-Gilloise", "PSV", "Athletic Club", "Napoli", "Copenhagen", "Ajax", "Eintracht Frankfurt", "Slavia", "Villarreal", "Kairat"]},
             { player: 1, predict: [BAR, LIV, BAY, PSG, INT, ARS, MCI, RMA, TOT, NAP, CHE, NEW, SLB, GAL, JUV, VIL, SCP, ATM, OLY, ATH, ATA, DOR, BOD, PSV, FRA, AJA, COP, LEV, MAR, PAF, BRU, USG, MON, QAR, KAI, SLA]},
             { player: 2, predict: [PSG, BAR, ARS, NAP, RMA, BAY, CHE, LIV, NEW, INT, TOT, MCI, DOR, SLB, ATA, JUV, FRA, ATM, AJA, SCP, BRU, BOD, PSV, ATH, PAF, GAL, COP, MAR, OLY, MON, LEV, VIL, USG, KAI, QAR, SLA]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2026-01-28 09:58:30.260815'},
-        finished: false
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/uefa-champions-league-6/classificacao', update: '2026-01-31 09:51:36.730560'},
+        finished: true
     },
     {
         id: 'can26', code: 'can26', date: 2026, name: 'African Cup of Nations', category: 'africa',
