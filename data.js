@@ -200,19 +200,19 @@ const trophies = [
     {
         id: 'pt26', code: 'ptbetclic', date: 2026, name: 'Liga Portugal', category: 'pt',
         graph: [
-            { player: 1, color: 'red', evolution:   [41, 113, 178, 231, 269, 375, 424, 476, 553, 599, 656, 711, 751, 832, 881, 916, 997,  1058, 1131] },
-            { player: 2, color: 'green', evolution: [57, 140, 204, 271, 321, 378, 431, 471, 527, 573, 614, 675, 717, 805, 864, 941, 1000, 1074, 1163] },
+            { player: 1, color: 'red', evolution:   [41, 113, 178, 231, 269, 375, 424, 476, 553, 599, 656, 711, 751, 832, 881, 916, 997,  1058, 1131, 1168] },
+            { player: 2, color: 'green', evolution: [57, 140, 204, 271, 321, 378, 431, 471, 527, 573, 614, 675, 717, 805, 864, 941, 1000, 1074, 1163, 1209] },
         ],
         finished: false
     },
     {
         id: 'pt26battle', code: 'ptbattle', date: 2026, name: 'Portugal Battle', category: 'pt',
         standings: [
-            { player: 0, predict: ["Porto", "Sporting", "Benfica", "Braga", "Gil Vicente", "Moreirense", "Famalicão", "Estoril", "Vitória SC", "FC Alverca", "Nacional", "Rio Ave", "Estrela", "Santa Clara", "Arouca", "Casa Pia", "Tondela", "AVS"]},
+            { player: 0, predict: ["Porto", "Sporting", "Benfica", "Braga", "Gil Vicente", "Moreirense", "Famalicão", "Estoril", "Vitória SC", "FC Alverca", "Arouca", "Nacional", "Rio Ave", "Estrela", "Casa Pia", "Santa Clara", "Tondela", "AVS"]},
             { player: 1, predict: [SLB, FCP, SCP, SCB, VSC, FCF, MFC, GDSC, FCA, RAFC, GDEP, ALV, GVFC, CPI, CDT, FCEA, CDN, AVS]},
             { player: 2, predict: [SCP, SLB, FCP, VSC, SCB, GDEP, FCF, MFC, CPI, GDSC, FCA, GVFC, CDN, CDT, ALV, RAFC, FCEA, AVS]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2026-01-28 09:48:08.098070'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2026-02-03 21:21:16.264709'},
         finished: false
     },
     {
@@ -226,16 +226,16 @@ const trophies = [
     {
         id: 'en26', code: 'premier', date: 2026, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red',  evolution: [56, 119, 155, 232, 259, 289, 347, 389, 455, 522, 576, 614, 666, 734, 785, 853, 952, 1013, 1049, 1090, 1127, 1157, 1193] },
-            { player: 2, color: 'green', evolution: [43, 94, 146, 211, 255, 282, 361, 404, 444, 498, 530, 562, 600, 672, 710, 780, 871,  922,  950,  982, 1032, 1075, 1123] },
+            { player: 1, color: 'red',  evolution: [56, 119, 155, 232, 259, 289, 347, 389, 455, 522, 576, 614, 666, 734, 785, 853, 952, 1013, 1049, 1090, 1127, 1157, 1193, 1248] },
+            { player: 2, color: 'green', evolution: [43, 94, 146, 211, 255, 282, 361, 404, 444, 498, 530, 562, 600, 672, 710, 780, 871,  922,  950,  982, 1032, 1075, 1123, 1183] },
         ],
         finished: false
     },
     {
         id: 'en26challenge', code: 'enchallenge', date: 2026, name: 'English Challenge', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution:   [37, 70, 111, 197, 245, 245, 307, 364, 404, 468, 468, 517, 557, 615, 663, 711, 839, 889, 910, 937, 977, 1117, 1148] },
-            { player: 2, color: 'green', evolution: [52, 92, 132, 132, 187, 237, 300, 359, 411, 477, 497, 524, 568, 650, 650, 671, 801, 834, 847, 872, 936,  957,  994] },
+            { player: 1, color: 'red', evolution:   [37, 70, 111, 197, 245, 245, 307, 364, 404, 468, 468, 517, 557, 615, 663, 711, 839, 889, 910, 937, 977, 1017, 1048, 1102] },
+            { player: 2, color: 'green', evolution: [52, 92, 132, 132, 187, 237, 300, 359, 411, 477, 497, 524, 568, 650, 650, 671, 801, 834, 847, 872, 936,  957,  994, 1040] },
         ],
         finished: false
     },
