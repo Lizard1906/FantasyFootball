@@ -250,24 +250,24 @@ const trophies = [
     {
         id: 'ucl26', code: 'champions', date: 2026, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495, 535, 618, 696, 749] },
-            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440, 504, 559, 642, 701] },
+            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495, 535, 618, 696, 749, 814, 909] },
+            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440, 504, 559, 642, 701, 772, 884] },
         ],
         finished: false
     },
     {
         id: 'ucl26predict', code: 'uclpredictor', date: 2026, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350, 417, 477, 528, 582] },
-            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355, 410, 480, 548, 612] },
+            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350, 417, 477, 528, 582, 640, 725] },
+            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355, 410, 480, 548, 612, 676, 731] },
         ],
         finished: false
     },
     {
         id: 'ucl26bracket', code: 'uclbracket', date: 2026, name: 'Champions Bracket', category: 'ucl',
         data: [
-            { pos: 1, player: 2, points: 0 },
-            { pos: 2, player: 1, points: 0 },
+            { pos: 1, player: 1, points: 23 },
+            { pos: 2, player: 2, points: 19 },
         ],
         finished: false
     },
