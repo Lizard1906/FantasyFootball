@@ -212,7 +212,7 @@ const trophies = [
             { player: 1, predict: [SLB, FCP, SCP, SCB, VSC, FCF, MFC, GDSC, FCA, RAFC, GDEP, ALV, GVFC, CPI, CDT, FCEA, CDN, AVS]},
             { player: 2, predict: [SCP, SLB, FCP, VSC, SCB, GDEP, FCF, MFC, CPI, GDSC, FCA, GVFC, CDN, CDT, ALV, RAFC, FCEA, AVS]},
         ],
-        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2026-03-10 19:27:36.066387'},
+        source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2026-03-20 22:03:26.348607'},
         finished: false
     },
     {
@@ -226,16 +226,16 @@ const trophies = [
     {
         id: 'en26', code: 'premier', date: 2026, name: 'Premier League', category: 'en',
         graph: [
-            { player: 1, color: 'red',  evolution: [56, 119, 155, 232, 259, 289, 347, 389, 455, 522, 576, 614, 666, 734, 785, 853, 952, 1013, 1049, 1090, 1127, 1157, 1193, 1248, 1302, 1366, 1409, 1455, 1516] },
-            { player: 2, color: 'green', evolution: [43, 94, 146, 211, 255, 282, 361, 404, 444, 498, 530, 562, 600, 672, 710, 780, 871,  922,  950,  982, 1032, 1075, 1123, 1183, 1253, 1302, 1354, 1403, 1471] },
+            { player: 1, color: 'red',  evolution: [56, 119, 155, 232, 259, 289, 347, 389, 455, 522, 576, 614, 666, 734, 785, 853, 952, 1013, 1049, 1090, 1127, 1157, 1193, 1248, 1302, 1366, 1409, 1455, 1516, 1567] },
+            { player: 2, color: 'green', evolution: [43, 94, 146, 211, 255, 282, 361, 404, 444, 498, 530, 562, 600, 672, 710, 780, 871,  922,  950,  982, 1032, 1075, 1123, 1183, 1253, 1302, 1354, 1403, 1471, 1515] },
         ],
         finished: false
     },
     {
         id: 'en26challenge', code: 'enchallenge', date: 2026, name: 'English Challenge', category: 'en',
         graph: [
-            { player: 1, color: 'red', evolution:   [37, 70, 111, 197, 245, 245, 307, 364, 404, 468, 468, 517, 557, 615, 663, 711, 839, 889, 910, 937, 977, 1017, 1048, 1102, 1151, 1235, 1264, 1300, 1380] },
-            { player: 2, color: 'green', evolution: [52, 92, 132, 132, 187, 237, 300, 359, 411, 477, 497, 524, 568, 650, 650, 671, 801, 834, 847, 872, 936,  957,  994, 1040, 1040, 1086, 1125, 1157, 1245] },
+            { player: 1, color: 'red', evolution:   [37, 70, 111, 197, 245, 245, 307, 364, 404, 468, 468, 517, 557, 615, 663, 711, 839, 889, 910, 937, 977, 1017, 1048, 1102, 1151, 1235, 1264, 1300, 1380, 1440] },
+            { player: 2, color: 'green', evolution: [52, 92, 132, 132, 187, 237, 300, 359, 411, 477, 497, 524, 568, 650, 650, 671, 801, 834, 847, 872, 936,  957,  994, 1040, 1040, 1086, 1125, 1157, 1245, 1303] },
         ],
         finished: false
     },
