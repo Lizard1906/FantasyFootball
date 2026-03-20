@@ -200,15 +200,15 @@ const trophies = [
     {
         id: 'pt26', code: 'ptbetclic', date: 2026, name: 'Liga Portugal', category: 'pt',
         graph: [
-            { player: 1, color: 'red', evolution:   [41, 113, 178, 231, 269, 375, 424, 476, 553, 599, 656, 711, 751, 832, 881, 916, 997,  1058, 1131, 1168, 1201, 1250, 1328, 1389, 1443] },
-            { player: 2, color: 'green', evolution: [57, 140, 204, 271, 321, 378, 431, 471, 527, 573, 614, 675, 717, 805, 864, 941, 1000, 1074, 1163, 1209, 1276, 1341, 1425, 1494, 1550] },
+            { player: 1, color: 'red', evolution:   [41, 113, 178, 231, 269, 375, 424, 476, 553, 599, 656, 711, 751, 832, 881, 916, 997,  1058, 1131, 1168, 1201, 1250, 1328, 1389, 1443, 1478] },
+            { player: 2, color: 'green', evolution: [57, 140, 204, 271, 321, 378, 431, 471, 527, 573, 614, 675, 717, 805, 864, 941, 1000, 1074, 1163, 1209, 1276, 1341, 1425, 1494, 1550, 1603] },
         ],
         finished: false
     },
     {
         id: 'pt26battle', code: 'ptbattle', date: 2026, name: 'Portugal Battle', category: 'pt',
         standings: [
-            { player: 0, predict: ["Porto", "Sporting", "Benfica", "Braga", "Gil Vicente", "Famalicão", "Moreirense", "Estoril", "Vitória SC", "FC Alverca", "Arouca", "Estrela", "Rio Ave", "Casa Pia", "Nacional", "Santa Clara", "Tondela", "AFS"]},
+            { player: 0, predict: ["Porto", "Sporting", "Benfica", "Braga", "Gil Vicente", "Famalicão", "Estoril", "Moreirense", "Vitória SC", "FC Alverca", "Rio Ave", "Arouca", "Estrela", "Santa Clara", "Casa Pia", "Nacional", "Tondela", "AFS"]},
             { player: 1, predict: [SLB, FCP, SCP, SCB, VSC, FCF, MFC, GDSC, FCA, RAFC, GDEP, ALV, GVFC, CPI, CDT, FCEA, CDN, AVS]},
             { player: 2, predict: [SCP, SLB, FCP, VSC, SCB, GDEP, FCF, MFC, CPI, GDSC, FCA, GVFC, CDN, CDT, ALV, RAFC, FCEA, AVS]},
         ],
