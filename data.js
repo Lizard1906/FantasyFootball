@@ -22,7 +22,7 @@ const players = [
 ];
 
 // siglas equipas PT
-AVS="AVS"; ALV="FC Alverca"; FCA="Arouca"; SLB="Benfica"; BFC="Boavista"; CPI = "Casa Pia", GDEP = "Estoril"; FCEA="Estrela"; FCF="Famalicão"; SCF="Farense"; GVFC="Gil Vicente"; MFC="Moreirense"; CDN="Nacional"; FCP="Porto"; RAFC="Rio Ave"; GDSC="Santa Clara"; SCB="Braga"; SCP="Sporting"; CDT="Tondela"; VSC="Vitória SC"
+AFS="AFS"; ALV="FC Alverca"; FCA="Arouca"; SLB="Benfica"; BFC="Boavista"; CPI = "Casa Pia", GDEP = "Estoril"; FCEA="Estrela"; FCF="Famalicão"; SCF="Farense"; GVFC="Gil Vicente"; MFC="Moreirense"; CDN="Nacional"; FCP="Porto"; RAFC="Rio Ave"; GDSC="Santa Clara"; SCB="Braga"; SCP="Sporting"; CDT="Tondela"; VSC="Vitória SC"
 // siglas equipas UCL
 AJA="Ajax"; ARS="Arsenal"; ATA="Atalanta"; ATH="Athletic Club"; ATM="Atlético Madrid"; AVI="Aston Villa"; BAR="Barcelona"; BAY="Bayern München"; BRE="Brest"; BRU="Club Brugge"; BOD="Bodø / Glimt"; BOL="Bolonha"; CEL="Celtic"; CHE="Chelsea"; COP="Copenhagen"; CZV="Crvena Zvezda"; DOR="Borussia Dortmund"; DZG="D. Zagreb"; FEY="Feyenoord"; FRA="Eintracht Frankfurt"; GAL="Galatasaray"; GIR="Girona"; INT="Internazionale"; JUV="Juventus"; KAI="Kairat"; LEV="Bayer Leverkusen"; LIV="Liverpool"; LOSC="Lille"; LPZ="Leipzig"; MAR="Olympique Marseille"; MCI="Manchester City"; MIL="Milan"; MON="Monaco"; NAP="Napoli"; NEW="Newcastle United"; OLY="Olympiakos"; PAF="Pafos"; PSG="PSG"; PSV="PSV"; QAR="Qarabağ"; RMA="Real Madrid"; SHK="Shakhtar"; SLA="Slavia"; SLO="Slovan Bratislava"; SPA="Sparta Praha"; STT="Estugarda"; STU="Sturm Graz"; SZB="Salzburg"; TOT="Tottenham Hotspur"; USG="Union Saint-Gilloise"; VIL="Villarreal"; YB="Young Boys";
 
@@ -102,9 +102,9 @@ const trophies = [
     {
         id: 'pt25battle', code: 'ptbattle', date: 2025, name: 'Portugal Battle', category: 'pt',
         standings: [
-            { player: 0, predict: ["Sporting", "Benfica", "Porto", "Braga", "Santa Clara", "Vitória SC", "Famalicão", "Estoril", "Casa Pia", "Moreirense", "Rio Ave", "Arouca", "Gil Vicente", "Nacional", "Estrela", "AVS", "Farense", "Boavista"]},
-            { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AVS, GVFC, CDN, GDSC]},
-            { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AVS, BFC]},
+            { player: 0, predict: ["Sporting", "Benfica", "Porto", "Braga", "Santa Clara", "Vitória SC", "Famalicão", "Estoril", "Casa Pia", "Moreirense", "Rio Ave", "Arouca", "Gil Vicente", "Nacional", "Estrela", "AFS", "Farense", "Boavista"]},
+            { player: 1, predict: [SLB, SCP, FCP, SCB, VSC, FCF, MFC, RAFC, FCA, BFC, FCEA, SCF, GDEP, CPI, AFS, GVFC, CDN, GDSC]},
+            { player: 2, predict: [SLB, SCP, FCP, SCB, VSC, FCF, RAFC, SCF, FCA, GDEP, GDSC, CPI, MFC, FCEA, CDN, GVFC, AFS, BFC]},
         ],
         source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2025-05-20 10:20:26.639904'},
         finished: true
@@ -209,8 +209,8 @@ const trophies = [
         id: 'pt26battle', code: 'ptbattle', date: 2026, name: 'Portugal Battle', category: 'pt',
         standings: [
             { player: 0, predict: ["Porto", "Sporting", "Benfica", "Braga", "Famalicão", "Gil Vicente", "Estoril", "Moreirense", "Vitória SC", "Rio Ave", "Arouca", "FC Alverca", "Estrela", "Santa Clara", "Casa Pia", "Nacional", "Tondela", "AFS"]},
-            { player: 1, predict: [SLB, FCP, SCP, SCB, VSC, FCF, MFC, GDSC, FCA, RAFC, GDEP, ALV, GVFC, CPI, CDT, FCEA, CDN, AVS]},
-            { player: 2, predict: [SCP, SLB, FCP, VSC, SCB, GDEP, FCF, MFC, CPI, GDSC, FCA, GVFC, CDN, CDT, ALV, RAFC, FCEA, AVS]},
+            { player: 1, predict: [SLB, FCP, SCP, SCB, VSC, FCF, MFC, GDSC, FCA, RAFC, GDEP, ALV, GVFC, CPI, CDT, FCEA, CDN, AFS]},
+            { player: 2, predict: [SCP, SLB, FCP, VSC, SCB, GDEP, FCF, MFC, CPI, GDSC, FCA, GVFC, CDN, CDT, ALV, RAFC, FCEA, AFS]},
         ],
         source: {name: 'SAPO Desporto', url: 'https://desporto.sapo.pt/futebol/competicao/primeira-liga-2/classificacao', update: '2026-03-29 22:32:49.883440'},
         finished: false
