@@ -184,12 +184,12 @@ function drawChart(playerData) {
     const ctxLine = document.getElementById('lineChart').getContext('2d');
     const ctxColumn = document.getElementById('columnChart').getContext('2d');
 
-    const labels = playerData[0].evolution.map((_, i) => "GW " + (i + 1));
+    const labels = playerData[0].evolution.map((_, i) => "" + (i + 1));
     
     const isMobile = window.innerWidth <= 768;
 
     const mobileLabels = isMobile ? 
-        playerData[0].evolution.map((_, i) => (i % 2 === 0 || i === playerData[0].evolution.length - 1) ? "GW " + (i + 1) : '') : 
+        playerData[0].evolution.map((_, i) => (i % 2 === 0 || i === playerData[0].evolution.length - 1) ? "" + (i + 1) : '') : 
         labels;
 
     const datasetsLine = playerData.map(player => ({
