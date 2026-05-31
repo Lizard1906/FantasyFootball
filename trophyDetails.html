@@ -28,15 +28,24 @@
                     <h1 class="trophy-title mb-4" id="trophy-title" style="font-weight: bold; font-size: 2.2rem;"></h1>
                 </div>
             </div>
-            <div class="row justify-content-center align-items-center mb-4">
-                <div class="col-auto">
-                    <div class="card border-0 p-3 mb-2" style="background-color: transparent;">
-                        <div class="winner-img-container position-relative mx-auto">
-                            <img class="trophy-winner" id="trophy-winner"
-                                style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.18); transition: filter 0.3s;" />
-                            <div class="description-winner" id="description-winner"></div>
+            <div class="row trophy-hero-row g-4 align-items-stretch mb-4">
+                <div class="col-12">
+                    <section class="trophy-hero-panel h-100">
+                        <div class="spotlight-grid mt-4 row g-3">
+                            <div class="col-12 col-lg-6">
+                                <div class="spotlight-history-wrap">
+                                    <h5 class="spotlight-col-title mb-2">History</h5>
+                                    <div id="spotlight-history" class="spotlight-history-list"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-none" id="spotlight-related-wrap">
+                                <div class="spotlight-history-wrap">
+                                    <h5 class="spotlight-col-title mb-2">Related</h5>
+                                    <div id="spotlight-related" class="spotlight-related-list"></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
 
