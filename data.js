@@ -250,26 +250,26 @@ const trophies = [
     {
         id: 'ucl26', code: 'champions', date: 2026, name: 'Champions League', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495, 535, 618, 696, 749, 814, 909, 994, 1073, 1150, 1213] },
-            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440, 504, 559, 642, 701, 772, 884, 962, 1042, 1122, 1179] },
+            { player: 1, color: 'red', evolution:  [118, 205, 271, 322, 427, 495, 535, 618, 696, 749, 814, 909, 994, 1073, 1150, 1213, 1256] },
+            { player: 2, color: 'green', evolution: [94, 181, 282, 327, 370, 440, 504, 559, 642, 701, 772, 884, 962, 1042, 1122, 1179, 1222] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'ucl26predict', code: 'uclpredictor', date: 2026, name: 'Champions Predict', category: 'ucl',
         graph: [
-            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350, 417, 477, 528, 582, 640, 725, 759, 804, 866, 922] },
-            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355, 410, 480, 548, 612, 676, 731, 797, 856, 897, 953] },
+            { player: 1, color: 'red', evolution:   [73, 153, 207, 269, 306, 350, 417, 477, 528, 582, 640, 725, 759, 804, 866, 922, 940] },
+            { player: 2, color: 'green', evolution: [55, 137, 199, 265, 302, 355, 410, 480, 548, 612, 676, 731, 797, 856, 897, 953, 993] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'ucl26bracket', code: 'uclbracket', date: 2026, name: 'Champions Bracket', category: 'ucl',
         data: [
-            { pos: 1, player: 1, points: 36 },
-            { pos: 2, player: 2, points: 31 },
+            { pos: 1, player: 1, points: 38 },
+            { pos: 2, player: 2, points: 33 },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'ucl26battle', code: 'uclbattle', date: 2026, name: 'Champions Battle', category: 'ucl',
