@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     const badgeHtml = winnerImage ? `<img src="${winnerImage}" alt="${trophy.winner}" class="trophy-badge" ${badgeStyle}>` : '';
 
                     trophyCol.innerHTML = `
-                        <a href="trophyDetails.html?${trophy.id}" class="text-decoration-none">
+                        <a href="trophyDetails?${trophy.id}" class="text-decoration-none">
                             <div class="trophy-card ${trophy.code}">
                                 <img src="data/images/trophies/${trophy.code}.png" alt="${trophy.name}" class="trophy-img">
                                 <div class="trophy-overlay">${trophy.name}</div>
