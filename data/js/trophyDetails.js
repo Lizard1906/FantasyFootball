@@ -71,48 +71,109 @@ function getTrophyDataRows(id, trophyData) {
 
 
 console.log(foundTrophy)
-document.getElementById('trophy-winner').setAttribute('src', "data/images/players/" + foundTrophy.winner + ".jpg")
-document.getElementById('trophy-winner').setAttribute('alt', foundTrophy.winner)
+renderSpotlightHistory();
+renderRelated();
 
-const description = document.getElementById('description-winner');
-description.innerHTML = `
-    <div style="font-size:1.1em;font-weight:1000;margin-bottom:20px;">
-        ${foundTrophy.winner ? foundTrophy.winner : ''}
-    </div>
-    <div>
-        ${getNumberTrophiesPast(foundTrophy.id, foundTrophy.name, foundTrophy.winner)}
-    </div>
-`;
-
-
-function getNumberTrophiesPast(id, name, winner) {
-    let html = name + ' ongoing';
-
-    if (winner !== null) {
-        let countText = '';
-        let numTrophiesPast = 0;
-
-        const index = trophies.findIndex(item => item.id === id);
-
-        for (let i = index; i >= 0; i--) {
-            if (trophies[i].name === name && trophies[i].winner === winner) {
-                numTrophiesPast++;
-            }
-        }
-
-        switch (numTrophiesPast) {
-            case 1: countText = "1st"; break;
-            case 2: countText = "2nd"; break;
-            case 3: countText = "3rd"; break;
-            default: countText = numTrophiesPast + "th";
-                break;
-        }
-
-        html = `${countText} ${name} won`
+function renderSpotlightHistory() {
+    const historyContainer = document.getElementById('spotlight-history');
+    if (!historyContainer) {
+        return;
     }
 
+    const allSeasons = fantasy.trophies
+        .filter(trophy => trophy.name === foundTrophy.name)
+        .sort((a, b) => b.date - a.date);
 
-    return html;
+    historyContainer.innerHTML = allSeasons.map(trophy => {
+        const season = `${trophy.date - 1}/${trophy.date}`;
+        const winner = trophy.winner ? trophy.winner : 'Ongoing';
+        const winnerImage = trophy.winner ? `data/images/players/${trophy.winner}.jpg` : 'data/images/logo.png';
+        const isCurrent = trophy.id === foundTrophy.id;
+        const currentWinnerText = isCurrent ? getWinnerHistoryLabel(trophy) : '';
+        const classes = `spotlight-season${isCurrent ? ' spotlight-season-current' : ''}`;
+        const content = `
+            <img class="spotlight-season-avatar" src="${winnerImage}" alt="${winner}">
+            <span class="spotlight-season-content">
+                <span class="spotlight-season-year">${season}</span>
+                <span class="spotlight-season-winner">${winner}</span>
+                ${isCurrent ? `<span class="spotlight-current-tag">${currentWinnerText}</span>` : ''}
+            </span>
+        `;
+
+        if (isCurrent) {
+            return `<div class="${classes}">${content}</div>`;
+        }
+
+        return `<a class="${classes}" href="trophyDetails.html?${trophy.id}" aria-label="Open ${trophy.name} ${season}">${content}</a>`;
+    }).join('');
+}
+
+function renderRelated() {
+    const wrap = document.getElementById('spotlight-related-wrap');
+    const container = document.getElementById('spotlight-related');
+    if (!container || !wrap) return;
+
+    const related = fantasy.trophies
+        .filter(t => t.category === foundTrophy.category && t.date === foundTrophy.date && t.id !== foundTrophy.id)
+        .sort((a, b) => b.date - a.date);
+
+    if (!related || related.length === 0) {
+        wrap.classList.add('d-none');
+        return;
+    }
+
+    wrap.classList.remove('d-none');
+    container.innerHTML = related.map(trophy => {
+        const label = trophy.name;
+        const winner = trophy.winner ? trophy.winner : 'Ongoing';
+        const winnerImage = trophy.winner ? `data/images/players/${trophy.winner}.jpg` : 'data/images/logo.png';
+        const classes = `spotlight-season`;
+        const content = `
+            <img class="spotlight-season-avatar" src="${winnerImage}" alt="${winner}">
+            <span class="spotlight-season-content">
+                <span class="spotlight-season-year">${label}</span>
+                <span class="spotlight-season-winner">${winner}</span>
+            </span>
+        `;
+
+        return `<a class="${classes}" href="trophyDetails.html?${trophy.id}" aria-label="Open ${trophy.name}">${content}</a>`;
+    }).join('');
+}
+
+function getWinnerHistoryLabel(currentTrophy) {
+    if (!currentTrophy.winner) {
+        return `${currentTrophy.name} ongoing`;
+    }
+
+    const currentIndex = trophies.findIndex(trophy => trophy.id === currentTrophy.id);
+    let wins = 0;
+
+    for (let i = 0; i <= currentIndex; i++) {
+        const trophy = trophies[i];
+        if (trophy.name === currentTrophy.name && trophy.winner === currentTrophy.winner) {
+            wins++;
+        }
+    }
+
+    return `${toOrdinal(wins)} ${currentTrophy.name} won`;
+}
+
+function toOrdinal(number) {
+    const remainder100 = number % 100;
+    if (remainder100 >= 11 && remainder100 <= 13) {
+        return `${number}th`;
+    }
+
+    switch (number % 10) {
+        case 1:
+            return `${number}st`;
+        case 2:
+            return `${number}nd`;
+        case 3:
+            return `${number}rd`;
+        default:
+            return `${number}th`;
+    }
 }
 
 

@@ -116,6 +116,29 @@ h1 {
     transform: translateY(0);
 }
 
+/* small winner avatar badge in bottom-right of trophy card */
+.trophy-badge {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.9); /* fallback; JS will override with trophy color */
+    box-shadow: 0 6px 14px rgba(0,0,0,0.45);
+    display: inline-block;
+}
+
+@media (max-width: 576px) {
+    .trophy-badge {
+        width: 24px;
+        height: 24px;
+        right: 6px;
+        bottom: 6px;
+    }
+}
+
 
 /* Season timeline navigation */
 .season-timeline {
