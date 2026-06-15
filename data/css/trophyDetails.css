@@ -243,6 +243,30 @@ tr.odd {
     border-color: #53B9B3;
 }
 
+.wc26 {
+    background-color: #002d4c;
+    color: #4f9077;
+    border-color: #bc0400;
+}
+
+.wc26predict {
+    background-color: #1c61ac;
+    color: #fff;
+    border-color: #fff;
+}
+
+.wc26bracket {
+    background-color: #025c38;
+    color: #fff;
+    border-color: #fff;
+}
+
+.wc26chips {
+    background-color: #e10715;
+    color: #fff;
+    border-color: #fff;
+}
+
 
 
 
