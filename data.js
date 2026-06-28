@@ -292,33 +292,33 @@ const trophies = [
     { 
         id: 'wc26', code: 'wc26', date: 2026, name: 'World Cup', category: 'world',
         graph: [
-            { player: 1, color: 'red',   evolution: [100] },
-            { player: 2, color: 'green', evolution: [85] },
-            { player: 4, color: 'blue',  evolution: [71] },
+            { player: 1, color: 'red',   evolution: [100, 191, 248] },
+            { player: 2, color: 'green', evolution: [85,  145, 218] },
+            { player: 4, color: 'blue',  evolution: [71,  176, 256] },
         ],
         finished: false
     },
     {
         id: 'wc26predict', code: 'wc26predict', date: 2026, name: 'World Cup Predict', category: 'world',
         graph: [
-            { player: 1, color: 'red',   evolution: [240] },
-            { player: 2, color: 'green', evolution: [220] },
+            { player: 1, color: 'red',   evolution: [240, 565, 850] },
+            { player: 2, color: 'green', evolution: [220, 480, 750] },
         ],
         finished: false
     },
     {
         id: 'wc26bracket', code: 'wc26bracket', date: 2026, name: 'World Cup Bracket', category: 'world',
         data: [
-            { pos: 1, player: 1, points: 0 },
-            { pos: 2, player: 2, points: 0 },
+            { pos: 1, player: 1, points: 1800 },
+            { pos: 2, player: 2, points: 1310 },
         ],
         finished: false
     },
     {
         id: 'wc26chips', code: 'wc26chips', date: 2026, name: 'World Cup Chips', category: 'world',
         graph: [
-            { player: 1, color: 'red',   evolution: [16, 28, 43, 47, 71, 102] },
-            { player: 2, color: 'green', evolution: [16, 28, 70, 74, 102, 133] },
+            { player: 1, color: 'red',   evolution: [16, 28, 43, 47, 71,  102, 133, 149, 184, 216, 247, 259, 278, 286, 306, 326] },
+            { player: 2, color: 'green', evolution: [16, 28, 70, 74, 102, 133, 164, 180, 215, 239, 270, 293, 317, 363, 367, 379] },
         ],
         finished: false
     }
