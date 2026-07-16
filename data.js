@@ -292,17 +292,17 @@ const trophies = [
     { 
         id: 'wc26', code: 'wc26', date: 2026, name: 'World Cup', category: 'world',
         graph: [
-            { player: 1, color: 'red',   evolution: [100, 191, 248, 356] },
-            { player: 2, color: 'green', evolution: [85,  145, 218, 338] },
-            { player: 4, color: 'blue',  evolution: [71,  176, 256, 334] },
+            { player: 1, color: 'red',   evolution: [100, 191, 248, 356, 451, 529, 570] },
+            { player: 2, color: 'green', evolution: [85,  145, 218, 338, 403, 479, 524] },
+            { player: 4, color: 'blue',  evolution: [71,  176, 256, 334, 387, 459, 503] },
         ],
         finished: false
     },
     {
         id: 'wc26predict', code: 'wc26predict', date: 2026, name: 'World Cup Predict', category: 'world',
         graph: [
-            { player: 1, color: 'red',   evolution: [240, 565, 850, 1150] },
-            { player: 2, color: 'green', evolution: [220, 480, 750, 1090] },
+            { player: 1, color: 'red',   evolution: [240, 565, 850, 1150, 1310, 1390, 1395] },
+            { player: 2, color: 'green', evolution: [220, 480, 750, 1090, 1215, 1360, 1365] },
         ],
         finished: false
     },
@@ -317,8 +317,8 @@ const trophies = [
     {
         id: 'wc26chips', code: 'wc26chips', date: 2026, name: 'World Cup Chips', category: 'world',
         graph: [
-            { player: 1, color: 'red',   evolution: [16, 28, 43, 47, 71,  102, 133, 149, 184, 216, 247, 259, 278, 286, 306, 326, 342, 392, 424, 440, 479] },
-            { player: 2, color: 'green', evolution: [16, 28, 70, 74, 102, 133, 164, 180, 215, 239, 270, 293, 317, 363, 367, 379, 403, 434, 454, 490, 529] },
+            { player: 1, color: 'red',   evolution: [16, 28, 43, 47, 71,  102, 133, 149, 184, 216, 247, 259, 278, 286, 306, 326, 342, 392, 424, 440, 479, 511, 519, 531] },
+            { player: 2, color: 'green', evolution: [16, 28, 70, 74, 102, 133, 164, 180, 215, 239, 270, 293, 317, 363, 367, 379, 403, 434, 454, 490, 529, 561, 569, 593] },
         ],
         finished: false
     }
