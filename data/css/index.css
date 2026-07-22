@@ -149,3 +149,19 @@ h1 {
         top: -60px;
     }
 }
+
+
+.trophy-item {
+  display: flex;
+  align-items: center;
+}
+
+.trophy-icons {
+  margin-left: auto; /* empurra os troféus para a direita */
+  display: flex;
+  gap: 2px;
+}
+
+.mini-trophy {
+  height: 30px;
+}

@@ -35,10 +35,15 @@ document.addEventListener('DOMContentLoaded', function () {
     player.trophies.forEach(trophy => {
       const trophyItem = document.createElement('div');
       trophyItem.className = 'trophy-item';
+
+      const trophies = `<img src="data/images/trophies/${trophy.name}.png" class="mini-trophy">`.repeat(trophy.count);
+
       trophyItem.innerHTML = `
-        <span class="category-details">${trophy.count}</span>
         <img src="data/images/competitions/categ/${trophy.category}.jpg" alt="${trophy.name}" class="category-img">
         <span class="category-details">${trophy.name}</span>
+        <div class="trophy-icons">
+          ${trophies}
+        </div>
       `;
       
       trophyList.appendChild(trophyItem);
