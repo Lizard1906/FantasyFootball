@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
       trophyItem.className = 'trophy-item';
       trophyItem.innerHTML = `
         <span class="category-details">${trophy.count}</span>
-        <img src="data/images/trophies/categ/${trophy.category}.jpg" alt="${trophy.name}" class="category-img">
+        <img src="data/images/competitions/categ/${trophy.category}.jpg" alt="${trophy.name}" class="category-img">
         <span class="category-details">${trophy.name}</span>
       `;
       
