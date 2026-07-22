@@ -165,3 +165,40 @@ h1 {
 .mini-trophy {
   height: 30px;
 }
+
+
+.trophy-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: auto auto 50px auto;
+    width: 100%;
+}
+
+.filter-chip input {
+    display: none;
+}
+
+.filter-chip span {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: #222;
+    color: white;
+    border: 2px solid #555;
+    cursor: pointer;
+    transition: .2s;
+    display: inline-block;
+}
+
+.filter-chip span:hover {
+    transform: scale(1.05);
+}
+
+.filter-chip input:checked + span {
+    background: #d4af37;
+    color: black;
+    border-color: #d4af37;
+    font-weight: bold;
+}
