@@ -292,35 +292,35 @@ const trophies = [
     { 
         id: 'wc26', code: 'wc26', date: 2026, name: 'World Cup', category: 'world',
         graph: [
-            { player: 1, color: 'red',   evolution: [100, 191, 248, 356, 451, 529, 570] },
-            { player: 2, color: 'green', evolution: [85,  145, 218, 338, 403, 479, 524] },
-            { player: 4, color: 'blue',  evolution: [71,  176, 256, 334, 387, 459, 503] },
+            { player: 1, color: 'red',   evolution: [100, 191, 248, 356, 451, 529, 570, 644] },
+            { player: 2, color: 'green', evolution: [85,  145, 218, 338, 403, 479, 524, 597] },
+            { player: 4, color: 'blue',  evolution: [71,  176, 256, 334, 387, 459, 503, 583] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'wc26predict', code: 'wc26predict', date: 2026, name: 'World Cup Predict', category: 'world',
         graph: [
-            { player: 1, color: 'red',   evolution: [240, 565, 850, 1150, 1310, 1390, 1395] },
-            { player: 2, color: 'green', evolution: [220, 480, 750, 1090, 1215, 1360, 1365] },
+            { player: 1, color: 'red',   evolution: [240, 565, 850, 1150, 1310, 1390, 1395, 1405] },
+            { player: 2, color: 'green', evolution: [220, 480, 750, 1090, 1215, 1360, 1365, 1375] },
         ],
-        finished: false
+        finished: true
     },
     {
         id: 'wc26bracket', code: 'wc26bracket', date: 2026, name: 'World Cup Bracket', category: 'world',
         data: [
-            { pos: 1, player: 1, points: 1800 },
-            { pos: 2, player: 2, points: 1310 },
+            { pos: 1, player: 1, points: 2435 },
+            { pos: 2, player: 2, points: 1855 },
         ],
-        finished: false
+        finished: TextTrackCue
     },
     {
         id: 'wc26chips', code: 'wc26chips', date: 2026, name: 'World Cup Chips', category: 'world',
         graph: [
-            { player: 1, color: 'red',   evolution: [16, 28, 43, 47, 71,  102, 133, 149, 184, 216, 247, 259, 278, 286, 306, 326, 342, 392, 424, 440, 479, 511, 519, 531] },
-            { player: 2, color: 'green', evolution: [16, 28, 70, 74, 102, 133, 164, 180, 215, 239, 270, 293, 317, 363, 367, 379, 403, 434, 454, 490, 529, 561, 569, 593] },
+            { player: 1, color: 'red',   evolution: [16, 28, 43, 47, 71,  102, 133, 149, 184, 216, 247, 259, 278, 286, 306, 326, 342, 392, 424, 440, 479, 511, 519, 531, 546] },
+            { player: 2, color: 'green', evolution: [16, 28, 70, 74, 102, 133, 164, 180, 215, 239, 270, 293, 317, 363, 367, 379, 403, 434, 454, 490, 529, 561, 569, 593, 642] },
         ],
-        finished: false
+        finished: TextTrackCue
     }
 
 ];
