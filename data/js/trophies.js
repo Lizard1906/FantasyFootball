@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     trophyCol.innerHTML = `
                         <a href="trophyDetails.html?${trophy.id}" class="text-decoration-none">
                             <div class="trophy-card ${trophy.code}">
-                                <img src="data/images/trophies/${trophy.code}.png" alt="${trophy.name}" class="trophy-img">
+                                <img src="data/images/competitions/${trophy.code}.png" alt="${trophy.name}" class="trophy-img">
                                 <div class="trophy-overlay">${trophy.name}</div>
                                 ${badgeHtml}
                             </div>
