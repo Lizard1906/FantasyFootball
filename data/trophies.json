@@ -2147,5 +2147,136 @@
             }
         ],
         "finished": true
+    },
+    {
+        "id": "pt27",
+        "code": "ptbetclic",
+        "date": 2027,
+        "name": "Liga Portugal",
+        "category": "pt",
+        "level": "major",
+        "graph": [
+            {
+                "player": 1,
+                "color": "red",
+                "evolution": [
+                    0
+                ]
+            },
+            {
+                "player": 2,
+                "color": "green",
+                "evolution": [
+                    0
+                ]
+            }
+        ],
+        "finished": false
+    },
+    {
+        "id": "pt27battle",
+        "code": "ptbattle",
+        "date": 2027,
+        "name": "Portugal Battle",
+        "category": "pt",
+        "level": "battle",
+        "standings": [
+            {
+                "player": 0,
+                "predict": [
+                    "Académico",
+                    "FC Alverca",
+                    "Arouca",
+                    "Benfica",
+                    "Casa Pia",
+                    "Estoril",
+                    "Estrela",
+                    "Famalicão",
+                    "Gil Vicente",
+                    "Marítimo",
+                    "Moreirense",
+                    "Nacional",
+                    "Porto",
+                    "Rio Ave",
+                    "Santa Clara",
+                    "Braga",
+                    "Sporting",
+                    "Vitória SC"
+                ]
+            },
+            {
+                "player": 1,
+                "predict": [
+                    "Benfica",
+                    "Sporting",
+                    "Porto",
+                    "Braga",
+                    "Gil Vicente",
+                    "Famalicão",
+                    "Vitória SC",
+                    "Moreirense",
+                    "Rio Ave",
+                    "Arouca",
+                    "Marítimo",
+                    "Estoril",
+                    "Académico",
+                    "Santa Clara",
+                    "Nacional",
+                    "FC Alverca",
+                    "Estrela",
+                    "Casa Pia"
+                ]
+            },
+            {
+                "player": 2,
+                "predict": [
+                    "Sporting",
+                    "Porto",
+                    "Braga",
+                    "Benfica",
+                    "Gil Vicente",
+                    "Famalicão",
+                    "Santa Clara",
+                    "FC Alverca",
+                    "Vitória SC",
+                    "Moreirense",
+                    "Casa Pia",
+                    "Arouca",
+                    "Marítimo",
+                    "Estoril",
+                    "Académico",
+                    "Nacional",
+                    "Rio Ave",
+                    "Estrela"
+                ]
+            }
+        ],
+        "source": {
+            "name": "SAPO Desporto",
+            "url": "https://sapo.pt/desporto/calendario-classificacao?torneio=i-liga-270",
+            "update": "2026-08-06 13:49:55.928100"
+        },
+        "finished": false
+    },
+    {
+        "id": "pt27cup",
+        "code": "ptcup",
+        "date": 2027,
+        "name": "Taça de Portugal",
+        "category": "pt",
+        "level": "cup",
+        "data": [
+            {
+                "pos": 1,
+                "player": 1,
+                "points": 0
+            },
+            {
+                "pos": 2,
+                "player": 2,
+                "points": 0
+            }
+        ],
+        "finished": false
     }
 ]
