@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         seasonTrophies.forEach(trophy => {
             const trophyCol = document.createElement('div');
             trophyCol.className = 'col-lg-2 col-md-3 col-sm-4 col-6';
-                    const winnerImage = trophy.winner ? `data/images/players/${trophy.winner}.jpg` : '';
+                    const winnerImage = trophy.winner ? `images/players/${trophy.winner}.jpg` : '';
 
                     // try to derive player's color from any trophy.graph entry where that player appears
                     function getPlayerColorByName(name) {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     trophyCol.innerHTML = `
                         <a href="trophyDetails.html?${trophy.id}" class="text-decoration-none">
                             <div class="trophy-card ${trophy.code}">
-                                <img src="data/images/competitions/${trophy.code}.png" alt="${trophy.name}" class="trophy-img">
+                                <img src="images/competitions/${trophy.code}.png" alt="${trophy.name}" class="trophy-img">
                                 <div class="trophy-overlay">${trophy.name}</div>
                                 ${badgeHtml}
                             </div>

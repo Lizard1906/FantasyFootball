@@ -4,7 +4,7 @@ var url = window.location.href;
 var id = url.split('?')[1];
 console.log(id)
 
-document.body.style.backgroundImage = "url('data/images/background/" + id + ".png')";
+document.body.style.backgroundImage = "url('images/background/" + id + ".png')";
 
 fantasy.trophies.forEach(trophy => {
     if (trophy.id == id) {
@@ -87,7 +87,7 @@ function renderSpotlightHistory() {
     historyContainer.innerHTML = allSeasons.map(trophy => {
         const season = `${trophy.date - 1}/${trophy.date}`;
         const winner = trophy.winner ? trophy.winner : 'Ongoing';
-        const winnerImage = trophy.winner ? `data/images/players/${trophy.winner}.jpg` : 'data/images/players/undefined.jpg';
+        const winnerImage = trophy.winner ? `images/players/${trophy.winner}.jpg` : 'images/players/undefined.jpg';
         const isCurrent = trophy.id === foundTrophy.id;
         const currentWinnerText = isCurrent ? getWinnerHistoryLabel(trophy) : '';
         const classes = `spotlight-season${isCurrent ? ' spotlight-season-current' : ''}`;
@@ -126,7 +126,7 @@ function renderRelated() {
     container.innerHTML = related.map(trophy => {
         const label = trophy.name;
         const winner = trophy.winner ? trophy.winner : 'Ongoing';
-        const winnerImage = trophy.winner ? `data/images/players/${trophy.winner}.jpg` : 'data/images/players/undefined.jpg';
+        const winnerImage = trophy.winner ? `images/players/${trophy.winner}.jpg` : 'images/players/undefined.jpg';
         const classes = `spotlight-season`;
         const content = `
             <img class="spotlight-season-avatar" src="${winnerImage}" alt="${winner}">
