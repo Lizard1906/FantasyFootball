@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       playerDiv.innerHTML = `
       <div class="player-card">
         <div class="player-image-container">
-          <img src="data/images/players/${player.name}.jpg" class="player-photo" alt="${player.name}" loading="lazy">
+          <img src="images/players/${player.name}.jpg" class="player-photo" alt="${player.name}" loading="lazy">
         </div>
         <div class="player-name">${player.name}</div>
         <div class="player-desc">${player.description}</div>
@@ -102,10 +102,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const trophyItem = document.createElement('div');
         trophyItem.className = 'trophy-item';
 
-        const trophies = `<img src="data/images/trophies/${trophy.name}.png" class="mini-trophy">`.repeat(trophy.count);
+        const trophies = `<img src="images/trophies/${trophy.name}.png" class="mini-trophy">`.repeat(trophy.count);
 
         trophyItem.innerHTML = `
-        <img src="data/images/competitions/categ/${trophy.category}.jpg" alt="${trophy.name}" class="category-img">
+        <img src="images/competitions/categ/${trophy.category}.jpg" alt="${trophy.name}" class="category-img">
         <span class="category-details">${trophy.name}</span>
         <div class="trophy-icons">
           ${trophies}
