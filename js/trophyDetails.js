@@ -37,7 +37,7 @@ table.innerHTML = tableRows;
 function getTrophyDataRows(id, trophyData) {
     let html = '';
 
-    const trophy = trophies.find((trophy) => trophy.id === id);
+    const trophy = fantasy.trophies.find((trophy) => trophy.id === id);
     if (trophy) {
         const rowClass = trophy.code;
         headers = Object.keys(trophyData[0])
@@ -145,11 +145,11 @@ function getWinnerHistoryLabel(currentTrophy) {
         return `${currentTrophy.name} ongoing`;
     }
 
-    const currentIndex = trophies.findIndex(trophy => trophy.id === currentTrophy.id);
+    const currentIndex = fantasy.trophies.findIndex(trophy => trophy.id === currentTrophy.id);
     let wins = 0;
 
     for (let i = 0; i <= currentIndex; i++) {
-        const trophy = trophies[i];
+        const trophy = fantasy.trophies[i];
         if (trophy.name === currentTrophy.name && trophy.winner === currentTrophy.winner) {
             wins++;
         }
