@@ -3,7 +3,7 @@ import json
 import requests
 
 def getTable(trophy):
-    url = trophies[trophy]
+    # url = trophies[trophy]
     # equipas = useParserSapo(url)
     equipas = useApiSapo(api_ids[trophy])
 
