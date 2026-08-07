@@ -1,35 +1,38 @@
 import datetime
+import json
 import requests
 
 def getTable(trophy):
-    url = trophies[trophy]
+    # url = trophies[trophy]
     # equipas = useParserSapo(url)
     equipas = useApiSapo(api_ids[trophy])
 
-    equipas_str = ', '.join([f'"{e}"' for e in equipas])
-    nova_linha_js = f"            {{ player: 0, predict: [{equipas_str}]}},\n"
-    update_info = f"        source: {{name: 'SAPO Desporto', url: '{url}', update: '{datetime.datetime.now()}'}},\n"
+    # read from trophies.json
+    trophies_loaded = {}
+    with open("data/trophies.json", "r", encoding="utf-8") as file:
+        trophies_loaded = json.load(file)
 
-    # abrir o js original
-    with open("data.js", "r", encoding="utf-8") as file:
-        lines = file.readlines()
+    current_trophy = next((t for t in trophies_loaded if t["id"] == trophy), None)
+    if current_trophy is None:
+        print(f"Trophy {trophy} not found in trophies.json")
+        return
 
-    # Localizar e substituir a linha específica no arquivo JS
-    with open("data.js", "w", encoding="utf-8") as file:
-        is_this_trophy = False
-        for line in lines:
-            if (is_this_trophy):
-                if line.strip().startswith("{ player: 0, predict: ["):
-                    file.write(f"{nova_linha_js}")
-                elif line.strip().startswith("source"):
-                    file.write(update_info)
-                    is_this_trophy = False
-                else:
-                    file.write(line)
-            else:
-                if trophy in line.strip():
-                    is_this_trophy = True
-                file.write(line)
+    # update standings[0]
+    if "standings" in current_trophy and len(current_trophy["standings"]) > 0:
+        current_trophy["standings"][0]["predict"] = equipas
+    else:
+        print(f"No standings found for trophy {trophy}")
+        return
+
+    # update datetime updated
+    if "source" in current_trophy:
+        current_trophy["source"]["update"] = str(datetime.datetime.now())
+
+
+    # write back to trophies.json
+    with open("data/trophies.json", "w", encoding="utf-8") as file:
+        json.dump(trophies_loaded, file, ensure_ascii=False, indent=4)
+        print(f"Updated standings for trophy {trophy} in trophies.json")
 
 def useParserSapo(url):
     from urllib.request import urlopen, Request
@@ -114,8 +117,9 @@ trophies = {
 
 api_ids = {
     "ucl26battle": "173",
-    "pt26battle": "192"
+    "pt26battle": "192",
+    "pt27battle": "270"
 }
 
 # getTable("ucl26battle")
-getTable("pt26battle")
+getTable("pt27battle")

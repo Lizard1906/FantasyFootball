@@ -1,11 +1,11 @@
 Promise.all([
-    fetch("data/html/navbar.html").then(response => {
+    fetch("html/navbar.html").then(response => {
         if (!response.ok) {
             throw new Error(`Failed to load navbar: ${response.status} ${response.statusText}`);
         }
         return response.text();
     }),
-    fetch("data/html/footer.html").then(response => {
+    fetch("html/footer.html").then(response => {
         if (!response.ok) {
             throw new Error(`Failed to load footer: ${response.status} ${response.statusText}`);
         }
