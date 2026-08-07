@@ -104,7 +104,7 @@ function renderSpotlightHistory() {
             return `<div class="${classes}">${content}</div>`;
         }
 
-        return `<a class="${classes}" href="trophyDetails.html?${trophy.id}" aria-label="Open ${trophy.name} ${season}">${content}</a>`;
+        return `<a class="${classes}" href="trophyDetails?${trophy.id}" aria-label="Open ${trophy.name} ${season}">${content}</a>`;
     }).join('');
 }
 
@@ -136,7 +136,7 @@ function renderRelated() {
             </span>
         `;
 
-        return `<a class="${classes}" href="trophyDetails.html?${trophy.id}" aria-label="Open ${trophy.name}">${content}</a>`;
+        return `<a class="${classes}" href="trophyDetails?${trophy.id}" aria-label="Open ${trophy.name}">${content}</a>`;
     }).join('');
 }
 
