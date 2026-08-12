@@ -2160,14 +2160,14 @@
                 "player": 1,
                 "color": "red",
                 "evolution": [
-                    0
+                    45
                 ]
             },
             {
                 "player": 2,
                 "color": "green",
                 "evolution": [
-                    0
+                    56
                 ]
             }
         ],
@@ -2184,24 +2184,24 @@
             {
                 "player": 0,
                 "predict": [
-                    "Académico",
-                    "FC Alverca",
+                    "Porto",
                     "Arouca",
-                    "Benfica",
-                    "Casa Pia",
-                    "Estoril",
-                    "Estrela",
-                    "Famalicão",
                     "Gil Vicente",
                     "Marítimo",
+                    "Académico",
+                    "Benfica",
+                    "Estrela",
                     "Moreirense",
                     "Nacional",
-                    "Porto",
-                    "Rio Ave",
                     "Santa Clara",
                     "Braga",
                     "Sporting",
-                    "Vitória SC"
+                    "Estoril",
+                    "Famalicão",
+                    "Casa Pia",
+                    "Rio Ave",
+                    "Vitória SC",
+                    "FC Alverca"
                 ]
             },
             {
@@ -2254,7 +2254,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/calendario-classificacao?torneio=i-liga-270",
-            "update": "2026-08-06 13:49:55.928100"
+            "update": "2026-08-12 12:37:47.500005"
         },
         "finished": false
     },
