@@ -208,6 +208,7 @@ if (foundTrophy.standings) {
             </thead>
         `
         let tbody = document.createElement('tbody')
+        let numberOfTeams = player.predict.length;
         player.predict.forEach((team, index) => {
             const rowClass = index % 2 === 0 ? 'even' : 'odd';
             let tr = document.createElement('tr')
@@ -215,8 +216,8 @@ if (foundTrophy.standings) {
             tr.innerHTML = `
                 <td>${index + 1}</td>
                 <td>${team.team} <span style="font-size: 0.75rem">(${team.realPlace})</span> </td>
-                <td style="color: ${team.points > 0 ? 'green' : team.points < 0 ? 'red' : ''};">
-                    ${team.points > 0 ? '+' : ''}${team.points}
+                <td style="color: ${team.points == numberOfTeams ? 'green' : team.points < numberOfTeams / 2 ? 'red' : ''};">
+                    ${team.points}
                 </td>
             `;
             tbody.appendChild(tr)
