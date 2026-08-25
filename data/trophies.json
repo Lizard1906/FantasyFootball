@@ -2160,14 +2160,18 @@
                 "player": 1,
                 "color": "red",
                 "evolution": [
-                    0
+                    45,
+                    134,
+                    182
                 ]
             },
             {
                 "player": 2,
                 "color": "green",
                 "evolution": [
-                    0
+                    56,
+                    91,
+                    140
                 ]
             }
         ],
@@ -2184,24 +2188,24 @@
             {
                 "player": 0,
                 "predict": [
-                    "Académico",
-                    "FC Alverca",
-                    "Arouca",
-                    "Benfica",
-                    "Casa Pia",
-                    "Estoril",
-                    "Estrela",
-                    "Famalicão",
-                    "Gil Vicente",
-                    "Marítimo",
-                    "Moreirense",
-                    "Nacional",
                     "Porto",
-                    "Rio Ave",
-                    "Santa Clara",
-                    "Braga",
                     "Sporting",
-                    "Vitória SC"
+                    "Marítimo",
+                    "Santa Clara",
+                    "Arouca",
+                    "Gil Vicente",
+                    "Benfica",
+                    "Nacional",
+                    "Vitória SC",
+                    "Rio Ave",
+                    "Estrela",
+                    "Académico",
+                    "Braga",
+                    "Famalicão",
+                    "Moreirense",
+                    "Estoril",
+                    "FC Alverca",
+                    "Casa Pia"
                 ]
             },
             {
@@ -2253,8 +2257,8 @@
         ],
         "source": {
             "name": "SAPO Desporto",
-            "url": "https://sapo.pt/desporto/calendario-classificacao?torneio=i-liga-270",
-            "update": "2026-08-06 13:49:55.928100"
+            "url": "https://sapo.pt/desporto/sapo-score?tab=liga-portugal%2C1550%2F70785%2Fstandings%2Fleague",
+            "update": "2026-08-25 22:14:04.258342"
         },
         "finished": false
     },
@@ -2275,6 +2279,189 @@
                 "pos": 2,
                 "player": 2,
                 "points": 0
+            }
+        ],
+        "finished": false
+    },
+    {
+        "id": "en27",
+        "code": "premier",
+        "date": 2027,
+        "name": "Premier League",
+        "category": "en",
+        "level": "major",
+        "graph": [
+            {
+                "player": 1,
+                "color": "red",
+                "evolution": [
+                    44
+                ]
+            },
+            {
+                "player": 2,
+                "color": "green",
+                "evolution": [
+                    60
+                ]
+            }
+        ],
+        "finished": false
+    },
+    {
+        "id": "en27battle",
+        "code": "enbattle",
+        "date": 2027,
+        "name": "English Battle",
+        "category": "en",
+        "level": "battle",
+        "standings": [
+            {
+                "player": 0,
+                "predict": [
+                    "Arsenal",
+                    "Brentford",
+                    "Everton",
+                    "Hull City",
+                    "Ipswich Town",
+                    "Leeds United",
+                    "Aston Villa",
+                    "AFC Bournemouth",
+                    "Brighton & Hove Albion",
+                    "Chelsea",
+                    "Fulham",
+                    "Liverpool",
+                    "Manchester City",
+                    "Newcastle United",
+                    "Sunderland",
+                    "Nottingham Forest",
+                    "Crystal Palace",
+                    "Manchester United",
+                    "Coventry City",
+                    "Tottenham Hotspur"
+                ]
+            },
+            {
+                "player": 1,
+                "predict": [
+                    "Arsenal",
+                    "Manchester United",
+                    "Manchester City",
+                    "Chelsea",
+                    "Liverpool",
+                    "Aston Villa",
+                    "AFC Bournemouth",
+                    "Crystal Palace",
+                    "Newcastle United",
+                    "Tottenham Hotspur",
+                    "Brighton & Hove Albion",
+                    "Fulham",
+                    "Brentford",
+                    "Everton",
+                    "Sunderland",
+                    "Nottingham Forest",
+                    "Leeds United",
+                    "Ipswich Town",
+                    "Coventry City",
+                    "Hull City"
+                ]
+            },
+            {
+                "player": 2,
+                "predict": [
+                    "Arsenal",
+                    "Chelsea",
+                    "Manchester City",
+                    "Liverpool",
+                    "Tottenham Hotspur",
+                    "Aston Villa",
+                    "Manchester United",
+                    "Everton",
+                    "Brentford",
+                    "Newcastle United",
+                    "AFC Bournemouth",
+                    "Brighton & Hove Albion",
+                    "Sunderland",
+                    "Nottingham Forest",
+                    "Fulham",
+                    "Ipswich Town",
+                    "Crystal Palace",
+                    "Coventry City",
+                    "Leeds United",
+                    "Hull City"
+                ]
+            }
+        ],
+        "source": {
+            "name": "SAPO Desporto",
+            "url": "https://sapo.pt/desporto/sapo-score?tab=premier-league%2C1528%2F70582%2Fstandings%2Fleague",
+            "update": "2026-08-25 22:14:04.359233"
+        },
+        "finished": false
+    },
+    {
+        "id": "en27challenge",
+        "code": "enchallenge",
+        "date": 2027,
+        "name": "English Challenge",
+        "category": "en",
+        "level": "challenge",
+        "graph": [
+            {
+                "player": 1,
+                "color": "red",
+                "evolution": [
+                    47
+                ]
+            },
+            {
+                "player": 2,
+                "color": "green",
+                "evolution": [
+                    46
+                ]
+            }
+        ],
+        "finished": false
+    },
+    {
+        "id": "en27cup",
+        "code": "emirates",
+        "date": 2027,
+        "name": "Emirates Cup",
+        "category": "en",
+        "level": "cup",
+        "data": [
+            {
+                "pos": 1,
+                "player": 1,
+                "points": 0
+            },
+            {
+                "pos": 2,
+                "player": 2,
+                "points": 0
+            }
+        ],
+        "finished": false
+    },
+    {
+        "id": "en27laststanding",
+        "code": "enlaststanding",
+        "date": 2027,
+        "name": "English Last Standing",
+        "category": "en",
+        "level": "laststanding",
+        "data": [
+            {
+                "pos": 1,
+                "player": 1,
+                "points": 1
+            },
+            {
+                "pos": 2,
+                "player": 2,
+                "points": 1
             }
         ],
         "finished": false

@@ -42,6 +42,7 @@ async function loadData() {
 
         if (trophy.standings) {
 
+            /*
             if (trophy.code === 'ptbattle') {
 
                 const ptbattleScoringRules = {
@@ -281,6 +282,36 @@ async function loadData() {
                 ];
             }
 
+            */
+
+
+            // SAME SCORING RULES FOR ALL BATTLES
+            /*
+                N = number of teams in the tournament
+                For each team:
+                - points = N - abs(realPlace - predictPlace)
+            */
+            let realTable = trophy.standings[0];
+            let new_standings = [];
+            let numberOfTeams = realTable.predict.length;
+
+            let realPlace, predictPlace, points_scored;
+
+            for (let i = 1; i < trophy.standings.length; i++) {
+                new_predict = [];
+                trophy.standings[i].predict.forEach((t, index) => {
+
+                    realPlace = realTable.predict.indexOf(t) + 1;
+                    predictPlace = index + 1;
+
+                    points_scored = numberOfTeams - Math.abs(realPlace - predictPlace);
+
+                    new_predict.push({ team: t, realPlace: realPlace, points: points_scored });
+                });
+                new_standings.push({ player: i, predict: new_predict });
+            }
+            trophy.standings = new_standings;
+
             // tabela data
             let playersData = trophy.standings.map((player, index) => ({
                 pos: 0,
@@ -333,12 +364,14 @@ async function loadData() {
     function compareNames(a, b) {
         if (a.startsWith('World Cup') && b.startsWith('Club World Cup')) return -1;
         if (a.startsWith('Club World Cup') && b.startsWith('World Cup')) return 1;
-        if (a.includes('Battle') && !b.includes('Battle')) return 1;
-        if (!a.includes('Battle') && b.includes('Battle')) return -1;
         if (a.includes('Bracket') && !b.includes('Bracket')) return 1;
         if (!a.includes('Bracket') && b.includes('Bracket')) return -1;
         if (a.includes('Predict') && !b.includes('Predict')) return 1;
         if (!a.includes('Predict') && b.includes('Predict')) return -1;
+        if (a.includes('Battle') && !b.includes('Battle')) return 1;
+        if (!a.includes('Battle') && b.includes('Battle')) return -1;
+        if (a.includes('League') && !b.includes('League')) return -1;
+        if (!a.includes('League') && b.includes('League')) return 1;
         return a.localeCompare(b);
     }
 
