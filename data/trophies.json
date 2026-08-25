@@ -2160,14 +2160,18 @@
                 "player": 1,
                 "color": "red",
                 "evolution": [
-                    45
+                    45,
+                    134,
+                    182
                 ]
             },
             {
                 "player": 2,
                 "color": "green",
                 "evolution": [
-                    56
+                    56,
+                    91,
+                    140
                 ]
             }
         ],
@@ -2185,23 +2189,23 @@
                 "player": 0,
                 "predict": [
                     "Porto",
+                    "Sporting",
+                    "Marítimo",
+                    "Santa Clara",
                     "Arouca",
                     "Gil Vicente",
-                    "Marítimo",
-                    "Académico",
                     "Benfica",
-                    "Estrela",
-                    "Moreirense",
                     "Nacional",
-                    "Santa Clara",
-                    "Braga",
-                    "Sporting",
-                    "Estoril",
-                    "Famalicão",
-                    "Casa Pia",
-                    "Rio Ave",
                     "Vitória SC",
-                    "FC Alverca"
+                    "Rio Ave",
+                    "Estrela",
+                    "Académico",
+                    "Braga",
+                    "Famalicão",
+                    "Moreirense",
+                    "Estoril",
+                    "FC Alverca",
+                    "Casa Pia"
                 ]
             },
             {
@@ -2253,8 +2257,8 @@
         ],
         "source": {
             "name": "SAPO Desporto",
-            "url": "https://sapo.pt/desporto/calendario-classificacao?torneio=i-liga-270",
-            "update": "2026-08-12 12:37:47.500005"
+            "url": "https://sapo.pt/desporto/sapo-score?tab=liga-portugal%2C1550%2F70785%2Fstandings%2Fleague",
+            "update": "2026-08-25 22:14:04.258342"
         },
         "finished": false
     },
