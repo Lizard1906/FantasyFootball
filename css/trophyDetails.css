@@ -237,6 +237,18 @@ tr.odd {
     border-color: #ffb241;
 }
 
+.enbattle {
+    background-color: #37003c;
+    color: #9ccbff;
+    border-color: #9ccbff;
+}
+
+.enlaststanding {
+    background-color: #37003c;
+    color: #C7FF0D;
+    border-color: #C7FF0D;
+}
+
 .can26 {
     background-color: #820000;
     color: #53B9B3;

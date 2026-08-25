@@ -118,8 +118,10 @@ trophies = {
 api_ids = {
     "ucl26battle": "173",
     "pt26battle": "192",
-    "pt27battle": "270"
+    "pt27battle": "270",
+    "en27battle": "283"
 }
 
 # getTable("ucl26battle")
 getTable("pt27battle")
+getTable("en27battle")
