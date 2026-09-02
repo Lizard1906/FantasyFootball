@@ -2162,7 +2162,8 @@
                 "evolution": [
                     45,
                     134,
-                    182
+                    182,
+                    253
                 ]
             },
             {
@@ -2171,7 +2172,8 @@
                 "evolution": [
                     56,
                     91,
-                    140
+                    140,
+                    206
                 ]
             }
         ],
@@ -2190,21 +2192,21 @@
                 "predict": [
                     "Porto",
                     "Sporting",
-                    "Marítimo",
-                    "Santa Clara",
                     "Arouca",
-                    "Gil Vicente",
+                    "Santa Clara",
                     "Benfica",
+                    "Gil Vicente",
+                    "Marítimo",
+                    "Estrela",
+                    "Braga",
+                    "Moreirense",
                     "Nacional",
                     "Vitória SC",
                     "Rio Ave",
-                    "Estrela",
-                    "Académico",
-                    "Braga",
                     "Famalicão",
-                    "Moreirense",
-                    "Estoril",
+                    "Académico",
                     "FC Alverca",
+                    "Estoril",
                     "Casa Pia"
                 ]
             },
@@ -2258,7 +2260,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=liga-portugal%2C1550%2F70785%2Fstandings%2Fleague",
-            "update": "2026-08-25 22:14:04.258342"
+            "update": "2026-09-02 18:47:30.722953"
         },
         "finished": false
     },
@@ -2295,14 +2297,16 @@
                 "player": 1,
                 "color": "red",
                 "evolution": [
-                    44
+                    44,
+                    126
                 ]
             },
             {
                 "player": 2,
                 "color": "green",
                 "evolution": [
-                    60
+                    60,
+                    146
                 ]
             }
         ],
@@ -2319,25 +2323,25 @@
             {
                 "player": 0,
                 "predict": [
-                    "Arsenal",
-                    "Brentford",
-                    "Everton",
-                    "Hull City",
-                    "Ipswich Town",
-                    "Leeds United",
-                    "Aston Villa",
-                    "AFC Bournemouth",
-                    "Brighton & Hove Albion",
-                    "Chelsea",
-                    "Fulham",
-                    "Liverpool",
                     "Manchester City",
+                    "Arsenal",
+                    "Hull City",
+                    "Chelsea",
+                    "Brentford",
                     "Newcastle United",
-                    "Sunderland",
-                    "Nottingham Forest",
-                    "Crystal Palace",
+                    "Everton",
+                    "Leeds United",
+                    "Brighton & Hove Albion",
                     "Manchester United",
+                    "Sunderland",
+                    "Ipswich Town",
+                    "Liverpool",
+                    "AFC Bournemouth",
+                    "Nottingham Forest",
+                    "Fulham",
                     "Coventry City",
+                    "Crystal Palace",
+                    "Aston Villa",
                     "Tottenham Hotspur"
                 ]
             },
@@ -2395,7 +2399,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=premier-league%2C1528%2F70582%2Fstandings%2Fleague",
-            "update": "2026-08-25 22:14:04.359233"
+            "update": "2026-09-02 18:47:31.267015"
         },
         "finished": false
     },
@@ -2411,14 +2415,16 @@
                 "player": 1,
                 "color": "red",
                 "evolution": [
-                    47
+                    47,
+                    112
                 ]
             },
             {
                 "player": 2,
                 "color": "green",
                 "evolution": [
-                    46
+                    46,
+                    107
                 ]
             }
         ],
@@ -2455,15 +2461,15 @@
         "data": [
             {
                 "pos": 1,
-                "player": 1,
-                "points": 1
+                "player": 2,
+                "points": 2
             },
             {
                 "pos": 2,
-                "player": 2,
+                "player": 1,
                 "points": 1
             }
         ],
-        "finished": false
+        "finished": true
     }
 ]
