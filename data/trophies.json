@@ -2471,5 +2471,215 @@
             }
         ],
         "finished": true
+    },
+    {
+        "id": "ucl27",
+        "code": "champions",
+        "date": 2027,
+        "name": "Champions League",
+        "category": "ucl",
+        "level": "major",
+        "graph": [
+            {
+                "player": 1,
+                "color": "red",
+                "evolution": [
+                    97
+                ]
+            },
+            {
+                "player": 2,
+                "color": "green",
+                "evolution": [
+                    104
+                ]
+            }
+        ],
+        "finished": false
+    },
+    {
+        "id": "ucl27predict",
+        "code": "uclpredictor",
+        "date": 2027,
+        "name": "Champions Predict",
+        "category": "ucl",
+        "level": "predict",
+        "graph": [
+            {
+                "player": 1,
+                "color": "red",
+                "evolution": [
+                    97
+                ]
+            },
+            {
+                "player": 2,
+                "color": "green",
+                "evolution": [
+                    91
+                ]
+            }
+        ],
+        "finished": false
+    },
+    {
+        "id": "ucl27bracket",
+        "code": "uclbracket",
+        "date": 2027,
+        "name": "Champions Bracket",
+        "category": "ucl",
+        "level": "bracket",
+        "data": [
+            {
+                "pos": 1,
+                "player": 1,
+                "points": 0
+            },
+            {
+                "pos": 2,
+                "player": 2,
+                "points": 0
+            }
+        ],
+        "finished": false
+    },
+    {
+        "id": "ucl27battle",
+        "code": "uclbattle",
+        "date": 2027,
+        "name": "Champions Battle",
+        "category": "ucl",
+        "level": "battle",
+        "standings": [
+            {
+                "player": 0,
+                "predict": [
+                    "PSG",
+                    "Bayern München",
+                    "Barcelona",
+                    "Manchester United",
+                    "Como",
+                    "Sporting",
+                    "Stuttgart",
+                    "Manchester City",
+                    "Aston Villa",
+                    "Lens",
+                    "Real Betis",
+                    "Borussia Dortmund",
+                    "Liverpool",
+                    "Real Madrid",
+                    "Arsenal",
+                    "AEK Atenas",
+                    "Roma",
+                    "Shakhtar Donetsk",
+                    "Fenerbahçe",
+                    "PSV",
+                    "Villarreal",
+                    "Club Brugge",
+                    "Lille",
+                    "Slavia",
+                    "Atlético Madrid",
+                    "Internazionale",
+                    "LASK",
+                    "Napoli",
+                    "Galatasaray",
+                    "Viking",
+                    "Porto",
+                    "Leipzig",
+                    "Feyenoord",
+                    "Sabah",
+                    "Slovan Bratislava",
+                    "Bodø / Glimt"
+                ]
+            },
+            {
+                "player": 1,
+                "predict": [
+                    "Bayern München",
+                    "Barcelona",
+                    "Real Madrid",
+                    "PSG",
+                    "Arsenal",
+                    "Internazionale",
+                    "Liverpool",
+                    "Manchester City",
+                    "Aston Villa",
+                    "Napoli",
+                    "Porto",
+                    "Sporting",
+                    "Borussia Dortmund",
+                    "Atlético Madrid",
+                    "Galatasaray",
+                    "Fenerbahçe",
+                    "PSV",
+                    "Roma",
+                    "Bodø / Glimt",
+                    "Leipzig",
+                    "Como",
+                    "Manchester United",
+                    "Stuttgart",
+                    "Real Betis",
+                    "Villarreal",
+                    "Lens",
+                    "Feyenoord",
+                    "Shakhtar Donetsk",
+                    "Lille",
+                    "Club Brugge",
+                    "Slavia",
+                    "Viking",
+                    "LASK",
+                    "Slovan Bratislava",
+                    "AEK Atenas",
+                    "Sabah"
+                ]
+            },
+            {
+                "player": 2,
+                "predict": [
+                    "Barcelona",
+                    "Arsenal",
+                    "Bayern München",
+                    "Manchester City",
+                    "Internazionale",
+                    "Real Madrid",
+                    "PSG",
+                    "Borussia Dortmund",
+                    "Stuttgart",
+                    "Roma",
+                    "Aston Villa",
+                    "Liverpool",
+                    "Fenerbahçe",
+                    "Sporting",
+                    "Napoli",
+                    "Porto",
+                    "Real Betis",
+                    "Galatasaray",
+                    "Lens",
+                    "PSV",
+                    "Como",
+                    "Manchester United",
+                    "Feyenoord",
+                    "Atlético Madrid",
+                    "Bodø / Glimt",
+                    "Club Brugge",
+                    "Villarreal",
+                    "Viking",
+                    "Leipzig",
+                    "Lille",
+                    "AEK Atenas",
+                    "Shakhtar Donetsk",
+                    "LASK",
+                    "Slavia",
+                    "Slovan Bratislava",
+                    "Sabah"
+                ]
+            }
+        ],
+        "source": {
+            "name": "SAPO Desporto",
+            "url": "https://sapo.pt/desporto/sapo-score?tab=champions-league%2C1658%2F70821%2Fstandings%2Fleague",
+            "update": "2026-09-14 23:08:45.389788"
+        },
+        "finished": false
     }
 ]
