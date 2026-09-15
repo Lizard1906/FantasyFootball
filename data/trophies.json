@@ -2163,7 +2163,9 @@
                     45,
                     134,
                     182,
-                    253
+                    253,
+                    376,
+                    441
                 ]
             },
             {
@@ -2173,7 +2175,9 @@
                     56,
                     91,
                     140,
-                    206
+                    206,
+                    323,
+                    373
                 ]
             }
         ],
@@ -2191,21 +2195,21 @@
                 "player": 0,
                 "predict": [
                     "Porto",
-                    "Sporting",
-                    "Arouca",
-                    "Santa Clara",
                     "Benfica",
+                    "Sporting",
+                    "Santa Clara",
+                    "Estrela",
+                    "Arouca",
+                    "Braga",
+                    "Académico",
+                    "Moreirense",
                     "Gil Vicente",
                     "Marítimo",
-                    "Estrela",
-                    "Braga",
-                    "Moreirense",
-                    "Nacional",
-                    "Vitória SC",
-                    "Rio Ave",
-                    "Famalicão",
-                    "Académico",
                     "FC Alverca",
+                    "Vitória SC",
+                    "Famalicão",
+                    "Nacional",
+                    "Rio Ave",
                     "Estoril",
                     "Casa Pia"
                 ]
@@ -2260,7 +2264,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=liga-portugal%2C1550%2F70785%2Fstandings%2Fleague",
-            "update": "2026-09-02 18:47:30.722953"
+            "update": "2026-09-14 23:27:40.057606"
         },
         "finished": false
     },
