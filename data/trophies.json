@@ -2302,7 +2302,9 @@
                 "color": "red",
                 "evolution": [
                     44,
-                    126
+                    126,
+                    194,
+                    253
                 ]
             },
             {
@@ -2310,7 +2312,9 @@
                 "color": "green",
                 "evolution": [
                     60,
-                    146
+                    146,
+                    196,
+                    282
                 ]
             }
         ],
@@ -2327,26 +2331,26 @@
             {
                 "player": 0,
                 "predict": [
-                    "Manchester City",
                     "Arsenal",
+                    "Manchester City",
+                    "Leeds United",
                     "Hull City",
+                    "Brighton & Hove Albion",
                     "Chelsea",
                     "Brentford",
-                    "Newcastle United",
+                    "Liverpool",
                     "Everton",
-                    "Leeds United",
-                    "Brighton & Hove Albion",
+                    "Ipswich Town",
+                    "Nottingham Forest",
+                    "Newcastle United",
                     "Manchester United",
                     "Sunderland",
-                    "Ipswich Town",
-                    "Liverpool",
                     "AFC Bournemouth",
-                    "Nottingham Forest",
-                    "Fulham",
-                    "Coventry City",
                     "Crystal Palace",
+                    "Tottenham Hotspur",
+                    "Fulham",
                     "Aston Villa",
-                    "Tottenham Hotspur"
+                    "Coventry City"
                 ]
             },
             {
@@ -2403,7 +2407,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=premier-league%2C1528%2F70582%2Fstandings%2Fleague",
-            "update": "2026-09-02 18:47:31.267015"
+            "update": "2026-09-15 19:36:23.963888"
         },
         "finished": false
     },
@@ -2420,7 +2424,9 @@
                 "color": "red",
                 "evolution": [
                     47,
-                    112
+                    112,
+                    171,
+                    233
                 ]
             },
             {
@@ -2428,7 +2434,9 @@
                 "color": "green",
                 "evolution": [
                     46,
-                    107
+                    107,
+                    163,
+                    232
                 ]
             }
         ],
@@ -2466,7 +2474,7 @@
             {
                 "pos": 1,
                 "player": 2,
-                "points": 2
+                "points": 3
             },
             {
                 "pos": 2,
