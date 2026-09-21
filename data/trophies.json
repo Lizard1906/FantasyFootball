@@ -2165,7 +2165,8 @@
                     182,
                     253,
                     376,
-                    441
+                    445,
+                    485
                 ]
             },
             {
@@ -2177,7 +2178,8 @@
                     140,
                     206,
                     323,
-                    373
+                    373,
+                    422
                 ]
             }
         ],
@@ -2198,20 +2200,20 @@
                     "Benfica",
                     "Sporting",
                     "Santa Clara",
-                    "Estrela",
                     "Arouca",
                     "Braga",
                     "Académico",
+                    "Estrela",
                     "Moreirense",
                     "Gil Vicente",
                     "Marítimo",
                     "FC Alverca",
-                    "Vitória SC",
                     "Famalicão",
+                    "Vitória SC",
                     "Nacional",
                     "Rio Ave",
-                    "Estoril",
-                    "Casa Pia"
+                    "Casa Pia",
+                    "Estoril"
                 ]
             },
             {
@@ -2264,7 +2266,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=liga-portugal%2C1550%2F70785%2Fstandings%2Fleague",
-            "update": "2026-09-14 23:27:40.057606"
+            "update": "2026-09-21 21:38:54.576489"
         },
         "finished": false
     },
