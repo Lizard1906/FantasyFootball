@@ -2507,7 +2507,8 @@
                 "color": "red",
                 "evolution": [
                     97,
-                    179
+                    179,
+                    260
                 ]
             },
             {
@@ -2515,7 +2516,8 @@
                 "color": "green",
                 "evolution": [
                     104,
-                    160
+                    160,
+                    228
                 ]
             }
         ],
@@ -2534,7 +2536,8 @@
                 "color": "red",
                 "evolution": [
                     97,
-                    131
+                    131,
+                    171
                 ]
             },
             {
@@ -2542,7 +2545,8 @@
                 "color": "green",
                 "evolution": [
                     91,
-                    134
+                    134,
+                    170
                 ]
             }
         ],
@@ -2581,40 +2585,40 @@
                 "player": 0,
                 "predict": [
                     "PSG",
-                    "Barcelona",
                     "Aston Villa",
-                    "Stuttgart",
                     "Liverpool",
-                    "Sporting",
-                    "Arsenal",
                     "Real Madrid",
                     "Real Betis",
-                    "Bayern München",
-                    "Shakhtar Donetsk",
+                    "Stuttgart",
+                    "Arsenal",
+                    "Barcelona",
                     "Como",
-                    "Manchester United",
-                    "Villarreal",
-                    "Atlético Madrid",
-                    "Club Brugge",
                     "Manchester City",
+                    "Club Brugge",
+                    "Sporting",
                     "Borussia Dortmund",
-                    "Lens",
-                    "AEK Atenas",
-                    "Leipzig",
+                    "Bayern München",
+                    "Roma",
+                    "Atlético Madrid",
+                    "Shakhtar Donetsk",
+                    "PSV",
+                    "Villarreal",
+                    "Internazionale",
+                    "Manchester United",
+                    "Napoli",
+                    "Galatasaray",
+                    "LASK",
                     "Sabah",
                     "Feyenoord",
+                    "Lens",
                     "Bodø / Glimt",
-                    "Roma",
-                    "PSV",
-                    "Viking",
+                    "AEK Atenas",
+                    "Leipzig",
                     "Fenerbahçe",
-                    "Internazionale",
-                    "Porto",
                     "Slavia",
-                    "Napoli",
-                    "LASK",
+                    "Viking",
+                    "Porto",
                     "Lille",
-                    "Galatasaray",
                     "Slovan Bratislava"
                 ]
             },
@@ -2704,7 +2708,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=champions-league%2C1658%2F70821%2Fstandings%2Fleague",
-            "update": "2026-10-15 21:37:37.356932"
+            "update": "2026-10-23 21:08:57.354969"
         },
         "finished": false
     }
