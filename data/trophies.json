@@ -2310,7 +2310,9 @@
                     194,
                     253,
                     325,
-                    377
+                    377,
+                    438,
+                    482
                 ]
             },
             {
@@ -2322,7 +2324,9 @@
                     196,
                     282,
                     335,
-                    416
+                    416,
+                    483,
+                    514
                 ]
             }
         ],
@@ -2342,23 +2346,23 @@
                     "Manchester City",
                     "Arsenal",
                     "Brighton & Hove Albion",
-                    "Brentford",
-                    "Everton",
-                    "Chelsea",
-                    "Leeds United",
-                    "Hull City",
                     "Liverpool",
-                    "Ipswich Town",
+                    "Chelsea",
+                    "Brentford",
+                    "Leeds United",
                     "Newcastle United",
-                    "Crystal Palace",
-                    "Manchester United",
-                    "Coventry City",
-                    "Nottingham Forest",
                     "Aston Villa",
-                    "Sunderland",
+                    "Hull City",
+                    "Everton",
+                    "Ipswich Town",
                     "AFC Bournemouth",
                     "Tottenham Hotspur",
-                    "Fulham"
+                    "Fulham",
+                    "Manchester United",
+                    "Crystal Palace",
+                    "Nottingham Forest",
+                    "Coventry City",
+                    "Sunderland"
                 ]
             },
             {
@@ -2415,7 +2419,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=premier-league%2C1528%2F70582%2Fstandings%2Fleague",
-            "update": "2026-10-15 21:27:45.944324"
+            "update": "2026-10-27 22:48:49.251185"
         },
         "finished": false
     },
@@ -2436,7 +2440,9 @@
                     171,
                     233,
                     284,
-                    331
+                    331,
+                    389,
+                    479
                 ]
             },
             {
@@ -2448,7 +2454,9 @@
                     163,
                     232,
                     280,
-                    347
+                    347,
+                    414,
+                    503
                 ]
             }
         ],
