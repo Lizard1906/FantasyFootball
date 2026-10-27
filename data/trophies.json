@@ -2166,7 +2166,9 @@
                     253,
                     376,
                     445,
-                    485
+                    485,
+                    533,
+                    587
                 ]
             },
             {
@@ -2179,7 +2181,9 @@
                     206,
                     323,
                     373,
-                    422
+                    422,
+                    486,
+                    549
                 ]
             }
         ],
@@ -2201,17 +2205,17 @@
                     "Sporting",
                     "Santa Clara",
                     "Arouca",
-                    "Braga",
                     "Académico",
-                    "Estrela",
-                    "Moreirense",
                     "Gil Vicente",
-                    "Marítimo",
+                    "Braga",
+                    "Moreirense",
                     "FC Alverca",
                     "Famalicão",
+                    "Estrela",
                     "Vitória SC",
-                    "Nacional",
+                    "Marítimo",
                     "Rio Ave",
+                    "Nacional",
                     "Casa Pia",
                     "Estoril"
                 ]
@@ -2266,7 +2270,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=liga-portugal%2C1550%2F70785%2Fstandings%2Fleague",
-            "update": "2026-09-21 21:38:54.576489"
+            "update": "2026-10-27 22:54:03.871026"
         },
         "finished": false
     },
@@ -2307,7 +2311,10 @@
                     126,
                     194,
                     253,
-                    325
+                    325,
+                    377,
+                    438,
+                    482
                 ]
             },
             {
@@ -2318,7 +2325,10 @@
                     146,
                     196,
                     282,
-                    335
+                    335,
+                    416,
+                    483,
+                    514
                 ]
             }
         ],
@@ -2338,23 +2348,23 @@
                     "Manchester City",
                     "Arsenal",
                     "Brighton & Hove Albion",
+                    "Liverpool",
+                    "Chelsea",
                     "Brentford",
                     "Leeds United",
-                    "Liverpool",
-                    "Everton",
-                    "Hull City",
                     "Newcastle United",
-                    "Chelsea",
-                    "Ipswich Town",
-                    "Manchester United",
-                    "Nottingham Forest",
-                    "Sunderland",
-                    "Crystal Palace",
                     "Aston Villa",
+                    "Hull City",
+                    "Everton",
+                    "Ipswich Town",
                     "AFC Bournemouth",
-                    "Coventry City",
+                    "Tottenham Hotspur",
                     "Fulham",
-                    "Tottenham Hotspur"
+                    "Manchester United",
+                    "Crystal Palace",
+                    "Nottingham Forest",
+                    "Coventry City",
+                    "Sunderland"
                 ]
             },
             {
@@ -2411,7 +2421,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=premier-league%2C1528%2F70582%2Fstandings%2Fleague",
-            "update": "2026-09-21 21:41:49.336896"
+            "update": "2026-10-27 22:48:49.251185"
         },
         "finished": false
     },
@@ -2431,7 +2441,10 @@
                     112,
                     171,
                     233,
-                    284
+                    284,
+                    331,
+                    389,
+                    479
                 ]
             },
             {
@@ -2442,7 +2455,10 @@
                     107,
                     163,
                     232,
-                    280
+                    280,
+                    347,
+                    414,
+                    503
                 ]
             }
         ],
@@ -2502,14 +2518,18 @@
                 "player": 1,
                 "color": "red",
                 "evolution": [
-                    97
+                    97,
+                    179,
+                    260
                 ]
             },
             {
                 "player": 2,
                 "color": "green",
                 "evolution": [
-                    104
+                    104,
+                    160,
+                    228
                 ]
             }
         ],
@@ -2527,14 +2547,18 @@
                 "player": 1,
                 "color": "red",
                 "evolution": [
-                    97
+                    97,
+                    131,
+                    171
                 ]
             },
             {
                 "player": 2,
                 "color": "green",
                 "evolution": [
-                    91
+                    91,
+                    134,
+                    170
                 ]
             }
         ],
@@ -2573,41 +2597,41 @@
                 "player": 0,
                 "predict": [
                     "PSG",
-                    "Bayern München",
-                    "Barcelona",
-                    "Manchester United",
-                    "Como",
-                    "Sporting",
-                    "Stuttgart",
-                    "Manchester City",
                     "Aston Villa",
-                    "Lens",
-                    "Real Betis",
-                    "Borussia Dortmund",
                     "Liverpool",
                     "Real Madrid",
+                    "Real Betis",
+                    "Stuttgart",
                     "Arsenal",
-                    "AEK Atenas",
+                    "Barcelona",
+                    "Como",
+                    "Manchester City",
+                    "Club Brugge",
+                    "Sporting",
+                    "Borussia Dortmund",
+                    "Bayern München",
                     "Roma",
+                    "Atlético Madrid",
                     "Shakhtar Donetsk",
-                    "Fenerbahçe",
                     "PSV",
                     "Villarreal",
-                    "Club Brugge",
-                    "Lille",
-                    "Slavia",
-                    "Atlético Madrid",
                     "Internazionale",
-                    "LASK",
+                    "Manchester United",
                     "Napoli",
                     "Galatasaray",
+                    "LASK",
+                    "Sabah",
+                    "Feyenoord",
+                    "Lens",
+                    "Bodø / Glimt",
+                    "AEK Atenas",
+                    "Leipzig",
+                    "Fenerbahçe",
+                    "Slavia",
                     "Viking",
                     "Porto",
-                    "Leipzig",
-                    "Feyenoord",
-                    "Sabah",
-                    "Slovan Bratislava",
-                    "Bodø / Glimt"
+                    "Lille",
+                    "Slovan Bratislava"
                 ]
             },
             {
@@ -2696,7 +2720,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=champions-league%2C1658%2F70821%2Fstandings%2Fleague",
-            "update": "2026-09-14 23:08:45.389788"
+            "update": "2026-10-23 21:08:57.354969"
         },
         "finished": false
     }
