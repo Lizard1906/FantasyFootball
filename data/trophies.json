@@ -2168,7 +2168,9 @@
                     445,
                     485,
                     533,
-                    587
+                    587,
+                    673,
+                    727
                 ]
             },
             {
@@ -2183,7 +2185,9 @@
                     373,
                     422,
                     486,
-                    549
+                    549,
+                    598,
+                    661
                 ]
             }
         ],
@@ -2209,14 +2213,14 @@
                     "Gil Vicente",
                     "Braga",
                     "Moreirense",
-                    "FC Alverca",
                     "Famalicão",
+                    "FC Alverca",
                     "Estrela",
+                    "Nacional",
                     "Vitória SC",
                     "Marítimo",
-                    "Rio Ave",
-                    "Nacional",
                     "Casa Pia",
+                    "Rio Ave",
                     "Estoril"
                 ]
             },
@@ -2270,7 +2274,7 @@
         "source": {
             "name": "SAPO Desporto",
             "url": "https://sapo.pt/desporto/sapo-score?tab=liga-portugal%2C1550%2F70785%2Fstandings%2Fleague",
-            "update": "2026-10-27 22:54:03.871026"
+            "update": "2026-11-09 22:29:09.756009"
         },
         "finished": false
     },
